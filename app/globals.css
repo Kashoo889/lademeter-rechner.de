@@ -1,26 +1,312 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f6f8;
+  --foreground: #0b1324;
+
+  /* Signal orange: the single accent, used for CTAs, highlights and the load plan. */
+  --color-brand-50: #fff6ed;
+  --color-brand-100: #ffead4;
+  --color-brand-200: #fed3a8;
+  --color-brand-300: #fdb674;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+
+  /* Deep navy "ink" for hero, header, footer and primary results. */
+  --color-ink-950: #060c1a;
+  --color-ink-900: #0b1324;
+  --color-ink-800: #15203a;
+  --color-ink-700: #2a3856;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-manrope);
+
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+
+  --color-ink-950: var(--color-ink-950);
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-800: var(--color-ink-800);
+  --color-ink-700: var(--color-ink-700);
+
+  --shadow-card: 0 1px 2px rgb(11 19 36 / 0.04), 0 8px 24px -8px rgb(11 19 36 / 0.08);
+  --shadow-lift: 0 2px 4px rgb(11 19 36 / 0.05), 0 18px 40px -12px rgb(11 19 36 / 0.18);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+/* Tabular figures keep result values from jittering while typing. */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Blueprint grid used behind the hero. */
+.bg-blueprint {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 100% at 70% 0%, #000 30%, transparent 78%);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pallet-in {
+  from {
+    opacity: 0;
+    transform: scaleX(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-pop {
+  animation: pop 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.pallet-anim {
+  transform-origin: left center;
+  animation: pallet-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Visible focus states for keyboard accessibility (spec §21). */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--color-ink-900);
+  color: white;
+  border-radius: 0 0 0.375rem 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* Minimal prose styling for rendered Ratgeber markdown content, avoiding an
+   extra Tailwind Typography dependency (spec: keep dependencies minimal). */
+.prose-content h2 {
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--color-ink-900);
+}
+
+.prose-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-ink-900);
+}
+
+.prose-content p {
+  margin-top: 0.9rem;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.prose-content ul,
+.prose-content ol {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  color: #475569;
+}
+
+.prose-content ul {
+  list-style-type: disc;
+}
+
+.prose-content ol {
+  list-style-type: decimal;
+}
+
+.prose-content li {
+  margin-top: 0.375rem;
+}
+
+.prose-content a {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-content strong {
+  color: var(--color-ink-900);
+  font-weight: 600;
+}
+
+.prose-content em {
+  font-style: italic;
+}
+
+.prose-content blockquote {
+  margin-top: 1rem;
+  border-left: 4px solid var(--color-brand-300);
+  padding-left: 1rem;
+  color: #475569;
+}
+
+.prose-content code {
+  border-radius: 0.25rem;
+  background: #f1f5f9;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.9em;
+}
+
+/* Tables are wrapped in .table-scroll (lib/content/toc.ts) so wide tables
+   scroll horizontally instead of breaking the mobile layout. */
+.table-scroll {
+  margin-top: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose-content table {
+  width: 100%;
+  min-width: 28rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.prose-content th {
+  border-bottom: 2px solid #cbd5e1;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-ink-900);
+  white-space: nowrap;
+}
+
+.prose-content td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+.prose-content h2 {
+  scroll-margin-top: 6rem;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print / "Drucken / PDF": show calculator input and result, hide navigation and ads. */
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print,
+  .skip-link,
+  [data-ad-placement],
+  aside[aria-label="Anzeige"] {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .calculator-shell {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #94a3b8 !important;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+
+  details > summary {
+    list-style: none;
+  }
+}
+
+.prose-content > div > :first-child {
+  margin-top: 0;
 }

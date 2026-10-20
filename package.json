@@ -2,25 +2,39 @@
   "name": "lademeter-rechner",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "typecheck": "next typegen && tsc --noEmit",
+    "check:site": "node scripts/check-production.mjs",
+    "check:launch": "vitest run --config vitest.launch.config.mts"
   },
   "dependencies": {
-    "next": "16.3.5",
+    "clsx": "^2.1.1",
+    "js-yaml": "^4.1.1",
+    "lucide-react": "^1.47.0",
+    "marked": "^18.0.14",
+    "next": "16.4.2",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.19.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.5",
+    "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.5"
   }
 }

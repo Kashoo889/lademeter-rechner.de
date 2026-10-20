@@ -11,14 +11,14 @@ Alle Werte werden in **`lib/legal/operator.ts`** eingetragen. Nichts davon darf 
 | --- | --- | --- |
 | `kind`, `name` | Vollständiger Name (Person) bzw. Firma inkl. Rechtsform; bestätigt: Einzelperson, Muhammad Kashif | § 5 DDG |
 | `representatives` | Nur bei Gesellschaften: Vertretungsberechtigte | § 5 DDG |
-| `street`, `postalCode`, `city` | Ladungsfähige Anschrift (kein Postfach) | § 5 DDG |
+| `street` | Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach; PLZ 54000, Ort Lahore, Punjab und Land Pakistan sind bestätigt) | § 5 DDG |
 | `email` | Elektronische Kontaktaufnahme; bestätigt: mkashifshah10@gmail.com | § 5 DDG |
 | `phone` **oder** funktionierendes Kontaktformular | Zweiter schneller, unmittelbarer Kontaktweg | § 5 DDG |
 | `register`, `vatId` | Nur falls vorhanden (Handelsregister, USt-IdNr./Wirtschafts-IdNr.) | § 5 DDG |
 | `editorialResponsibilityReview` | Bei Sitz in Pakistan fachlich klären, ob § 18 Abs. 2 MStV anwendbar ist | § 1 Abs. 7, § 18 Abs. 2 MStV |
 | `editorialResponsible` | Falls § 18 Abs. 2 MStV anwendbar ist: natürliche Person mit ständigem Aufenthalt in Deutschland | § 18 Abs. 2 MStV |
 | `euRepresentative` oder `euRepresentativeExemption` | EU-Vertretung benennen oder die enge Ausnahme fachlich prüfen und dokumentieren | Art. 3 Abs. 2, Art. 27 DSGVO |
-| `consumerDisputeStatement` | Tatsächlich zutreffende, rechtlich geprüfte Erklärung zur Verbraucherstreitbeilegung | VSBG |
+| `consumerDisputeStatement` | Tatsächlich zutreffende Erklärung nach § 36 VSBG (z. B. Nichtteilnahme an Streitbeilegungsverfahren; Hinweis: EU-OS-Plattform nach Verordnung (EU) 2024/3228 seit 2025 dauerhaft eingestellt, kein Link mehr zulässig) | § 36 VSBG |
 | `supervisoryAuthority` | Optional: nur eintragen, wenn die Zuständigkeit für den Betreiber in Pakistan fachlich bestimmt wurde | Art. 77 DSGVO |
 | `hosting.*` | Vercel ist als geplanter Anbieter mit offiziellen Links eingetragen; Tarif, DPA-Geltung und reale Konfiguration bleiben zu bestätigen | Art. 28, 44 ff. DSGVO |
 | `about.authorName`, `about.bio` | Optional, aber stark empfohlen (E-E-A-T, Über uns) | – |

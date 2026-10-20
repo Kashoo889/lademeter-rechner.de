@@ -37,8 +37,28 @@ export default function ImpressumPage() {
             ))
           ) : (
             <>
-              <Missing label="Ladungsfähige Anschrift (Straße, Hausnummer, PLZ, Ort – kein Postfach)" />
-              <br />
+              {operator.street ? (
+                <>
+                  {operator.street}
+                  <br />
+                </>
+              ) : (
+                <>
+                  <Missing label="Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach)" />
+                  <br />
+                </>
+              )}
+              {operator.postalCode || operator.city ? (
+                <>
+                  {[operator.postalCode, operator.city].filter(Boolean).join(" ")}
+                  <br />
+                </>
+              ) : (
+                <>
+                  <Missing label="Postleitzahl und Ort" />
+                  <br />
+                </>
+              )}
               {operator.country}
             </>
           )}
@@ -80,6 +100,16 @@ export default function ImpressumPage() {
             </>
           ) : null}
         </p>
+        <p className="mt-2 text-sm text-slate-600">
+          Zentrale Kontaktstelle für Nutzer und Behörden nach Art. 11 und 12 der Verordnung (EU) 2022/2065 (Digital Services Act, DSA):{" "}
+          {operator.email ? (
+            <a href={`mailto:${operator.email}`} className="text-brand-700 underline">
+              {operator.email}
+            </a>
+          ) : (
+            <Missing label="E-Mail-Adresse" />
+          )}. Kommunikationssprachen: Deutsch, Englisch.
+        </p>
       </LegalSection>
 
       {operator.register ? (
@@ -114,8 +144,8 @@ export default function ImpressumPage() {
         )}
       </LegalSection>
 
-      <LegalSection title="Verbraucherstreitbeilegung">
-        <p>{operator.consumerDisputeStatement ?? <Missing label="Geprüfte Erklärung zur Verbraucherstreitbeilegung" />}</p>
+      <LegalSection title="Verbraucherstreitbeilegung (§ 36 VSBG)">
+        <p>{operator.consumerDisputeStatement ?? <Missing label="Geprüfte Erklärung zur Verbraucherstreitbeilegung nach § 36 VSBG" />}</p>
       </LegalSection>
 
       <LegalSection title="Weitere Hinweise">

@@ -9,8 +9,8 @@ describe("operator configuration", () => {
       country: "Pakistan",
       email: "mkashifshah10@gmail.com",
       street: null,
-      postalCode: null,
-      city: null,
+      postalCode: "54000",
+      city: "Lahore, Punjab",
       phone: null,
       register: null,
       vatId: null,
@@ -32,15 +32,14 @@ describe("operator configuration", () => {
     expect(fields).toEqual(
       expect.arrayContaining([
         "street",
-        "postalCode",
-        "city",
+        "phone",
         "editorialResponsibilityReview",
         "euRepresentative",
         "consumerDisputeStatement",
         "hosting.confirmed",
       ]),
     );
-    expect(fields).not.toEqual(expect.arrayContaining(["kind", "name", "email", "supervisoryAuthority"]));
+    expect(fields).not.toEqual(expect.arrayContaining(["kind", "name", "postalCode", "city", "email", "supervisoryAuthority"]));
   });
 
   it("accepts documented review outcomes without inventing representatives", () => {

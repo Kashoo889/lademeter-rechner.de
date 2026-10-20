@@ -46,7 +46,19 @@ export default function DatenschutzPage() {
             address.join(", ")
           ) : (
             <>
-              <Missing label="Vollständige ladungsfähige Anschrift" /> ({operator.country})
+              {!operator.street ? (
+                <>
+                  <Missing label="Straße und Hausnummer" />,{" "}
+                </>
+              ) : (
+                `${operator.street}, `
+              )}
+              {operator.postalCode || operator.city ? (
+                [operator.postalCode, operator.city].filter(Boolean).join(" ")
+              ) : (
+                <Missing label="PLZ und Ort" />
+              )}
+              {operator.country ? ` (${operator.country})` : ""}
             </>
           )}
           <br />
@@ -126,8 +138,8 @@ export default function DatenschutzPage() {
               Verbindungsinformationen, darunter IP-Adresse, daraus abgeleitete Standortinformationen
               und Systemkonfigurationen. Der veröffentlichte Vercel-DPA nennt die USA als primären
               Verarbeitungsort und weist darauf hin, dass Daten auch dort verarbeitet werden können, wo
-              Vercel oder seine Unterauftragsverarbeiter tätig sind. Für erfasste Übermittlungen aus dem
-              EWR sieht der DPA insbesondere die EU-Standardvertragsklauseln vor. Nach seinem aktuellen
+              Vercel oder seine Unterauftragsverarbeiter tätig sind. Vercel, Inc. ist unter dem EU-U.S. Data Privacy Framework (DPF) zertifiziert. Für Übermittlungen aus dem
+              EWR sieht der DPA zudem die EU-Standardvertragsklauseln (SCC) vor. Nach seinem aktuellen
               Wortlaut gilt dieser DPA für Kunden auf Pro- und Enterprise-Tarifen; der tatsächlich
               gewählte Tarif und die vertragliche Einbeziehung sind daher vor dem Livegang zu bestätigen.
             </p>
@@ -188,9 +200,9 @@ export default function DatenschutzPage() {
           <p>
             Nachrichten aus dem Kontaktformular werden über den E-Mail-Versanddienst Resend (Resend,
             Inc., USA) an uns zugestellt. Resend verarbeitet die Formularinhalte als
-            Auftragsverarbeiter (Art. 28 DSGVO); die Übermittlung in die USA erfolgt auf Grundlage der
-            vom Anbieter angebotenen Garantien (Standardvertragsklauseln bzw. Data Privacy Framework,
-            soweit zertifiziert). Zur Missbrauchsabwehr wird Ihre IP-Adresse kurzzeitig im
+            Auftragsverarbeiter (Art. 28 DSGVO); Resend, Inc. ist unter dem EU-U.S. Data Privacy Framework
+            (DPF) zertifiziert; zudem bietet der Anbieter einen Auftragsverarbeitungsvertrag (DPA) mit
+            EU-Standardvertragsklauseln. Zur Missbrauchsabwehr wird Ihre IP-Adresse kurzzeitig im
             Arbeitsspeicher verarbeitet (Begrenzung der Anfragen je Zeitraum) und nicht dauerhaft
             gespeichert. Weitere Informationen:{" "}
             <ExternalLink href="https://resend.com/legal/privacy-policy">Datenschutzerklärung von Resend</ExternalLink>.

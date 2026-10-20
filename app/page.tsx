@@ -10,7 +10,7 @@ import { ldmByQuantityRows, palletLdmRows } from "@/lib/content/referenceData";
 
 export const metadata: Metadata = {
   ...buildPageMetadata({
-    title: "Lademeter Rechner – Lademeter berechnen, kostenlos & mit Formel",
+    title: "Lademeter Rechner – Lademeter berechnen, kostenlos",
     description:
       "Lademeter online berechnen: Länge, Breite, Anzahl und Stapellagen eingeben – inklusive Stellplätzen und frachtpflichtigem Gewicht. Mit Formel und Beispielen.",
     path: "/",

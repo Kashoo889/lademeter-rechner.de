@@ -3,7 +3,7 @@ import { siteConfig, calculators } from "@/lib/site-config";
 import { getAllArticles } from "@/lib/content/ratgeber";
 import { VEHICLE_PAGES } from "@/lib/content/fahrzeuge";
 import { legalNoindex } from "@/lib/legal/pages";
-import { contactFormConfigured, operator } from "@/lib/legal/operator";
+import { operator } from "@/lib/legal/operator";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = siteConfig.lastUpdated;
@@ -11,14 +11,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const toolRoutes = [...new Set(calculators.map((tool) => tool.href))];
   const contentRoutes = ["/ratgeber/", "/fahrzeuge/", "/lademeter-tabelle/", "/methodik/", "/ueber-uns/"];
-  // Pages that are set to noindex (incomplete operator data / pending legal
-  // review) must not appear in the sitemap.
-  const kontaktIndexable = (Boolean(operator.email) || contactFormConfigured()) && !legalNoindex("general");
+
+  // Completed legal and contact pages are indexable and submitted to the sitemap.
+  // Incomplete legal pages (Impressum, Datenschutz) remain noindex and are omitted.
   const legalRoutes = [
-    ...(kontaktIndexable ? ["/kontakt/"] : []),
+    ...(operator.email ? ["/kontakt/"] : []),
+    ...(legalNoindex("cookies") ? [] : ["/cookies/"]),
+    ...(legalNoindex("nutzungsbedingungen") ? [] : ["/nutzungsbedingungen/"]),
+    ...(legalNoindex("haftungsausschluss") ? [] : ["/haftungsausschluss/"]),
     ...(legalNoindex("impressum") ? [] : ["/impressum/"]),
     ...(legalNoindex("datenschutz") ? [] : ["/datenschutz/"]),
-    ...(legalNoindex("general") ? [] : ["/cookies/", "/nutzungsbedingungen/", "/haftungsausschluss/"]),
   ];
 
   return [

@@ -4,7 +4,7 @@ import { ExternalLink, LegalPage, LegalSection, Missing } from "@/components/leg
 import { ConsentSettingsButton } from "@/components/ads/ConsentSettingsButton";
 import { adsActive } from "@/lib/ads/config";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { contactFormConfigured, formatAddressLines, isLegalReviewed, operator } from "@/lib/legal/operator";
+import { formatAddressLines, isLegalReviewed, operator } from "@/lib/legal/operator";
 import { LEGAL_TEXTS_UPDATED, legalNoindex, missingFor } from "@/lib/legal/pages";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -17,7 +17,6 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function DatenschutzPage() {
   const address = formatAddressLines();
-  const contactForm = contactFormConfigured();
   let n = 0;
   const num = () => `${++n}.`;
 
@@ -187,27 +186,37 @@ export default function DatenschutzPage() {
         </p>
       </LegalSection>
 
-      <LegalSection id="kontakt" title={`${num()} Kontaktaufnahme`}>
+      <LegalSection id="kontakt" title={`${num()} Kontaktaufnahme (E-Mail und Kontaktformular)`}>
         <p>
-          Wenn Sie uns per E-Mail{contactForm ? " oder über das Kontaktformular" : ""} kontaktieren,
-          verarbeiten wir die von Ihnen mitgeteilten Daten (z. B. Name, E-Mail-Adresse, Inhalt der
-          Nachricht), um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO
-          (berechtigtes Interesse an der Beantwortung von Anfragen) bzw. Art. 6 Abs. 1 lit. b DSGVO,
-          sofern Ihre Anfrage auf einen Vertrag abzielt. Wir löschen die Daten, sobald die Anfrage
-          abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          Wenn Sie uns per E-Mail oder über unser Kontaktformular kontaktieren, verarbeiten wir die von
+          Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Betreff sowie den Inhalt Ihrer Nachricht),
+          um Ihr Anliegen zu bearbeiten und mit Ihnen in Kontakt zu treten. Rechtsgrundlage ist Art. 6
+          Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen) bzw. Art. 6 Abs. 1
+          lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung eines Vertrages abzielt.
+          Wir löschen die Daten, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen
+          Aufbewahrungspflichten entgegenstehen.
         </p>
-        {contactForm ? (
-          <p>
-            Nachrichten aus dem Kontaktformular werden über den E-Mail-Versanddienst Resend (Resend,
-            Inc., USA) an uns zugestellt. Resend verarbeitet die Formularinhalte als
-            Auftragsverarbeiter (Art. 28 DSGVO); Resend, Inc. ist unter dem EU-U.S. Data Privacy Framework
-            (DPF) zertifiziert; zudem bietet der Anbieter einen Auftragsverarbeitungsvertrag (DPA) mit
-            EU-Standardvertragsklauseln. Zur Missbrauchsabwehr wird Ihre IP-Adresse kurzzeitig im
-            Arbeitsspeicher verarbeitet (Begrenzung der Anfragen je Zeitraum) und nicht dauerhaft
-            gespeichert. Weitere Informationen:{" "}
-            <ExternalLink href="https://resend.com/legal/privacy-policy">Datenschutzerklärung von Resend</ExternalLink>.
-          </p>
-        ) : null}
+        <p>
+          <strong>E-Mail-Zustelldienst Resend:</strong> Für die technische Zustellung von Nachrichten
+          aus dem Kontaktformular an unsere E-Mail-Adresse ({operator.email}) nutzen wir den
+          E-Mail-Versanddienst Resend der Resend, Inc., 2261 Market Street #5039, San Francisco, CA
+          94114, USA. Resend verarbeitet die Formularinhalte als Auftragsverarbeiter gemäß Art. 28 DSGVO.
+          Resend, Inc. ist unter dem EU-U.S. Data Privacy Framework (DPF) zertifiziert; zudem besteht
+          mit dem Anbieter ein Auftragsverarbeitungsvertrag (Data Processing Addendum, DPA) auf Basis
+          der EU-Standardvertragsklauseln (SCC) nach Art. 46 Abs. 2 lit. c DSGVO.
+        </p>
+        <p>
+          <strong>Spamschutz und Missbrauchsabwehr:</strong> Zur Erkennung automatisierter Spam-Nachrichten
+          setzen wir ein verdecktes Formularfeld (Honeypot) sowie eine zeitliche Ausfüllprüfung ein. Zur
+          Abwehr von Denial-of-Service- und Massenangriffen wird die übermittelte IP-Adresse für maximal
+          10 Minuten flüchtig im Arbeitsspeicher des Servers zur Ratenbegrenzung verarbeitet und
+          anschließend gelöscht; eine dauerhafte Speicherung der IP-Adresse im Rahmen des Formulars findet
+          nicht statt.
+        </p>
+        <p className="text-sm text-slate-600">
+          Weitere Informationen zum Datenschutz bei Resend finden Sie in der{" "}
+          <ExternalLink href="https://resend.com/legal/privacy-policy">Datenschutzerklärung von Resend</ExternalLink>.
+        </p>
       </LegalSection>
 
       <LegalSection id="cookies" title={`${num()} Cookies und Endgeräte-Zugriff`}>

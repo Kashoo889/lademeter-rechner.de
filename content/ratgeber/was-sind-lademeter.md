@@ -1,5 +1,5 @@
 ---
-title: "Lademeter berechnen: Formel, Beispiele und Tabelle"
+title: "Was ist ein Lademeter? Definition, Formel und Beispiele"
 description: "Was ist ein Lademeter (ldm)? Formel mit 2,4 m Ladebreite, Rechenbeispiele für Euro- und Industriepaletten, Stapeln, Abrechnung und typische Fehler."
 slug: "was-sind-lademeter"
 publishedAt: "2026-08-01"

@@ -1,5 +1,5 @@
 ---
-title: "Palettenarten im Überblick: Maße, Lademeter und Stellplätze"
+title: "Palettenarten im Überblick: Euro-, Industrie-, Halbpalette"
 description: "Europalette, Industriepalette, Halb- und Viertelpalette, Gitterbox: Maße, Lademeter und Stellplätze im Sattelzug im Vergleich – plus Hinweise zum Palettentausch."
 slug: "europaletten-und-palettenarten"
 publishedAt: "2026-08-15"

@@ -15,7 +15,7 @@ import { PageHero } from "@/components/layout/PageHero";
 const breadcrumbItems = [{ label: "Berechnungsgrundlagen", href: "/methodik/" }];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Berechnungsgrundlagen: Formeln, Annahmen und Grenzen der Rechner",
+  title: "Berechnungsgrundlagen: Formeln, Annahmen, Grenzen",
   description:
     "So rechnen die Rechner: Formeln für Lademeter, Palettenstellplätze, Kartons pro Palette, Beladung und Volumengewicht – mit Standardmaßen, Annahmen und Grenzen.",
   path: "/methodik/",

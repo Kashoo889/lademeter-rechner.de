@@ -10,10 +10,10 @@ export const metadata: Metadata = buildPageMetadata({
   title: "Haftungsausschluss",
   description:
     adsActive
-      ? "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten, externen Links und Werbung."
-      : "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten und externen Links.",
+      ? "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten, externen Links und Werbung – damit Sie alles richtig einordnen."
+      : "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten und externen Links – damit Sie die Ergebnisse richtig einordnen.",
   path: "/haftungsausschluss/",
-  noindex: legalNoindex("general"),
+  noindex: legalNoindex("haftungsausschluss"),
 });
 
 export default function HaftungsausschlussPage() {

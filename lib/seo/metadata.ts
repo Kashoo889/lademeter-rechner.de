@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 
+/** Approximate number of characters Google shows in a result title. */
+const SERP_TITLE_LIMIT = 60;
+
 type PageMetadataInput = {
   /** Page title without the site-name suffix (the root layout template adds it). */
   title: string;
@@ -31,10 +34,14 @@ export function buildPageMetadata({
   noindex,
 }: PageMetadataInput): Metadata {
   const url = new URL(path, siteConfig.domain).toString();
-  const socialTitle = absoluteTitle ? title : `${title} | ${siteConfig.name}`;
+  // Google truncates titles at roughly 60 characters. When the brand suffix from
+  // the root layout template would push the title past that, show the title alone.
+  const withSuffix = `${title} | ${siteConfig.name}`;
+  const useAbsolute = absoluteTitle || withSuffix.length > SERP_TITLE_LIMIT;
+  const socialTitle = useAbsolute ? title : withSuffix;
 
   return {
-    title: absoluteTitle ? { absolute: title } : title,
+    title: useAbsolute ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {

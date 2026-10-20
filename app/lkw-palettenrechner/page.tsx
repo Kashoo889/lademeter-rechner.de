@@ -8,7 +8,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { vehicleCapacityRows } from "@/lib/content/referenceData";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Wie viele Paletten passen in einen LKW? Palettenrechner mit Ladeplan",
+  title: "Wie viele Paletten passen in einen LKW? Rechner mit Ladeplan",
   description:
     "Palettenrechner: Wie viele Europaletten passen in Sattelzug, Wechselbrücke, 7,5-Tonner oder Container? Mit Ladeplan, Stapeloption und Vergleichstabelle.",
   path: "/lkw-palettenrechner/",

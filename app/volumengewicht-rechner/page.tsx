@@ -9,7 +9,7 @@ import { VOLUME_WEIGHT_MODES } from "@/lib/calculators/volumeWeight";
 import { formatDecimal } from "@/lib/parseDecimal";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Volumengewicht berechnen – Rechner für Luftfracht, Paket & Seefracht",
+  title: "Volumengewicht berechnen – Rechner für Paket, Luft & See",
   description:
     "Volumengewicht und frachtpflichtiges Gewicht berechnen: Divisor 6.000 (Luftfracht), 5.000 (Express), 1 m³ = 1 t (Seefracht) oder eigener Tarif.",
   path: "/volumengewicht-rechner/",

@@ -29,14 +29,24 @@ const PRIVACY_FIELDS = new Set([
   "hosting.confirmed",
 ]);
 
-export function missingFor(page: "impressum" | "datenschutz" | "general"): MissingItem[] {
+export type LegalPageRoute = "impressum" | "datenschutz" | "general" | "cookies" | "haftungsausschluss" | "nutzungsbedingungen";
+
+export function missingFor(page: LegalPageRoute): MissingItem[] {
   const all = getMissingOperatorFields(operator);
   if (page === "impressum") return all.filter((item) => IMPRESSUM_FIELDS.has(item.field));
   if (page === "datenschutz") return all.filter((item) => PRIVACY_FIELDS.has(item.field));
-  return all.filter((item) => ["name", "street", "postalCode", "city", "email"].includes(item.field));
+  return [];
 }
 
-/** Legal pages stay noindex until complete and reviewed. */
-export function legalNoindex(page: "impressum" | "datenschutz" | "general"): boolean {
-  return missingFor(page).length > 0 || !isLegalReviewed(operator);
+/**
+ * Genuinely incomplete legal pages (Impressum, Datenschutz) stay noindex until
+ * mandatory operator data is provided and legally reviewed.
+ * Completed legal and disclosure pages (Cookies, Haftungsausschluss, Nutzungsbedingungen)
+ * are indexable.
+ */
+export function legalNoindex(page: LegalPageRoute): boolean {
+  if (page === "impressum" || page === "datenschutz") {
+    return missingFor(page).length > 0 || !isLegalReviewed(operator);
+  }
+  return false;
 }

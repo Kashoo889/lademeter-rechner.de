@@ -5,7 +5,7 @@ import { KartonsForm } from "@/components/calculator/forms/KartonsForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Kartons pro Palette berechnen – Rechner mit Lagenbild, Höhe & Gewicht",
+  title: "Kartons pro Palette berechnen – Rechner mit Lagenbild",
   description:
     "Wie viele Kartons passen auf eine Palette? Rechner für Europalette, Industriepalette und Halbpalette mit Lagenbild, Verbund, maximaler Höhe und Gewichtsgrenze.",
   path: "/kartons-pro-palette-rechner/",

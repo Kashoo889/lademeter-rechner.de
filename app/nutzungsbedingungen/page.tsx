@@ -11,7 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Nutzungsbedingungen für die kostenlosen Rechner und Inhalte von Lademeter Rechner: Leistungsumfang, Ergebnisse ohne Gewähr, Haftung und Urheberrecht.",
   path: "/nutzungsbedingungen/",
-  noindex: legalNoindex("general"),
+  noindex: legalNoindex("nutzungsbedingungen"),
 });
 
 export default function NutzungsbedingungenPage() {
@@ -20,7 +20,7 @@ export default function NutzungsbedingungenPage() {
       title="Nutzungsbedingungen"
       path="/nutzungsbedingungen/"
       updatedAt={LEGAL_TEXTS_UPDATED}
-      missing={missingFor("general")}
+      missing={missingFor("nutzungsbedingungen")}
       reviewed={isLegalReviewed()}
     >
       <LegalSection title="1. Geltungsbereich">

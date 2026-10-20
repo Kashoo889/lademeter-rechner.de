@@ -12,7 +12,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Welche Cookies und vergleichbaren Technologien Lademeter Rechner einsetzt, wofür sie dienen und wie Sie Ihre Einwilligung verwalten oder Cookies im Browser löschen.",
   path: "/cookies/",
-  noindex: legalNoindex("general"),
+  noindex: legalNoindex("cookies"),
 });
 
 export default function CookiesPage() {

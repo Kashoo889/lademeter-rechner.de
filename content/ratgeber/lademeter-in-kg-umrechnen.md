@@ -1,5 +1,5 @@
 ---
-title: "Lademeter in kg umrechnen: Faktor und frachtpflichtiges Gewicht"
+title: "Lademeter in kg umrechnen: Faktor und Abrechnung"
 description: "Lademeter in kg umrechnen: Warum Speditionen 1.500 bis 2.000 kg je ldm ansetzen, wie das frachtpflichtige Gewicht entsteht und wann das echte Gewicht zählt."
 slug: "lademeter-in-kg-umrechnen"
 publishedAt: "2026-10-20"

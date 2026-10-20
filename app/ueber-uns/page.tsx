@@ -11,7 +11,7 @@ import { adsActive } from "@/lib/ads/config";
 const breadcrumbItems = [{ label: "Über uns", href: "/ueber-uns/" }];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Über uns",
+  title: "Über uns – Wer steht hinter Lademeter Rechner",
   description:
     "Wer hinter Lademeter Rechner steht, wie die Rechner entstehen, wie Inhalte geprüft werden und wie die Seite finanziert wird.",
   path: "/ueber-uns/",

@@ -161,6 +161,21 @@ export default async function FahrzeugPage(props: PageProps<"/fahrzeuge/[slug]">
         <RelatedArticles currentSlug="" slugs={page.relatedArticles} />
       </ContentSection>
 
+      <ContentSection title="Weitere Fahrzeuge und Maße">
+        <ul className="grid gap-2 sm:grid-cols-2">
+          {VEHICLE_PAGES.filter((other) => other.slug !== page.slug).map((other) => (
+            <li key={other.slug}>
+              <Link
+                href={`/fahrzeuge/${other.slug}/`}
+                className="block rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-800 transition-colors hover:border-brand-400 hover:bg-brand-50"
+              >
+                {other.h1}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </ContentSection>
+
       <p className="mt-6 text-sm text-slate-600">
         Weitere Fahrzeuge:{" "}
         <Link href="/fahrzeuge/" className="text-brand-700 underline">

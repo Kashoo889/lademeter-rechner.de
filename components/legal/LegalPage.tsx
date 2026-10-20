@@ -39,7 +39,7 @@ export function LegalPage({
   children,
 }: LegalPageProps) {
   const breadcrumbItems = [{ label: breadcrumbLabel ?? title, href: path }];
-  const incomplete = missing.length > 0 || !reviewed;
+  const incomplete = missing.length > 0;
 
   return (
     <>

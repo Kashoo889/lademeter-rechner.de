@@ -1,13 +1,13 @@
 const base = new URL(process.env.SITE_CHECK_URL || "http://localhost:3000/");
 const expectedOrigin = (process.env.NEXT_PUBLIC_SITE_URL || "https://lademeter-rechner.de").replace(/\/$/, "");
-const extraRoutes = [
-  "/kontakt/",
-  "/impressum/",
-  "/datenschutz/",
-  "/cookies/",
-  "/nutzungsbedingungen/",
-  "/haftungsausschluss/",
-];
+
+// Incomplete legal routes that must stay noindex and must not appear in the sitemap
+const incompleteRoutes = ["/impressum/", "/datenschutz/"];
+
+// Completed legal/info routes that are expected to be indexable and in the sitemap
+const completedLegalRoutes = ["/kontakt/", "/cookies/", "/nutzungsbedingungen/", "/haftungsausschluss/"];
+
+const extraRoutes = [...incompleteRoutes, ...completedLegalRoutes];
 
 const failures = [];
 const request = async (path) => fetch(new URL(path, base), { redirect: "follow" });
@@ -35,7 +35,7 @@ for (const path of paths) {
   const expectedCanonical = new URL(path, `${expectedOrigin}/`).toString();
   if (canonical !== expectedCanonical) failures.push(`${path}: Canonical ${canonical || "fehlt"} (erwartet ${expectedCanonical})`);
 
-  if (!sitemapPaths.includes(path) && extraRoutes.includes(path)) {
+  if (!sitemapPaths.includes(path) && incompleteRoutes.includes(path)) {
     const robotsMeta = html.match(/<meta[^>]+name="robots"[^>]+content="([^"]+)"/i)?.[1] ?? "";
     if (!robotsMeta.toLowerCase().includes("noindex")) {
       failures.push(`${path}: nicht in der Sitemap, aber ohne noindex`);
@@ -90,8 +90,13 @@ if (!contactResponse.headers.get("cache-control")?.toLowerCase().includes("no-st
 
 const robots = await (await request("/robots.txt")).text();
 if (!robots.includes("Sitemap:") || !robots.includes("Disallow: /api/")) failures.push("robots.txt unvollständig");
-for (const route of extraRoutes) {
+
+for (const route of incompleteRoutes) {
   if (sitemapPaths.includes(route)) failures.push(`${route}: unvollständige/noindex-Seite steht in der Sitemap`);
+}
+
+for (const route of completedLegalRoutes) {
+  if (!sitemapPaths.includes(route)) failures.push(`${route}: vollständige Seite fehlt in der Sitemap`);
 }
 
 console.log(`Geprüft: ${paths.length} HTML-Seiten, ${internalPaths.size} interne Ziele, ${jsonLdBlocks} JSON-LD-Blöcke.`);

@@ -5,7 +5,7 @@ import { BeladungForm } from "@/components/calculator/forms/BeladungForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "LKW Beladung berechnen – Beladungsrechner für Fläche, Gewicht & Volumen",
+  title: "LKW Beladung berechnen: Rechner für Fläche und Nutzlast",
   description:
     "LKW-Beladungsrechner: Mehrere Ladungspositionen gegen Ladefläche, Nutzlast und Volumen prüfen. Mit Stapellagen, Fahrzeugvorgaben und Eignungsampel.",
   path: "/lkw-beladungsrechner/",

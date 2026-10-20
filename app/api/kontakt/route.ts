@@ -1,17 +1,23 @@
 import { CONTACT_LIMITS, looksLikeSpam, validateContact, type ContactPayload } from "@/lib/contact";
-import { contactFormConfigured } from "@/lib/legal/operator";
+import { contactFormConfigured, operator } from "@/lib/legal/operator";
 
 /**
  * Contact form endpoint. Delivers messages via the Resend HTTP API when
- * RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL are configured;
- * otherwise it answers 503 and the form shows the e-mail fallback - it never
- * pretends a message was sent.
+ * RESEND_API_KEY is set; the recipient is the operator e-mail from
+ * lib/legal/operator.ts. Otherwise it answers 503 and the form shows the
+ * e-mail fallback - it never pretends a message was sent.
+ *
+ * Sender: Resend's shared test address. It needs no domain verification, but
+ * Resend only delivers it to the e-mail address of the Resend account, so the
+ * API key must belong to the account registered with the operator e-mail.
+ * To send to other recipients, verify a domain at Resend and change FROM.
  *
  * Abuse protection: honeypot + time trap, payload size limit and a simple
  * in-memory rate limit per IP (best effort on serverless; the IP is not
  * persisted).
  */
 
+const FROM = "Lademeter Rechner <onboarding@resend.dev>";
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 const hits = new Map<string, number[]>();
@@ -74,8 +80,8 @@ export async function POST(request: Request) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: process.env.CONTACT_FROM_EMAIL,
-      to: [process.env.CONTACT_TO_EMAIL],
+      from: FROM,
+      to: [operator.email],
       reply_to: email,
       subject: `[Kontakt lademeter-rechner.de] ${subject}`.replace(/[\r\n]+/g, " "),
       text: `Name: ${name}\nE-Mail: ${email}\nBetreff: ${subject}\n\n${message}`,

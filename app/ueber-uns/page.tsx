@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbJsonLd } from "@/lib/seo/jsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { operator } from "@/lib/legal/operator";
+import { adsActive } from "@/lib/ads/config";
 
 const breadcrumbItems = [{ label: "Über uns", href: "/ueber-uns/" }];
 
@@ -92,8 +93,9 @@ export default function UeberUnsPage() {
 
         <h2 className="pt-4 text-xl font-extrabold tracking-tight text-slate-950">Finanzierung</h2>
         <p>
-          Das Angebot ist kostenlos. Es kann künftig durch Werbung finanziert werden; Anzeigen sind
-          dann als „Anzeige“ gekennzeichnet und beeinflussen weder Berechnungen noch Inhalte.
+          {adsActive
+            ? "Das Angebot ist kostenlos und wird durch Werbung finanziert. Anzeigen sind als „Anzeige“ gekennzeichnet und beeinflussen weder Berechnungen noch Inhalte. Eigene Analyse- oder Tracking-Dienste setzen wir nicht ein."
+            : "Das Angebot ist kostenlos und werbefrei. Wir setzen keine Anzeigen und keine Analyse- oder Tracking-Dienste ein."}
         </p>
       </div>
       </Container>

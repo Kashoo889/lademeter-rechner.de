@@ -33,15 +33,14 @@ app/                  Routen (Startseite = Lademeter-Rechner)
   ads.txt/ robots.ts sitemap.ts manifest.ts icon.tsx apple-icon.tsx opengraph-image.tsx
 components/
   calculator/           Formulare, Ergebnis-Panel, Ladeplan-SVG, Teilen/Drucken
-  consent/              Consent Mode v2, CMP-Skripte, GA4/AdSense-Lader (alles consent-gesteuert)
-  ads/                  AdSlot (inaktiv ohne Konfiguration)
   content/ layout/ legal/ seo/ ui/
 content/ratgeber/      Markdown-Artikel (Frontmatter inkl. faq/sources)
 lib/
   calculators/          Rechenkerne + Tests (packing, truckPallets, lademeter, cartonsPerPallet, truckLoading, volumeWeight)
   content/              Artikel-Loader, Fahrzeugtexte, Referenztabellen (aus den Rechenkernen berechnet)
-  consent/ legal/ seo/  Konfiguration, Betreiberdaten, Metadaten/JSON-LD
-docs/                   Launch-Checkliste, Vercel-Deployment, Consent/AdSense-Setup, Content-Roadmap
+  ads/                  AdSense-Slot, -Skript, Consent-Link (inaktiv ohne Konfiguration)
+  legal/ seo/           Betreiberdaten, Metadaten/JSON-LD
+docs/                   Launch-Checkliste, Vercel-Deployment, Content-Roadmap
 ```
 
 ## Wichtige Entwurfsentscheidungen
@@ -52,7 +51,7 @@ docs/                   Launch-Checkliste, Vercel-Deployment, Consent/AdSense-Se
   dieselben Funktionen wie die Rechner (`lib/content/referenceData.ts`).
 - **Rechtstexte sind datengetrieben.** `lib/legal/operator.ts` enthält alle Betreiberangaben. Fehlen Pflichtangaben
   oder die Rechtsprüfung, sind die Seiten sichtbar als „nicht vollständig“ markiert, `noindex` und nicht in der Sitemap.
-- **Nichts Google-bezogenes ohne Einwilligung.** Siehe [`docs/ADSENSE-CONSENT-SETUP.md`](docs/ADSENSE-CONSENT-SETUP.md).
+- **Keine Cookies, keine Analyse, Werbung nur bei Aktivierung.** Ohne `NEXT_PUBLIC_ADSENSE_*` lädt die Seite keine Drittanbieter-Skripte; Schriftarten sind selbst gehostet, ein Cookie-Banner ist nicht nötig. AdSense wird später beantragt: erst `NEXT_PUBLIC_ADSENSE_CLIENT` (Meta-Tag + ads.txt), nach Freigabe `NEXT_PUBLIC_ADSENSE_ENABLED=true` plus Slot-IDs; Einwilligung über Googles „Datenschutz & Mitteilungen“. Die Rechtstexte schalten dann automatisch um.
 - **Preview-Deployments** (`VERCEL_ENV` ≠ production) senden `noindex` und ein `Disallow: /` in der robots.txt.
 - **Vercel-Konfiguration:** siehe [`docs/VERCEL-DEPLOYMENT.md`](docs/VERCEL-DEPLOYMENT.md); noch nicht deployen, solange `check:launch` fehlschlägt.
 

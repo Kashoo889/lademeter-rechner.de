@@ -35,7 +35,7 @@ infrage kommt. Keine Scheinadresse verwenden.
 
 Der Betreiber sitzt in Pakistan und richtet das Angebot an Deutschland. Deshalb müssen die räumliche
 Anwendbarkeit der DSGVO, eine Vertretung in der EU nach Art. 27 DSGVO und die Anwendbarkeit des MStV
-vor Veröffentlichung fachlich geprüft werden. Eine Google-zertifizierte CMP ersetzt diese Prüfung nicht.
+vor Veröffentlichung fachlich geprüft werden.
 
 ## 2. Hosting & Domain (außerhalb dieses Repos)
 
@@ -46,19 +46,25 @@ vor Veröffentlichung fachlich geprüft werden. Eine Google-zertifizierte CMP er
 - [ ] Erst danach `hosting.confirmed = true` setzen und den Hosting-Abschnitt erneut rechtlich prüfen lassen
 - [ ] Search Console (Domain-Property) + Bing Webmaster Tools verifizieren, `sitemap.xml` einreichen
 
-## 3. Einwilligung, Analyse, Werbung
+## 3. Cookies und Werbung (AdSense später)
 
-- [ ] Zertifizierte CMP wählen und in der Produktionsumgebung `NEXT_PUBLIC_CMP_PROVIDER` / `NEXT_PUBLIC_CMP_ID` setzen — Details: `docs/ADSENSE-CONSENT-SETUP.md` (Google-CMP nur zusammen mit aktiviertem AdSense; für GA-only Usercentrics/Cookiebot verwenden)
-- [ ] Optional GA4: `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GA_RETENTION_MONTHS` (GA lädt erst nach Einwilligung)
+Solange AdSense nicht aktiv ist, setzt die Seite keine Cookies und lädt keine Drittanbieter-Skripte; ein
+Cookie-Banner ist nicht nötig. Es gibt bewusst keine Webanalyse. Die Rechtstexte (Datenschutz, Cookie-Richtlinie,
+Nutzungsbedingungen, Haftungsausschluss, Über uns) schalten automatisch auf „mit Werbung“ um, sobald AdSense aktiv ist.
+
+- [ ] Browser-Netzwerk prüfen: Es dürfen keine Drittanbieter-Anfragen (außer ggf. beim Absenden des Kontaktformulars) erfolgen
 - [ ] AdSense erst **nach** Livegang, Indexierbarkeit, vollständigen Rechtstexten und einer eigenständigen, nützlichen Website beantragen. Google nennt keine feste Mindestzahl an Seiten oder Besuchen.
 - [ ] AdSense als **Einzelperson in Pakistan** anlegen: Name exakt wie beim Bankkonto, Zahlungsland Pakistan,
       vollständige postzustellfähige pakistanische Adresse für die PIN und gültige Telefonnummer mit `+92`.
       Das Zahlungsland kann im bestehenden AdSense-Konto nicht nachträglich geändert werden.
-- [ ] Nach Freigabe: `NEXT_PUBLIC_ADSENSE_CLIENT`, Slot-IDs, `NEXT_PUBLIC_ADSENSE_ENABLED=true`
+- [ ] Während des Antrags: nur `NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-…` setzen (Meta-Tag + `/ads.txt`), neu deployen, Seite in AdSense verifizieren
+- [ ] Nach Freigabe: in AdSense unter „Datenschutz & Mitteilungen“ die EWR-/UK-Einwilligungsmeldung (TCF) veröffentlichen
+- [ ] Anzeigenblöcke anlegen, `NEXT_PUBLIC_ADSENSE_SLOT_SECTION` / `NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE_END` eintragen, `NEXT_PUBLIC_ADSENSE_ENABLED=true`, neu deployen
+- [ ] Danach Einwilligungsmeldung in Browsern testen (Ablehnen, Zustimmen, Widerruf über „Datenschutzeinstellungen“ im Footer) und Rechtstexte erneut prüfen lassen
 
 ## 4. Kontaktformular
 
-- [ ] Resend-Konto, Absenderdomain verifizieren, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` setzen
+- [ ] Resend-Konto mit der Betreiber-E-Mail anlegen und `RESEND_API_KEY` setzen (Absender `onboarding@resend.dev`, Empfänger = Betreiber-E-Mail; für andere Empfänger zuerst eine Domain bei Resend verifizieren)
 - [ ] Testnachricht senden (die Datenschutzerklärung beschreibt Resend automatisch, sobald alle drei Variablen gesetzt sind; wenn Sie einen anderen Dienst nutzen, `app/api/kontakt/route.ts` und den Datenschutztext anpassen)
 
 ## 5. Inhalte & Qualität
@@ -72,5 +78,4 @@ vor Veröffentlichung fachlich geprüft werden. Eine Google-zertifizierte CMP er
 ## 6. Nach dem Livegang
 
 - [ ] Rich-Results-Test für Breadcrumb/Article/WebApplication (FAQ-Rich-Results sind für diese Website-Kategorie nicht verfügbar; die sichtbaren FAQ bleiben normale Inhalte)
-- [ ] Einwilligungs-Banner in Browsern testen (Ablehnen, Zustimmen, Widerrufen über Footer-Link)
 - [ ] Netzwerkanalyse: ohne Zustimmung dürfen keine Requests an Google (Tag Manager, Syndication, DoubleClick) gehen

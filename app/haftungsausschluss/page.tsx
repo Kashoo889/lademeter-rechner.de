@@ -3,12 +3,15 @@ import Link from "next/link";
 import { LegalPage, LegalSection } from "@/components/legal/LegalPage";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { isLegalReviewed } from "@/lib/legal/operator";
+import { adsActive } from "@/lib/ads/config";
 import { LEGAL_TEXTS_UPDATED, legalNoindex } from "@/lib/legal/pages";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Haftungsausschluss",
   description:
-    "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten, externen Links und Werbung.",
+    adsActive
+      ? "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten, externen Links und Werbung."
+      : "Haftungsausschluss von Lademeter Rechner: Hinweise zu Berechnungsergebnissen, Inhalten und externen Links.",
   path: "/haftungsausschluss/",
   noindex: legalNoindex("general"),
 });
@@ -58,12 +61,14 @@ export default function HaftungsausschlussPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="Werbung">
-        <p>
-          Als „Anzeige“ gekennzeichnete Inhalte stammen von Dritten. Wir machen uns deren Inhalte nicht
-          zu eigen und übernehmen keine Gewähr für beworbene Produkte oder Dienstleistungen.
-        </p>
-      </LegalSection>
+      {adsActive ? (
+        <LegalSection title="Werbung">
+          <p>
+            Als „Anzeige“ gekennzeichnete Inhalte stammen von Dritten. Wir machen uns deren Inhalte nicht
+            zu eigen und übernehmen keine Gewähr für beworbene Produkte oder Dienstleistungen.
+          </p>
+        </LegalSection>
+      ) : null}
 
       <LegalSection title="Hinweise auf Fehler">
         <p>

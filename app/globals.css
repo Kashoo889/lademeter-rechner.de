@@ -275,14 +275,13 @@ textarea:focus-visible,
   }
 }
 
-/* Print / "Drucken / PDF": show calculator input and result, hide navigation and ads. */
+/* Print / "Drucken / PDF": show calculator input and result, hide navigation. */
 @media print {
   header,
   footer,
   nav,
   .no-print,
   .skip-link,
-  [data-ad-placement],
   aside[aria-label="Anzeige"] {
     display: none !important;
   }

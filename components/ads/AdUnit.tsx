@@ -2,7 +2,13 @@
 
 import { useEffect, useRef } from "react";
 
-/** One responsive AdSense unit. The library itself is loaded by components/consent/GoogleServices.tsx. */
+declare global {
+  interface Window {
+    adsbygoogle?: unknown[];
+  }
+}
+
+/** One responsive AdSense unit. The library itself is loaded by AdSenseScript. */
 export function AdUnit({ client, slot }: { client: string; slot: string }) {
   const pushed = useRef(false);
 
@@ -12,13 +18,13 @@ export function AdUnit({ client, slot }: { client: string; slot: string }) {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch {
-      // Ad blockers or a missing library must never break the page.
+      // Ad blockers or a not yet loaded library must never break the page.
     }
   }, []);
 
   return (
     <ins
-      className="adsbygoogle block min-h-[100px] w-full sm:min-h-[250px]"
+      className="adsbygoogle block min-h-[120px]"
       data-ad-client={client}
       data-ad-slot={slot}
       data-ad-format="auto"

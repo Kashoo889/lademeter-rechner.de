@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/layout/PageHero";
 import { ArticleMeta } from "@/components/content/ArticleMeta";
 import { ArticleSources } from "@/components/content/ArticleSources";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { FaqAccordion } from "@/components/content/FaqAccordion";
 import { TableOfContents } from "@/components/content/TableOfContents";
 import { ContentSection } from "@/components/content/ContentSection";
@@ -15,7 +16,6 @@ import { addHeadingIdsAndExtractToc } from "@/lib/content/toc";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildArticleJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo/jsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { AdSlot } from "@/components/ads/AdSlot";
 
 export function generateStaticParams() {
   return getAllArticles().map((article) => ({ slug: article.slug }));
@@ -100,9 +100,10 @@ export default async function RatgeberArticlePage(props: PageProps<"/ratgeber/[s
             <ArticleSources sources={article.sources} />
           </div>
 
-          <div className="mt-10 max-w-3xl">
+          <div className="max-w-3xl">
             <AdSlot placement="article-end" />
           </div>
+
         </div>
 
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start" aria-label="Zusatzinformationen">

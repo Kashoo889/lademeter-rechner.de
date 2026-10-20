@@ -1,7 +1,7 @@
 # Content- und SEO-Roadmap
 
 Grundsatz: **Qualität vor Menge.** Eine neue Domain mit vielen ähnlichen Texten in kurzer Zeit passt in das Muster, das
-Googles Spam-Richtlinien („scaled content abuse“) adressieren, und ist für AdSense ein Ablehnungsgrund („Seiten mit
+Googles Spam-Richtlinien („scaled content abuse“) adressieren, und kann zu Abstrafungen führen („Seiten mit
 geringem Mehrwert“). Deshalb: 2–3 sorgfältige Beiträge pro Woche, jeder mit eigenem Rechenbeispiel, Tabelle oder
 Grafik, Quellen und Verlinkung zum passenden Rechner.
 
@@ -32,19 +32,11 @@ Ziel: Indexierung sichern, erste Long-Tail-Rankings, Daten sammeln.
 - Vergleichstabellen aktualisieren, `lastUpdated` in `lib/site-config.ts` pflegen
 - Erste Auswertung der Search-Console-Daten: Seiten mit Impressionen, aber niedriger CTR → Titel/Beschreibung überarbeiten
 
-## Phase 3 – AdSense-Antrag (frühestens Monat 3, bei erfüllten Kriterien)
-
-- 25+ eigenständige, hilfreiche Seiten; keine Platzhalter oder dünne Seiten
-- Vollständige, geprüfte Rechtstexte; funktionierender Kontaktweg
-- Konsens-Management getestet; saubere Core Web Vitals
-- Erste organische Besucher (kein offizielles Kriterium, erleichtert aber die Prüfung)
-
-## Phase 4 – Wachstum (Monat 4–12)
+## Phase 3 – Wachstum (Monat 4–12)
 
 - Mehr Fahrzeug- und Ladungsarten nur mit echtem Mehrwert (z. B. Kühlkoffer, Jumbo, Gliederzug)
 - Linkaufbau über Nutzen: Ausbildungs-/Schulungsmaterial, Branchenforen, Fachmedien, Hinweis auf den Rechner in Antworten
 - Englische Version nur, wenn die deutsche Seite stabil rankt (hreflang, nicht automatisch übersetzen)
-- Monetarisierung ergänzen (Affiliate für Ladungssicherungsmaterial), kenntlich gemacht als Werbung/Provisionslink
 
 ## Qualitäts-Checkliste je Beitrag
 

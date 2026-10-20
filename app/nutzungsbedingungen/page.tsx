@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LegalPage, LegalSection } from "@/components/legal/LegalPage";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { isLegalReviewed } from "@/lib/legal/operator";
+import { adsActive } from "@/lib/ads/config";
 import { LEGAL_TEXTS_UPDATED, legalNoindex, missingFor } from "@/lib/legal/pages";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -90,15 +91,17 @@ export default function NutzungsbedingungenPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="7. Werbung">
-        <p>
-          Das Angebot kann durch Werbung finanziert werden. Anzeigen sind als „Anzeige“ gekennzeichnet
-          und stammen von Dritten; für deren Inhalte sind die jeweiligen Werbetreibenden verantwortlich.
-          Anzeigen beeinflussen weder die Berechnungen noch die redaktionellen Inhalte.
-        </p>
-      </LegalSection>
+      {adsActive ? (
+        <LegalSection title="7. Werbung">
+          <p>
+            Das Angebot wird durch Werbung finanziert. Anzeigen sind als „Anzeige“ gekennzeichnet und
+            stammen von Dritten; für deren Inhalte sind die jeweiligen Werbetreibenden verantwortlich.
+            Anzeigen beeinflussen weder die Berechnungen noch die redaktionellen Inhalte.
+          </p>
+        </LegalSection>
+      ) : null}
 
-      <LegalSection title="8. Datenschutz">
+      <LegalSection title={`${adsActive ? 8 : 7}. Datenschutz`}>
         <p>
           Informationen zur Verarbeitung personenbezogener Daten enthält unsere{" "}
           <Link href="/datenschutz/" className="text-brand-700 underline">
@@ -108,7 +111,7 @@ export default function NutzungsbedingungenPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="9. Änderungen und anwendbares Recht">
+      <LegalSection title={`${adsActive ? 9 : 8}. Änderungen und anwendbares Recht`}>
         <p>
           Wir können diese Bedingungen für die Zukunft anpassen; es gilt die jeweils hier
           veröffentlichte Fassung. Welches Recht auf die Nutzung dieses grenzüberschreitenden Angebots

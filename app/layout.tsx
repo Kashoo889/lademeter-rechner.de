@@ -4,10 +4,9 @@ import { SkipLink } from "@/components/layout/SkipLink";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { ConsentScripts } from "@/components/consent/ConsentScripts";
-import { GoogleServices } from "@/components/consent/GoogleServices";
+import { AdSenseScript } from "@/components/ads/AdSenseScript";
+import { adsenseClient } from "@/lib/ads/config";
 import { buildOrganizationJsonLd, buildWebsiteJsonLd } from "@/lib/seo/jsonLd";
-import { consentConfig } from "@/lib/consent/config";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -43,10 +42,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   // AdSense site verification. Only rendered when a valid publisher ID is
-  // configured; it does not load any script or set cookies.
-  ...(consentConfig.adsenseClient
-    ? { other: { "google-adsense-account": consentConfig.adsenseClient } }
-    : {}),
+  // configured; it loads no script and sets no cookies.
+  ...(adsenseClient ? { other: { "google-adsense-account": adsenseClient } } : {}),
   ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
     : {}),
@@ -65,13 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-slate-900">
-        <ConsentScripts />
-        <GoogleServices
-          gaId={consentConfig.gaId}
-          adsenseClient={consentConfig.adsenseClient}
-          adsEnabled={consentConfig.adsEnabled}
-          cmpProvider={consentConfig.cmpProvider}
-        />
+        <AdSenseScript />
         <JsonLd data={buildWebsiteJsonLd()} />
         <JsonLd data={buildOrganizationJsonLd()} />
         <SkipLink />

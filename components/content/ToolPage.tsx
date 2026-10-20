@@ -53,8 +53,8 @@ const tocLinks = [
 /**
  * Shared page template for all calculators: H1 + calculator first (above the
  * fold), then explanation, example, reference data, definitions, mistakes,
- * links, FAQ and the calculation disclaimer. Ads are only placed between
- * content sections, never next to the form or results.
+ * links, FAQ and the calculation disclaimer. Ads (when enabled) are only placed
+ * between content sections, never next to the form or results.
  */
 export function ToolPage({
   path,
@@ -141,9 +141,7 @@ export function ToolPage({
 
           {reference}
 
-          <div className="py-4">
-            <AdSlot placement="section-break" />
-          </div>
+          <AdSlot placement="section-break" />
 
           <ContentSection title="Wichtige Begriffe" id="begriffe">
             <DefinitionList items={definitions} />

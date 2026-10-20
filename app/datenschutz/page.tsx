@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink, LegalPage, LegalSection, Missing } from "@/components/legal/LegalPage";
-import { ConsentSettingsButton } from "@/components/consent/ConsentSettingsButton";
+import { ConsentSettingsButton } from "@/components/ads/ConsentSettingsButton";
+import { adsActive } from "@/lib/ads/config";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { contactFormConfigured, formatAddressLines, isLegalReviewed, operator } from "@/lib/legal/operator";
 import { LEGAL_TEXTS_UPDATED, legalNoindex, missingFor } from "@/lib/legal/pages";
-import { consentConfig } from "@/lib/consent/config";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Datenschutzerklärung",
@@ -15,22 +15,8 @@ export const metadata: Metadata = buildPageMetadata({
   noindex: legalNoindex("datenschutz"),
 });
 
-const CMP_NAMES = {
-  google: "Google „Datenschutz & Mitteilungen“ (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland)",
-  usercentrics: "Usercentrics CMP (Usercentrics GmbH, München)",
-  cookiebot: "Cookiebot (Usercentrics A/S, Kopenhagen, Dänemark)",
-} as const;
-
-const CMP_POLICIES = {
-  google: "https://policies.google.com/privacy",
-  usercentrics: "https://usercentrics.com/privacy-policy/",
-  cookiebot: "https://www.cookiebot.com/de/privacy-policy/",
-} as const;
-
 export default function DatenschutzPage() {
   const address = formatAddressLines();
-  const { cmpProvider, gaId, adsEnabled } = consentConfig;
-  const gaRetention = process.env.NEXT_PUBLIC_GA_RETENTION_MONTHS;
   const contactForm = contactFormConfigured();
   let n = 0;
   const num = () => `${++n}.`;
@@ -99,9 +85,9 @@ export default function DatenschutzPage() {
           <li>Es ist keine Registrierung und kein Benutzerkonto nötig.</li>
           <li>Schriftarten werden von unserem eigenen Server geladen, es besteht keine Verbindung zu Google Fonts.</li>
           <li>
-            {gaId || adsEnabled
-              ? "Analyse- und Werbedienste werden nur nach Ihrer Einwilligung genutzt (siehe unten)."
-              : "Derzeit setzen wir keine Analyse- oder Werbedienste und keine einwilligungspflichtigen Cookies ein."}
+            {adsActive
+              ? "Werbung (Google AdSense) wird nur nach Ihrer Einwilligung personalisiert ausgespielt; eigene Analyse- oder Tracking-Dienste setzen wir nicht ein."
+              : "Wir setzen keine Analyse-, Tracking- oder Werbedienste und keine Cookies ein."}
           </li>
         </ul>
       </LegalSection>
@@ -212,7 +198,7 @@ export default function DatenschutzPage() {
         ) : null}
       </LegalSection>
 
-      <LegalSection id="cookies" title={`${num()} Cookies, Endgeräte-Zugriff und Einwilligung`}>
+      <LegalSection id="cookies" title={`${num()} Cookies und Endgeräte-Zugriff`}>
         <p>
           Das Speichern von Informationen auf Ihrem Endgerät oder der Zugriff darauf (z. B. Cookies,
           Local Storage) ist nach § 25 Abs. 1 TDDDG nur mit Ihrer Einwilligung zulässig, es sei denn,
@@ -223,58 +209,32 @@ export default function DatenschutzPage() {
           </Link>
           .
         </p>
-        {cmpProvider ? (
+        {adsActive ? (
           <>
             <p>
-              Zur Einholung und Verwaltung Ihrer Einwilligungen nutzen wir die Consent-Management-Plattform{" "}
-              {CMP_NAMES[cmpProvider]}. Sie arbeitet mit dem Transparency &amp; Consent Framework (TCF)
-              des IAB Europe und übermittelt Ihre Entscheidung an die eingebundenen Werbe- und
-              Analysedienste. Dabei werden Ihre Einwilligungsentscheidung, ein Zeitstempel und
-              technische Kennungen in einem Cookie bzw. im Local Storage gespeichert und – je nach
-              Anbieter – zum Nachweis protokolliert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. c DSGVO
-              i. V. m. Art. 7 Abs. 1 DSGVO (Nachweispflicht für Einwilligungen); die Speicherung der
-              Entscheidung auf Ihrem Gerät ist nach § 25 Abs. 2 Nr. 2 TDDDG zulässig. Weitere
-              Informationen: <ExternalLink href={CMP_POLICIES[cmpProvider]}>Datenschutzhinweise des Anbieters</ExternalLink>.
+              Zur Einholung und Verwaltung Ihrer Einwilligungen nutzen wir die Consent-Management-Plattform
+              „Datenschutz &amp; Mitteilungen“ von Google (Google Ireland Limited, Gordon House, Barrow
+              Street, Dublin 4, Irland). Sie arbeitet mit dem Transparency &amp; Consent Framework (TCF)
+              des IAB Europe. Dabei werden Ihre Einwilligungsentscheidung, ein Zeitstempel und technische
+              Kennungen in Cookies gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. c DSGVO i. V. m.
+              Art. 7 Abs. 1 DSGVO (Nachweispflicht); die Speicherung der Entscheidung auf Ihrem Gerät ist
+              nach § 25 Abs. 2 Nr. 2 TDDDG zulässig. Weitere Informationen:{" "}
+              <ExternalLink href="https://policies.google.com/privacy">Datenschutzerklärung von Google</ExternalLink>.
             </p>
             <p>
               Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft ändern oder widerrufen:{" "}
-              <ConsentSettingsButton provider={cmpProvider} className="font-medium text-brand-700 underline" />.
+              <ConsentSettingsButton className="font-medium text-brand-700 underline" />.
             </p>
           </>
         ) : (
           <p>
-            Derzeit setzen wir keine Cookies oder vergleichbaren Technologien ein, die einer Einwilligung
+            Wir setzen keine Cookies oder vergleichbaren Technologien ein, die einer Einwilligung
             bedürfen. Daher wird auch kein Cookie-Banner angezeigt.
           </p>
         )}
       </LegalSection>
 
-      {gaId ? (
-        <LegalSection id="google-analytics" title={`${num()} Webanalyse mit Google Analytics 4`}>
-          <p>
-            Mit Ihrer Einwilligung nutzen wir Google Analytics 4, einen Webanalysedienst der Google
-            Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland („Google“). Google Analytics
-            wird erst geladen, nachdem Sie über die Einwilligungsverwaltung zugestimmt haben. Dabei
-            werden Cookies gesetzt und Informationen über Ihre Nutzung dieser Website verarbeitet, etwa
-            aufgerufene Seiten, Verweildauer, ungefährer Standort (aus der IP-Adresse abgeleitet),
-            Geräte- und Browserinformationen. Google Analytics 4 protokolliert und speichert nach
-            Angaben von Google keine IP-Adressen von Nutzern aus der EU.
-          </p>
-          <p>
-            Zweck ist die statistische Auswertung der Nutzung, um Inhalte und Rechner zu verbessern.
-            Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die
-            Sie jederzeit widerrufen können. Google verarbeitet die Daten als Auftragsverarbeiter.
-            Eine Übermittlung in die USA ist möglich; Google LLC ist unter dem EU-U.S. Data Privacy
-            Framework zertifiziert. Die Daten werden nach{" "}
-            {gaRetention ? `${gaRetention} Monaten` : <Missing label="Aufbewahrungsdauer in Google Analytics (2 oder 14 Monate)" />}{" "}
-            automatisch gelöscht. Weitere Informationen:{" "}
-            <ExternalLink href="https://policies.google.com/privacy">Datenschutzerklärung von Google</ExternalLink>,{" "}
-            <ExternalLink href="https://business.safety.google/adsprocessorterms/">Datenverarbeitungsbedingungen</ExternalLink>.
-          </p>
-        </LegalSection>
-      ) : null}
-
-      {adsEnabled ? (
+      {adsActive ? (
         <LegalSection id="google-adsense" title={`${num()} Werbung mit Google AdSense`}>
           <p>
             Zur Finanzierung des kostenlosen Angebots binden wir Werbeanzeigen über Google AdSense ein,
@@ -287,8 +247,7 @@ export default function DatenschutzPage() {
             haben – personalisierte Anzeigen auf Grundlage Ihrer Interessen anzuzeigen. Dabei können
             insbesondere IP-Adresse, Geräte- und Browserinformationen, die aufgerufene Seite sowie
             Kennungen verarbeitet werden. Welche Zwecke und Anbieter Sie zulassen, legen Sie in der
-            Einwilligungsverwaltung fest (IAB TCF). Wird die erforderliche Einwilligung nicht erteilt,
-            laden wir das AdSense-Werbeskript nicht.
+            Einwilligungsverwaltung fest (IAB TCF).
           </p>
           <p>
             Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG).
@@ -336,7 +295,7 @@ export default function DatenschutzPage() {
           <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
           <li>Löschung (Art. 17 DSGVO) und Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
           <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-          <li>Widerruf einer Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+          <li>Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
           <li>
             Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO), insbesondere in dem
             Mitgliedstaat Ihres Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutmaßlichen
@@ -362,7 +321,7 @@ export default function DatenschutzPage() {
             die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der
             Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
           </p>
-          {adsEnabled ? (
+          {adsActive ? (
             <p className="mt-2 font-semibold text-slate-900">
               Werden Daten zum Zweck der Direktwerbung verarbeitet, können Sie dieser Verarbeitung
               jederzeit ohne Angabe von Gründen widersprechen.

@@ -57,22 +57,13 @@ selbst. Diese Werte nicht manuell anlegen oder überschreiben.
 | Variable | Sichtbarkeit | Aktivierung |
 | --- | --- | --- |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | öffentlich | Erst nach Anlage der Search-Console-Property; Production |
-| `NEXT_PUBLIC_CMP_PROVIDER` | öffentlich | `google`, `usercentrics` oder `cookiebot`; erst nach CMP-Prüfung |
-| `NEXT_PUBLIC_CMP_ID` | öffentlich | Settings-/Domain-Group-ID für Usercentrics/Cookiebot |
-| `NEXT_PUBLIC_COOKIEBOT_FRAMEWORK` | öffentlich | Nur Cookiebot; gegen aktuelle Anbieter-Dokumentation prüfen |
-| `NEXT_PUBLIC_GA_ID` | öffentlich | Erst nach Datenschutzfreigabe und CMP-Test |
-| `NEXT_PUBLIC_GA_RETENTION_MONTHS` | öffentlich | Muss der tatsächlich in GA4 gewählten Dauer entsprechen |
-| `NEXT_PUBLIC_ADSENSE_CLIENT` | öffentlich | Erst nach vorhandenem AdSense-Konto; allein aktiviert noch keine Anzeigen |
-| `NEXT_PUBLIC_ADSENSE_ENABLED` | öffentlich | Bis zur Freigabe ausdrücklich `false`; erst danach `true` |
+| `NEXT_PUBLIC_ADSENSE_CLIENT` | öffentlich | Erst nach vorhandenem AdSense-Konto; allein aktiviert noch keine Anzeigen (nur Meta-Tag und `/ads.txt`) |
+| `NEXT_PUBLIC_ADSENSE_ENABLED` | öffentlich | Bis zur Freigabe `false`/leer; erst nach Freigabe und veröffentlichter Google-Einwilligungsmeldung `true` |
 | `NEXT_PUBLIC_ADSENSE_SLOT_SECTION` | öffentlich | Numerische Slot-ID nach AdSense-Freigabe |
-| `NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE_INTRO` | öffentlich | Numerische Slot-ID nach AdSense-Freigabe |
 | `NEXT_PUBLIC_ADSENSE_SLOT_ARTICLE_END` | öffentlich | Numerische Slot-ID nach AdSense-Freigabe |
 | `RESEND_API_KEY` | geheim/serverseitig | Erst bei aktivem, getesteten Kontaktformular; nur Production |
-| `CONTACT_TO_EMAIL` | geheim/serverseitig | Empfängeradresse; nur Production |
-| `CONTACT_FROM_EMAIL` | geheim/serverseitig | Bei Resend verifizierter Absender; nur Production |
 
-Für den ersten Preview-Build alle CMP-, GA-, AdSense- und Kontaktformularwerte weglassen;
-`NEXT_PUBLIC_ADSENSE_ENABLED=false` belassen. Änderungen an `NEXT_PUBLIC_*`-Werten werden beim Build
+Für den ersten Preview-Build alle Kontaktformularwerte weglassen. Änderungen an `NEXT_PUBLIC_*`-Werten werden beim Build
 fest in die Browser-Bundles eingebunden und erfordern ein neues Deployment.
 
 ## 4. Prüfungen vor jedem Deployment
@@ -97,7 +88,7 @@ Nach einem späteren Preview-Deployment:
 2. `/robots.txt` muss `Disallow: /` enthalten.
 3. Canonicals und Open-Graph-URLs müssen weiterhin auf `https://lademeter-rechner.de/...` zeigen.
 4. `/sitemap.xml` darf unvollständige Rechtsseiten nicht enthalten.
-5. Browser-Netzwerk prüfen: Ohne Einwilligung dürfen keine Google-, CMP- oder Resend-Anfragen erfolgen.
+5. Browser-Netzwerk prüfen: Es dürfen keine Google- oder sonstigen Drittanbieter-Anfragen erfolgen (Resend nur beim Absenden des Kontaktformulars).
 6. Security-Header kontrollieren; besonders CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`,
    `Permissions-Policy` und Frame-Schutz.
 7. Alle Rechner und die Druck-/Teilen-Funktionen erneut testen.

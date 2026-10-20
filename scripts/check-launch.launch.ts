@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { describeConsentSetup } from "@/lib/consent/config";
 import { getMissingOperatorFields, isLegalReviewed, operator } from "@/lib/legal/operator";
 
 /**
@@ -15,18 +14,5 @@ describe("Betreiberangaben (Impressum, Datenschutz, Kontakt)", () => {
   });
   it("die Rechtstexte wurden rechtlich geprüft (operator.legalReview.reviewed)", () => {
     expect(isLegalReviewed(operator)).toBe(true);
-  });
-});
-
-describe("Einwilligung und Werbung", () => {
-  const status = describeConsentSetup();
-  it("GA-ID ohne CMP wird nicht geladen (nur Warnung)", () => {
-    expect(status.gaIdIgnoredWithoutCmp).toBe(false);
-  });
-  it("AdSense ohne CMP wird nicht geladen (nur Warnung)", () => {
-    expect(status.adsIgnoredWithoutCmp).toBe(false);
-  });
-  it("wenn Werbung aktiv ist, ist eine zertifizierte CMP konfiguriert", () => {
-    expect(!status.adsActive || status.cmpConfigured).toBe(true);
   });
 });

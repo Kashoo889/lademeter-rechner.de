@@ -143,9 +143,12 @@ export function getMissingOperatorFields(config: OperatorConfig = operator): Mis
   return missing;
 }
 
-/** True when the contact form can actually deliver messages (see app/api/kontakt/route.ts). */
-export function contactFormConfigured(): boolean {
-  return Boolean(process.env.RESEND_API_KEY && process.env.CONTACT_TO_EMAIL && process.env.CONTACT_FROM_EMAIL);
+/**
+ * True when the contact form can actually deliver messages (see app/api/kontakt/route.ts):
+ * needs the Resend API key and the operator e-mail address as recipient.
+ */
+export function contactFormConfigured(config: OperatorConfig = operator): boolean {
+  return Boolean(process.env.RESEND_API_KEY && config.email);
 }
 
 export function isLegalReviewed(config: OperatorConfig = operator): boolean {

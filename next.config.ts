@@ -8,9 +8,8 @@ import { isNonProductionVercelDeployment } from "./lib/deployment";
  */
 const isNonProductionDeploy = isNonProductionVercelDeployment();
 
-// A conservative CSP that cannot break Next.js inline scripts, the CMP or
-// AdSense (which load from many Google domains): it restricts framing,
-// plugins, base URIs and form targets, and upgrades insecure requests.
+// A conservative CSP that cannot break Next.js inline scripts: it restricts
+// framing, plugins, base URIs and form targets, and upgrades insecure requests.
 const contentSecurityPolicy = [
   "base-uri 'self'",
   "object-src 'none'",

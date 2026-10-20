@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/brand/Logo";
-import { ConsentSettingsButton } from "@/components/consent/ConsentSettingsButton";
-import { consentConfig } from "@/lib/consent/config";
+import { ConsentSettingsButton } from "@/components/ads/ConsentSettingsButton";
+import { adsActive } from "@/lib/ads/config";
 import { footerNavigation, siteConfig } from "@/lib/site-config";
 
 function FooterColumn({
@@ -50,12 +50,9 @@ export function SiteFooter() {
           <FooterColumn title="Wissen" links={footerNavigation.wissen} />
           <FooterColumn title="Info" links={footerNavigation.info} />
           <FooterColumn title="Rechtliches" links={footerNavigation.rechtliches}>
-            {consentConfig.cmpProvider ? (
+            {adsActive ? (
               <li>
-                <ConsentSettingsButton
-                  provider={consentConfig.cmpProvider}
-                  className="text-sm text-slate-200 transition-colors hover:text-brand-300"
-                />
+                <ConsentSettingsButton className="text-sm text-slate-200 transition-colors hover:text-brand-300" />
               </li>
             ) : null}
           </FooterColumn>

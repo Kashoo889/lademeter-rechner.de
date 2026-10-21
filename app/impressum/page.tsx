@@ -37,28 +37,8 @@ export default function ImpressumPage() {
             ))
           ) : (
             <>
-              {operator.street ? (
-                <>
-                  {operator.street}
-                  <br />
-                </>
-              ) : (
-                <>
-                  <Missing label="Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach)" />
-                  <br />
-                </>
-              )}
-              {operator.postalCode || operator.city ? (
-                <>
-                  {[operator.postalCode, operator.city].filter(Boolean).join(" ")}
-                  <br />
-                </>
-              ) : (
-                <>
-                  <Missing label="Postleitzahl und Ort" />
-                  <br />
-                </>
-              )}
+              <Missing label="Anschrift (Straße und Hausnummer bzw. Gebäude und Ortsteil, Postleitzahl, Ort; kein Postfach)" />
+              <br />
               {operator.country}
             </>
           )}

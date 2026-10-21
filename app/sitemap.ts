@@ -4,6 +4,7 @@ import { getAllArticles } from "@/lib/content/ratgeber";
 import { VEHICLE_PAGES } from "@/lib/content/fahrzeuge";
 import { legalNoindex } from "@/lib/legal/pages";
 import { operator } from "@/lib/legal/operator";
+import { DOWNLOADS_LIVE, DOWNLOAD_UPDATED, downloadPages } from "@/lib/downloads";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = siteConfig.lastUpdated;
@@ -32,5 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: article.updatedAt ?? article.publishedAt,
     })),
     ...legalRoutes.map((route) => ({ url: url(route), lastModified })),
+    // Download landing pages stay out of the sitemap until DOWNLOADS_LIVE is switched on (lib/downloads.ts).
+    ...(DOWNLOADS_LIVE ? downloadPages.map((page) => ({ url: url(page.path), lastModified: DOWNLOAD_UPDATED })) : []),
   ];
 }

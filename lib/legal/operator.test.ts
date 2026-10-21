@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getMissingOperatorFields, operator, type OperatorConfig } from "@/lib/legal/operator";
+import { formatAddressLines, getMissingOperatorFields, operator, type OperatorConfig } from "@/lib/legal/operator";
 
 describe("operator configuration", () => {
   it("contains only the owner details that have been confirmed", () => {
@@ -9,8 +9,11 @@ describe("operator configuration", () => {
       country: "Pakistan",
       email: "mkashifshah10@gmail.com",
       street: null,
+      addressLines: ["Israr Boys Hostel", "Nashiman Iqbal Phase 1"],
+      addressComplete: false,
       postalCode: "54000",
-      city: "Lahore, Punjab",
+      city: "Lahore",
+      region: "Punjab",
       phone: null,
       register: null,
       vatId: null,
@@ -40,6 +43,32 @@ describe("operator configuration", () => {
       ]),
     );
     expect(fields).not.toEqual(expect.arrayContaining(["kind", "name", "postalCode", "city", "email", "supervisoryAuthority"]));
+  });
+
+  it("formats the confirmed address in German order without inventing a street or house number", () => {
+    expect(formatAddressLines(operator)).toEqual([
+      "Israr Boys Hostel",
+      "Nashiman Iqbal Phase 1",
+      "54000 Lahore, Punjab",
+      "Pakistan",
+    ]);
+    expect(operator.street).toBeNull();
+  });
+
+  it("returns no address while neither street nor confirmed address lines exist", () => {
+    expect(formatAddressLines({ ...operator, street: null, addressLines: [] })).toBeNull();
+    expect(getMissingOperatorFields({ ...operator, street: null, addressLines: [] }).map((item) => item.field)).toContain("street");
+  });
+
+  it("flags the missing street/house number precisely until the operator confirms the address", () => {
+    const flagged = getMissingOperatorFields(operator).find((item) => item.field === "street");
+    expect(flagged?.label).toContain("Israr Boys Hostel, Nashiman Iqbal Phase 1");
+    expect(flagged?.label).toContain("Straße und Hausnummer");
+
+    const confirmed = getMissingOperatorFields({ ...operator, addressComplete: true }).map((item) => item.field);
+    expect(confirmed).not.toContain("street");
+    const withStreet = getMissingOperatorFields({ ...operator, street: "Beispielstraße 1" }).map((item) => item.field);
+    expect(withStreet).not.toContain("street");
   });
 
   it("accepts documented review outcomes without inventing representatives", () => {

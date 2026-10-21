@@ -45,19 +45,7 @@ export default function DatenschutzPage() {
             address.join(", ")
           ) : (
             <>
-              {!operator.street ? (
-                <>
-                  <Missing label="Straße und Hausnummer" />,{" "}
-                </>
-              ) : (
-                `${operator.street}, `
-              )}
-              {operator.postalCode || operator.city ? (
-                [operator.postalCode, operator.city].filter(Boolean).join(" ")
-              ) : (
-                <Missing label="PLZ und Ort" />
-              )}
-              {operator.country ? ` (${operator.country})` : ""}
+              <Missing label="Anschrift (Straße und Hausnummer bzw. Gebäude und Ortsteil, PLZ, Ort)" />, {operator.country}
             </>
           )}
           <br />
@@ -287,7 +275,7 @@ export default function DatenschutzPage() {
 
       <LegalSection id="drittland" title={`${num()} Übermittlung in Drittländer`}>
         <p>
-          Der Betreiber hat seinen Sitz in Pakistan. Wenn Sie ihn per E-Mail oder künftig über ein
+          Der Betreiber hat seinen Sitz in Lahore, Pakistan. Wenn Sie ihn per E-Mail oder künftig über ein
           Kontaktformular kontaktieren, werden die von Ihnen übermittelten Daten deshalb grundsätzlich
           auch in Pakistan verarbeitet. Für Pakistan besteht kein Angemessenheitsbeschluss der
           EU-Kommission. Die für diese Übermittlung einschlägige Rechtsgrundlage, geeignete Garantien

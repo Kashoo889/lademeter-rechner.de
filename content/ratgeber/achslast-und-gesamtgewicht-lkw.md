@@ -1,6 +1,6 @@
 ---
 title: "Achslast und Gesamtgewicht beim LKW: Grundlagen"
-description: "Zulässiges Gesamtgewicht, Leergewicht, Nutzlast und Achslasten beim LKW erklärt: Grenzwerte nach § 34 StVZO, Lastverteilung und ein Rechenbeispiel für den Sattelzug."
+description: "Zulässiges Gesamtgewicht, Leergewicht, Nutzlast und Achslasten beim LKW: Grenzwerte nach § 34 StVZO, Lastverteilung und Rechenbeispiel für den Sattelzug."
 slug: "achslast-und-gesamtgewicht-lkw"
 publishedAt: "2026-10-20"
 updatedAt: "2026-10-20"

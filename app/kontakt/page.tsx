@@ -5,7 +5,8 @@ import { ContactForm } from "@/components/content/ContactForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbJsonLd } from "@/lib/seo/jsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { operator } from "@/lib/legal/operator";
+import Link from "next/link";
+import { formatAddressLines, operator } from "@/lib/legal/operator";
 
 const breadcrumbItems = [{ label: "Kontakt", href: "/kontakt/" }];
 
@@ -18,6 +19,8 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function KontaktPage() {
+  const address = formatAddressLines();
+
   return (
     <>
       <JsonLd data={buildBreadcrumbJsonLd(breadcrumbItems)} />
@@ -43,7 +46,30 @@ export default function KontaktPage() {
           <ContactForm fallbackEmail={operator.email} />
         </div>
 
-        <div className="mt-10 rounded-xl border border-slate-200/80 bg-slate-50 p-5 text-xs leading-relaxed text-slate-600 sm:text-sm">
+        {address ? (
+          <div className="mt-10 rounded-xl border border-slate-200/80 bg-white p-5 text-sm leading-relaxed text-slate-700">
+            <p className="font-semibold text-slate-900">Postanschrift</p>
+            <p className="mt-1">
+              {operator.name}
+              {address.map((line) => (
+                <span key={line}>
+                  <br />
+                  {line}
+                </span>
+              ))}
+            </p>
+            <p className="mt-2 text-xs text-slate-600 sm:text-sm">
+              Schneller erreichen Sie uns per E-Mail oder über das Kontaktformular. Alle Anbieterangaben
+              finden Sie im{" "}
+              <Link href="/impressum/" className="font-medium text-brand-700 underline underline-offset-2">
+                Impressum
+              </Link>
+              .
+            </p>
+          </div>
+        ) : null}
+
+        <div className="mt-6 rounded-xl border border-slate-200/80 bg-slate-50 p-5 text-xs leading-relaxed text-slate-600 sm:text-sm">
           <p className="font-semibold text-slate-800">Hinweis zur Bearbeitung:</p>
           <p className="mt-1">
             Wir prüfen Hinweise und Rückmeldungen gewissenhaft und antworten so schnell wie möglich.

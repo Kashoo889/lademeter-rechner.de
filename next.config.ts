@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 import { isNonProductionVercelDeployment } from "./lib/deployment";
+import { DOWNLOADS_LIVE, downloadPages } from "./lib/downloads";
+import { siteConfig } from "./lib/site-config";
 
 /**
  * Deployments other than production (Vercel preview/development builds) must
@@ -52,6 +54,19 @@ const nextConfig: NextConfig = {
     const headers = [{ source: "/:path*", headers: securityHeaders }];
     if (isNonProductionDeploy) {
       headers.push({ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] as typeof securityHeaders });
+    }
+    // Download files: point search engines to the landing page as the canonical result and keep the
+    // files out of the index entirely while the landing pages are still hidden.
+    for (const page of downloadPages) {
+      for (const file of page.files) {
+        headers.push({
+          source: `/downloads/${file.filename}`,
+          headers: [
+            { key: "Link", value: `<${siteConfig.domain}${page.path}>; rel="canonical"` },
+            ...(DOWNLOADS_LIVE ? [] : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]),
+          ],
+        } as (typeof headers)[number]);
+      }
     }
     return headers;
   },

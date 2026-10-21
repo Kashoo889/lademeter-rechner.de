@@ -19,6 +19,26 @@ const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m
 
 const errors = [];
 const warnings = [];
+
+// Host consistency (only meaningful against a real domain, not localhost): canonical, sitemap and the
+// www/apex redirect must all agree on ONE host.
+const isLocal = ["localhost", "127.0.0.1"].includes(base.hostname);
+if (!isLocal) {
+  const sitemapHosts = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).host));
+  if (sitemapHosts.size !== 1 || !sitemapHosts.has(base.host)) {
+    errors.push(`sitemap.xml: URLs nutzen Host(s) ${[...sitemapHosts].join(", ")}, geprueft wird ${base.host}`);
+  }
+  const otherHost = base.hostname.startsWith("www.") ? base.hostname.slice(4) : `www.${base.hostname}`;
+  try {
+    const res = await fetch(`${base.protocol}//${otherHost}/`, { redirect: "manual" });
+    const location = res.headers.get("location");
+    if (![301, 308].includes(res.status) || !location || new URL(location, base).host !== base.host) {
+      errors.push(`${otherHost} leitet nicht per 301/308 auf ${base.host} weiter (Status ${res.status}, Location ${location})`);
+    }
+  } catch (error) {
+    warnings.push(`${otherHost}: nicht erreichbar (${error.message})`);
+  }
+}
 const inbound = new Map(paths.map((p) => [p, new Set()]));
 const decode = (s) => s.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x27;/g, "'");
 
@@ -41,6 +61,7 @@ for (const path of paths) {
   if (h1Count !== 1) errors.push(`${path}: ${h1Count} H1 (Soll 1)`);
   if (!canonical) errors.push(`${path}: Canonical fehlt`);
   else if (!new URL(canonical).pathname.endsWith(path)) errors.push(`${path}: Canonical zeigt auf ${canonical}`);
+  if (canonical && !isLocal && new URL(canonical).host !== base.host) errors.push(`${path}: Canonical-Host ${new URL(canonical).host} != ${base.host}`);
   if (noindex) errors.push(`${path}: steht in der Sitemap, ist aber noindex`);
   if (links.length > MAX_INTERNAL_LINKS) warnings.push(`${path}: ${links.length} interne Links (> ${MAX_INTERNAL_LINKS})`);
   if (words < 250 && !["/kontakt/", "/cookies/", "/ueber-uns/"].includes(path)) warnings.push(`${path}: nur ${words} Wörter (dünn?)`);

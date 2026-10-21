@@ -10,7 +10,7 @@ import { LEGAL_TEXTS_UPDATED, legalNoindex } from "@/lib/legal/pages";
 export const metadata: Metadata = buildPageMetadata({
   title: "Cookie-Richtlinie",
   description:
-    "Welche Cookies und vergleichbaren Technologien Lademeter Rechner einsetzt, wofür sie dienen und wie Sie Ihre Einwilligung verwalten oder Cookies im Browser löschen.",
+    "Welche Cookies und ähnlichen Technologien Lademeter Rechner einsetzt, wofür sie dienen und wie Sie Ihre Einwilligung verwalten oder Cookies löschen.",
   path: "/cookies/",
   noindex: legalNoindex("cookies"),
 });

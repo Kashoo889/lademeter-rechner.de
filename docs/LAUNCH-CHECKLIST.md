@@ -11,7 +11,8 @@ Alle Werte werden in **`lib/legal/operator.ts`** eingetragen. Nichts davon darf 
 | --- | --- | --- |
 | `kind`, `name` | Vollständiger Name (Person) bzw. Firma inkl. Rechtsform; bestätigt: Einzelperson, Muhammad Kashif | § 5 DDG |
 | `representatives` | Nur bei Gesellschaften: Vertretungsberechtigte | § 5 DDG |
-| `street` | Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach; PLZ 54000, Ort Lahore, Punjab und Land Pakistan sind bestätigt) | § 5 DDG |
+| `addressLines`, `postalCode`, `city`, `region`, `country` | Bestätigt (21.10.2026): Israr Boys Hostel, Nashiman Iqbal Phase 1, 54000 Lahore, Punjab, Pakistan | § 5 DDG |
+| `street` **oder** `addressComplete` | Straße und Hausnummer (bzw. Plot-/Hausnummer) wurden **nicht** genannt und dürfen nicht erfunden werden. Entweder nachliefern (`street`) oder bestätigen, dass die Zeilen oben für Post und Zustellungen ausreichen (`addressComplete = true`). Bis dahin bleibt dieser Punkt als gelber Hinweis aktiv. | § 5 DDG |
 | `email` | Elektronische Kontaktaufnahme; bestätigt: mkashifshah10@gmail.com | § 5 DDG |
 | `phone` **oder** funktionierendes Kontaktformular | Zweiter schneller, unmittelbarer Kontaktweg | § 5 DDG |
 | `register`, `vatId` | Nur falls vorhanden (Handelsregister, USt-IdNr./Wirtschafts-IdNr.) | § 5 DDG |
@@ -29,7 +30,14 @@ Cookies, Nutzungsbedingungen und Haftungsausschluss einen gelben „nicht vollst
 `noindex` und stehen nicht in der Sitemap.
 
 Hinweis zur Anschrift: Für das geplante werbefinanzierte Angebot wird eine vollständige, tatsächlich
-erreichbare ladungsfähige Anschrift benötigt; ein Postfach genügt nicht. Wer die Privatanschrift nicht
+erreichbare ladungsfähige Anschrift benötigt; ein Postfach genügt nicht. Die bestätigte Anschrift
+(Gebäudename „Israr Boys Hostel“, Ortsteil „Nashiman Iqbal Phase 1“, 54000 Lahore) enthält keine
+Straße und keine Hausnummer; zudem ist ein Hostel eine Gemeinschaftsunterkunft. Vor dem Livegang
+prüfen: (1) Gibt es eine Straßen-/Plot-/Hausnummer oder Zimmernummer, die für die Zustellung nötig ist?
+(2) Ist die Anschrift dauerhaft und für Zustellungen erreichbar (Probesendung per Kurier/Einschreiben
+bzw. Bestätigung der Unterkunft)? (3) Stimmen Schreibweise von Ortsteil und Postleitzahl mit dem
+Postdienst überein (Pakistan Post PIN-Suche)? Erst danach `addressComplete = true` setzen. Wer die
+Privatanschrift nicht veröffentlichen möchte, lässt eine zustellfähige Geschäftsadresse rechtlich prüfen. Wer die Privatanschrift nicht
 veröffentlichen möchte, sollte rechtlich prüfen lassen, ob eine echte zustellfähige Geschäftsadresse
 infrage kommt. Keine Scheinadresse verwenden.
 

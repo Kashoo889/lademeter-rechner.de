@@ -34,9 +34,24 @@ export type OperatorConfig = {
   name: string | null;
   /** Companies only: authorised representative(s), e.g. "Geschäftsführer: Max Muster". */
   representatives: string | null;
+  /** Straße und Hausnummer (bzw. Plot-/Hausnummer). null = nicht angegeben; nichts erfinden. */
   street: string | null;
+  /**
+   * Weitere bestätigte Adresszeilen vor PLZ und Ort, z. B. Gebäudename und Ortsteil/Siedlung.
+   * Sie werden genau so ausgegeben, wie sie bestätigt wurden.
+   */
+  addressLines: string[];
+  /**
+   * Erst auf true setzen, wenn der Betreiber bestätigt hat, dass die Adresszeilen auch ohne Straße und
+   * Hausnummer eine vollständige, für Post und Zustellungen ausreichende Anschrift sind (z. B. weil der
+   * Gebäudename im Zustellgebiet eindeutig ist). Solange `street` fehlt und dies false ist, bleibt die
+   * Anschrift als „nicht vollständig bestätigt“ markiert (gelber Hinweis, noindex).
+   */
+  addressComplete: boolean;
   postalCode: string | null;
   city: string | null;
+  /** Provinz/Bundesland, wird hinter dem Ort ausgegeben (z. B. "Punjab"). */
+  region: string | null;
   country: string;
   email: string | null;
   /** Phone number; optional if a working contact form is offered as second channel. */
@@ -77,9 +92,14 @@ export const operator: OperatorConfig = {
   kind: "person",
   name: "Muhammad Kashif",
   representatives: null,
+  // Bestätigte Anschrift (21.10.2026): Israr Boys Hostel, Nashiman Iqbal Phase 1, Lahore, Punjab 54000, Pakistan.
+  // Straße und Hausnummer wurden NICHT genannt und dürfen nicht ergänzt werden, solange sie nicht bestätigt sind.
   street: null,
+  addressLines: ["Israr Boys Hostel", "Nashiman Iqbal Phase 1"],
+  addressComplete: false,
   postalCode: "54000",
-  city: "Lahore, Punjab",
+  city: "Lahore",
+  region: "Punjab",
   country: "Pakistan",
   email: "mkashifshah10@gmail.com",
   phone: null,
@@ -112,7 +132,14 @@ export function getMissingOperatorFields(config: OperatorConfig = operator): Mis
   if (!config.name) missing.push({ field: "name", label: "Vollständiger Name bzw. Firma inkl. Rechtsform" });
   if (config.kind === "company" && !config.representatives)
     missing.push({ field: "representatives", label: "Vertretungsberechtigte Person(en)" });
-  if (!config.street) missing.push({ field: "street", label: "Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach)" });
+  if (!config.street && config.addressLines.length === 0) {
+    missing.push({ field: "street", label: "Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach)" });
+  } else if (!config.street && !config.addressComplete) {
+    missing.push({
+      field: "street",
+      label: `Anschrift: Straße und Hausnummer (bzw. Plot-/Hausnummer) ergänzen oder bestätigen, dass „${config.addressLines.join(", ")}“ für Post und Zustellungen ausreicht`,
+    });
+  }
   if (!config.postalCode) missing.push({ field: "postalCode", label: "Postleitzahl" });
   if (!config.city) missing.push({ field: "city", label: "Ort" });
   if (!config.email) missing.push({ field: "email", label: "E-Mail-Adresse" });
@@ -160,7 +187,13 @@ export function isLegalComplete(config: OperatorConfig = operator): boolean {
   return getMissingOperatorFields(config).length === 0 && isLegalReviewed(config);
 }
 
+/**
+ * Anschrift als Zeilenliste in deutscher Schreibweise: Zeilen vor der PLZ, "PLZ Ort, Region", Land.
+ * Gibt null zurück, solange weder Straße noch bestätigte Adresszeilen oder PLZ/Ort vorliegen.
+ */
 export function formatAddressLines(config: OperatorConfig = operator): string[] | null {
-  if (!config.street || !config.postalCode || !config.city) return null;
-  return [config.street, `${config.postalCode} ${config.city}`, config.country];
+  const lines = [config.street, ...config.addressLines].filter((line): line is string => Boolean(line));
+  if (lines.length === 0 || !config.postalCode || !config.city) return null;
+  const place = [`${config.postalCode} ${config.city}`, config.region].filter(Boolean).join(", ");
+  return [...lines, place, config.country];
 }

@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { ToolPage } from "@/components/content/ToolPage";
 import { ReferenceTable } from "@/components/content/ReferenceTable";
 import { ContentSection } from "@/components/content/ContentSection";
+import { DownloadsCallout } from "@/components/content/DownloadsCallout";
 import { LademeterForm } from "@/components/calculator/forms/LademeterForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { ldmByQuantityRows, palletLdmRows } from "@/lib/content/referenceData";
@@ -126,6 +127,7 @@ export default function HomePage() {
             </Link>
             .
           </p>
+          <DownloadsCallout />
         </ContentSection>
       }
       definitions={[

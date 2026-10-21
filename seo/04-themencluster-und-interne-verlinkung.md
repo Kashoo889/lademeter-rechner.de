@@ -31,6 +31,8 @@ Pro URL gibt es **ein** Haupt-Keyword. Neue Artikel dürfen dieses nicht als Hau
 | `/kartons-pro-palette-rechner/` | kartons pro palette berechnen | wie viele kartons passen auf eine palette | Tabelle → Artikel M02 („…tabelle“) |
 | `/lkw-beladungsrechner/` | lkw beladung berechnen | lkw beladung berechnen excel | Checkliste → Ratgeber „LKW-Beladung planen“ |
 | `/volumengewicht-rechner/` | volumengewicht berechnen | volumengewicht rechner/formel | Carrier-Divisoren → Artikel V01/V02 |
+| `/lademeter-excel-vorlage/` | lademeter berechnen excel | excel vorlage lademeter | künftiger Anleitungsartikel L01 erweitert **diese** URL, kein neuer Artikel |
+| `/lademeter-aufgaben/` | lademeter aufgaben (lkw berechnen aufgaben) | lademeter übungsaufgaben | künftiger Beitrag L06 erweitert **diese** URL |
 | `/lademeter-tabelle/` | lademeter tabelle | lademeter europalette, lademeter paletten | – |
 | `/fahrzeuge/` + `/fahrzeuge/<typ>/` | `<fahrzeug> maße / ladefläche` | lademeter + Paletten je Fahrzeug | Aufbauten/Typen → Fahrzeug-Artikel F01–F22 |
 | `/ratgeber/lademeter-in-kg-umrechnen/` | lademeter in kg umrechnen | lademeter gewicht, kg pro lademeter | Fläche vs. Gewicht → Artikel L03 |

@@ -1,5 +1,5 @@
 ---
-title: "Kartons pro Palette berechnen: Lagen, Höhe und Gewicht"
+title: "Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen"
 description: "Wie viele Kartons passen auf eine Palette? Lagenbild, Verbund, Stapelhöhe und Gewichtsgrenzen erklärt – mit Rechenbeispielen für Euro- und Halbpalette."
 slug: "kartons-pro-palette-berechnen"
 publishedAt: "2026-10-10"

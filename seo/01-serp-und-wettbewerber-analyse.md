@@ -76,3 +76,16 @@
 | echte SERP-Positionen DE | Manuelle Prüfung der 20 wichtigsten Keywords auf google.de (Inkognito, Standort Deutschland) | Woche 1 |
 | Backlink-Profile der Wettbewerber | Ahrefs/Sistrix/Semrush (kostenpflichtig) oder Moz-/Bing-WMT-API – **Freigabe nötig** | nach Entscheidung |
 | eigene Sichtbarkeit | Search Console (Domain-Property) + Bing Webmaster Tools | Woche 1 |
+
+## 6. Update 21.10.2026: Wettbewerb für die übrigen vier Rechner
+
+*Gleiche Einschränkungen wie oben (US-basierte Websuche, keine Volumen-/Backlinkdaten). Aussagen stammen aus Suchtreffern und deren Zusammenfassung; nicht jede Seite wurde einzeln abgerufen.*
+
+| Rechner | Beobachtete Wettbewerber | Einschätzung |
+|---|---|---|
+| **LKW-Palettenrechner / Ladeplan** | SeaRates „Load & Stuffing Calculation“ (Container/LKW, Palettenfunktion, API), EasyCargo (kostenpflichtig; laut Suchtreffer Tagesticket 9,70 USD, Monatslizenz 79 USD, Jahreslizenz 799 USD, 10 Tage Test), Goodloading (Online-Ladeplaner, PDF-Ausgabe), TruckBuilder (kostenpflichtig, Lager/Distribution), Ratgeberartikel von cleverence.com | Kostenlose, deutschsprachige Rechner mit Ladeplan sind in der Stichprobe selten; Wettbewerber sind englisch, kostenpflichtig oder containerzentriert. Differenzierung: kostenlos, ohne Anmeldung, Fahrzeug-Voreinstellungen, Ladeplan-Grafik, Teilen-Link. |
+| **Kartons pro Palette** | englischsprachige Rechner (u. a. buildingclub.info), Patent-/Wiki-Treffer; ein „Kartonrechner“ von packstack ist ein anderes Werkzeug (Verpackungsgröße für Shopartikel) | **Kein dediziertes deutschsprachiges, kostenloses Palettier-Tool in der Stichprobe** – größte relative Chance unter den vier Rechnern. |
+| **LKW-Beladung** | calcforlife (Lademeter), SeaRates (Gewichtsverteilung, Container-Fokus), cleverence-Ratgeber | Nutzlast-/Flächen-/Volumenprüfung mehrerer Positionen für Straßenfahrzeuge wird kaum bedient. |
+| **Volumengewicht** | DSV (FAQ-Rechner, Luftfracht 6.000), Packlink (Paket-Rechner), LetMeShip (Blog), paketda.de (Divisor-Übersicht, Preisvergleich), FedEx | Marken-Domains dominieren; ein neutraler Mehrmodus-Rechner (Luft/Paket/See/eigener Divisor) ist ein Differenzierer. **Mögliche Funktionslücke:** Laut Suchtreffer-Zusammenfassung rundet DSV das Volumengewicht auf das nächsthöhere halbe/volle kg auf – eine optionale Rundungseinstellung im Rechner wäre ein Produktvorschlag (vor Umsetzung die DSV-Seite im Original prüfen). |
+
+**Folgerungen:** (1) Kartons-Rechner und Palettierung konsequent ausbauen (Artikel M02, M01). (2) Beim Volumengewicht auf Divisor-Referenztabellen mit Primärquellen setzen (V01/V02 erst nach Quellenprüfung). (3) Beim Palettenrechner die Differenzierung „kostenlos + Ladeplan + Deutsch“ im Titel/Text betonen.

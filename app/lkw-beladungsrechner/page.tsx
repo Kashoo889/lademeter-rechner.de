@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ToolPage } from "@/components/content/ToolPage";
+import { VehicleLinks } from "@/components/content/VehicleLinks";
+import { ContentSection } from "@/components/content/ContentSection";
 import { BeladungForm } from "@/components/calculator/forms/BeladungForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -100,6 +102,12 @@ export default function LkwBeladungsrechnerPage() {
         "Die Achslastverteilung zu ignorieren: Eine passende Gesamtlast kann trotzdem eine Achse überlasten.",
       ]}
       faqs={faqs}
+      reference={
+        <ContentSection title="Fahrzeuge im Detail" id="fahrzeuge">
+          <p>Innenmaße, Nutzlast und Palettenzahl gängiger Fahrzeuge:</p>
+          <VehicleLinks />
+        </ContentSection>
+      }
       articleSlugs={["lkw-beladung-richtig-planen", "achslast-und-gesamtgewicht-lkw", "ladungssicherung-lkw-grundlagen"]}
     />
   );

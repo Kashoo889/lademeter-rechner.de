@@ -55,6 +55,9 @@
 ### G. Branchenverzeichnisse (selektiv)
 - Nur seriöse, redaktionell geprüfte Verzeichnisse mit Themenbezug; **keine** Massen-Anmeldungen, keine Webkataloge niedriger Qualität.
 
+### H. OER-Portale (Update 21.10.2026)
+Das Aufgabenblatt (CC BY 4.0, Lizenz noch freizugeben) eignet sich für offene Bildungsportale (HubbS, WirLernenOnline, ZUM-Unterrichten, Mundo). Das ist kein Outreach per E-Mail, sondern ein Upload durch den Betreiber/eine Lehrkraft mit Quellenlink auf die Landingpage. Vorbereitung und Metadaten: `08-oer-veroeffentlichung.md`. Viele Portale setzen `nofollow`; der Nutzen liegt in Sichtbarkeit und Nutzung.
+
 ### Nicht tun
 Linkkauf · Linktausch im Ring · Kommentar-/Forum-Spam · automatisierte Verzeichnis-Einträge · Sponsored Posts ohne `rel="sponsored"`-Kennzeichnung · Artikel nur für Backlinks · gefälschte Reviews/Testimonials.
 

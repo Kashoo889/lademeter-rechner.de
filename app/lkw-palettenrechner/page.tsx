@@ -6,6 +6,7 @@ import { ContentSection } from "@/components/content/ContentSection";
 import { PalettenForm } from "@/components/calculator/forms/PalettenForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { vehicleCapacityRows } from "@/lib/content/referenceData";
+import { VehicleLinks } from "@/components/content/VehicleLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Wie viele Paletten passen in einen LKW? Rechner mit Ladeplan",
@@ -91,6 +92,7 @@ export default function LkwPalettenrechnerPage() {
         </>
       }
       reference={
+        <>
         <ContentSection title="Paletten pro Fahrzeug im Überblick" id="tabelle">
           <ReferenceTable
             caption="Maximale Palettenzahl je Fahrzeug (nicht gestapelt)"
@@ -109,6 +111,11 @@ export default function LkwPalettenrechnerPage() {
             .
           </p>
         </ContentSection>
+        <ContentSection title="Fahrzeuge im Detail" id="fahrzeuge">
+          <p>Maße, Lademeter und Palettenzahl je Fahrzeug mit Ladeplan:</p>
+          <VehicleLinks />
+        </ContentSection>
+        </>
       }
       definitions={[
         { term: "Europalette", detail: "Genormte Palette 1200 × 800 mm (EPAL 1, EN 13698-1); belegt 0,4 Lademeter." },

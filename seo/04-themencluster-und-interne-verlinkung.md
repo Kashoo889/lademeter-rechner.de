@@ -67,8 +67,8 @@ Pro URL gibt es **ein** Haupt-Keyword. Neue Artikel dürfen dieses nicht als Hau
 | # | Maßnahme | Status |
 |---|---|---|
 | 1 | Skript `npm run check:seo` – prüft Titel-/Description-Länge, H1-Anzahl, Canonical, **Waisenseiten (keine eingehenden internen Links)** und Linkdichte gegen eine laufende Instanz | **umgesetzt** (`scripts/check-seo.mjs`) |
-| 2 | Frontmatter-Feld `cluster:` ergänzen (Wert = Cluster-Slug) für automatische „Weiterlesen im Thema“-Box | offen (erst mit dem 5. Artikel je Cluster) |
-| 3 | Komponente `ClusterNav` unter Artikeln: Hub-Link + 3 Geschwister | offen |
+| 2 | Frontmatter-Feld `cluster:` (Wert = Cluster-ID) für die „Mehr zum Thema“-Box; Test erzwingt Cluster je Artikel | **umgesetzt** (21.10.2026, `lib/content/clusters.ts`) |
+| 3 | Komponente `ClusterNav` unter Artikeln: kuratierte Links + Geschwister (max. 6) | **umgesetzt** (21.10.2026) |
 | 4 | Hub-Seiten `/ratgeber/thema/<cluster>/` (Einleitung, Artikelliste, FAQ, Verweis auf Rechner) | offen (ab ≥ 8 Artikeln/Cluster) |
 | 5 | Breadcrumb `Start › Ratgeber › Thema › Artikel` + passendes BreadcrumbList-Schema | offen (zusammen mit 4) |
 | 6 | Rechner-Seiten: Block „Vertiefung zu diesem Rechner“ mit 3–5 Artikeln des Clusters (statt fester Slug-Liste) | offen |

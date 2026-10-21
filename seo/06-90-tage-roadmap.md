@@ -105,3 +105,7 @@ Zurück auf **1 Artikel/Tag** (oder weniger), falls einer der Fälle eintritt:
 | Google-Algorithmus-Updates | Fokus auf Nutzen/E-E-A-T, keine Tricks, Beobachtung der Search Console |
 | AdSense-Prüfung scheitert an dünnen/ähnlichen Seiten | Gate; AdSense erst bei vollständigen Rechtstexten und eigenständiger Substanz |
 | Datenquelle Autosuggest verändert sich | Keyword-Liste ab Woche 3 mit Search-Console-Queries abgleichen |
+
+## 8. Redaktionsablauf
+
+Der operative Ablauf für 2 Artikel pro Tag ab 26.10.2026 (Rollen, Pipeline T−2/T−1/T, Gate, Freigabe-Sicherungen, Start-Checkliste) steht in `WORKFLOW.md`; Briefings für die ersten 14 Tage liegen in `briefs/`.

@@ -6,6 +6,7 @@ publishedAt: "2026-10-26"
 updatedAt: "2026-10-26"
 category: "Recht & Sicherheit"
 tags: ["stvzo", "abmessungen", "höchstmaße", "sattelzug", "ladefläche"]
+cluster: "vorschriften"
 relatedTool: "lkw-palettenrechner"
 faq:
   - question: "Wie breit darf ein LKW in Deutschland sein?"

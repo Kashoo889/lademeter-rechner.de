@@ -19,6 +19,8 @@ export type ArticleFrontmatter = {
   tags: string[];
   /** Slug of a calculator in lib/site-config.ts to cross-link, if relevant. */
   relatedTool?: string;
+  /** Topic cluster id (lib/content/clusters.ts) used for the "Mehr zum Thema" links. */
+  cluster?: string;
   faq?: ArticleFaq[];
   sources?: ArticleSource[];
 };

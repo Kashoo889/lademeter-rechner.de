@@ -11,7 +11,7 @@ Quellenprüfung am 20.10.2026 über gesetze-im-internet.de (Text-Abruf, Wortlaut
 
 ## `paragraf-22-stvo-ladung.md` (R01, Kalender 26.10.2026, Slot 2)
 
-- Umfang ca. 1.610 Wörter – **unter dem Tier-A-Ziel (1.800)**. Nicht auffüllen: entweder um fachlich Sinnvolles ergänzen (z. B. Fallbeispiele zur Kennzeichnung mit Skizze) oder auf Tier B herabstufen.
+- Umfang ca. 1.550 Wörter. Im Kalender auf **Tier B** herabgestuft (Mindestumfang 1.200) – vollständig, nicht auffüllen. Gate (`npm run seo:check`): **bestanden**.
 - Alle Zahlen zu Absatz 2–5 sind abgeglichen. Absatz 1: Wortlaut nur teilweise zitiert („anerkannte Regeln der Technik“); Aufzählung der Gefahren paraphrasiert.
 - **Bewusst nicht enthalten:** Bußgelder (eigener Artikel mit Stand-Datum), Beschleunigungswerte der VDI 2700 (konnte nicht belegt werden; die VDI-Richtlinie wird nur als in der Praxis herangezogene Regel genannt – bitte prüfen).
 - **Offen:** (1) Absatz 3: „Höhe von 2,50 m“ – Bezugshöhe (über Fahrbahn) im Gesetzestext prüfen. (2) Skizze/Grafik zu Überstand und Kennzeichnung. (3) Gegenlesen durch zweite Person. (4) Abgrenzung zu „Ladungssicherung im LKW“ im Redaktionsgespräch bestätigen.

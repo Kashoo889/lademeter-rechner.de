@@ -65,12 +65,12 @@ einwegpalette gewicht;Kartons & Palettierung;Informationell (Fakten/Maße);2;2;3
 palettenhöhe luftfracht;Kartons & Palettierung;Informationell (Fakten/Maße);2;2;3;nicht verifiziert;mittel;;K08;Palettenhöhe in der Luftfracht: Grenzen und Verpackung;2027-01-08;Artikel geplant
 transportkosten palette berechnen;Kartons & Palettierung;kommerziell/Transaktional;2;2;3;nicht verifiziert;mittel;;P17;Gewicht einer beladenen Palette ermitteln: Waage, Rechnung, Schätzung;2026-12-29;Artikel geplant
 lademeter berechnen;Lademeter;Tool/Berechnung;5;9;1;nicht verifiziert;mittel;/;L07;Wie Speditionen Lademeter abrechnen: Tarif, Mindestgewicht, Zuschläge;2026-10-31;vorhanden – optimieren
-lademeter berechnen excel;Lademeter;Tool/Berechnung;5;5;2;nicht verifiziert;mittel;/;L01;Lademeter berechnen mit Excel: Vorlage und Formeln zum Download;2026-11-20;vorhanden – optimieren
+lademeter berechnen excel;Lademeter;Tool/Berechnung;5;5;2;nicht verifiziert;mittel;/;L01;Lademeter berechnen mit Excel: Vorlage und Formeln zum Download;2026-12-23;vorhanden – optimieren
 lademeter berechnen mit gewicht;Lademeter;Tool/Berechnung;5;4;2;nicht verifiziert;mittel;/;;;;vorhanden – optimieren
 lademeter berechnen mit höhe;Lademeter;Tool/Berechnung;5;3;1;nicht verifiziert;mittel;/;;;;vorhanden – optimieren
 lademeter berechnen mit stapelfaktor;Lademeter;Tool/Berechnung;5;3;1;nicht verifiziert;mittel;/;;;;vorhanden – optimieren
 lademeter berechnen nicht stapelbar;Lademeter;Tool/Berechnung;5;3;1;nicht verifiziert;mittel;/;L02;Lademeter bei nicht stapelbarer Ware berechnen: Beispiele und Sonderfälle;2026-11-08;vorhanden – optimieren
-lademeter berechnen rechner excel;Lademeter;Tool/Berechnung;5;6;2;nicht verifiziert;mittel;/;L01;Lademeter berechnen mit Excel: Vorlage und Formeln zum Download;2026-11-20;vorhanden – optimieren
+lademeter berechnen rechner excel;Lademeter;Tool/Berechnung;5;6;2;nicht verifiziert;mittel;/;L01;Lademeter berechnen mit Excel: Vorlage und Formeln zum Download;2026-12-23;vorhanden – optimieren
 lademeter europalette;Lademeter;Informationell;5;3;1;nicht verifiziert;mittel;/lademeter-tabelle/;;;;vorhanden – optimieren
 lademeter in quadratmeter berechnen;Lademeter;Tool/Berechnung;5;3;1;nicht verifiziert;mittel;/ratgeber/was-sind-lademeter/;;;;vorhanden – optimieren
 lademeter lkw;Lademeter;Informationell;5;3;1;nicht verifiziert;mittel;/ratgeber/was-sind-lademeter/;L23;Lademeterpreis: Wie Preisstaffeln nach Lademetern aufgebaut sind;2026-12-31;vorhanden – optimieren
@@ -107,14 +107,14 @@ ladungssicherung lkw;Ladungssicherung & Recht;Informationell;5;3;1;nicht verifiz
 ladungssicherung lkw gesetzliche vorschriften;Ladungssicherung & Recht;Informationell;5;4;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;;;;vorhanden – optimieren
 antirutschmatte lkw;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;;R06;Antirutschmatten: Reibbeiwert und Einsatz;2026-12-31;Artikel geplant
 din en 12195 2 zurrgurte;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;;R05;DIN EN 12195-2: Kennzeichnung von Zurrgurten lesen;2026-12-27;Artikel geplant
-formschluss kraftschluss stoffschluss;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;;R03;Formschluss, Kraftschluss, Niederzurren: Methoden erklärt;2026-11-27;Artikel geplant
+formschluss kraftschluss stoffschluss;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;;R03;Formschluss, Kraftschluss, Niederzurren: Methoden erklärt;2026-11-24;Artikel geplant
 komplettladung definition;Ladungssicherung & Recht;Informationell (Definition);4;2;1;nicht verifiziert;hoch;/ratgeber/stueckgut-teilladung-komplettladung/;;;;vorhanden – optimieren
 ladungssicherung lkw wer ist verantwortlich;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;;;;vorhanden – optimieren
-ladungssicherung paletten;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R12;Ladungssicherung bei Paletten: Folie, Umreifung, Verbund;2026-12-15;vorhanden – optimieren
-ladungssicherung strafe;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R02;Ladungssicherung: Bußgelder und Punkte laut Bußgeldkatalog;2026-11-24;vorhanden – optimieren
+ladungssicherung paletten;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R12;Ladungssicherung bei Paletten: Folie, Umreifung, Verbund;2026-12-10;vorhanden – optimieren
+ladungssicherung strafe;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R02;Ladungssicherung: Bußgelder und Punkte laut Bußgeldkatalog;2026-11-20;vorhanden – optimieren
 sperrbalken ladungssicherung;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R07;Sperrbalken und Sperrstangen: Einsatz und Grenzen;2027-01-03;vorhanden – optimieren
-vdi 2700 ladungssicherung;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R10;VDI 2700: Überblick über die Blätter und ihre Anwendung;2026-12-10;vorhanden – optimieren
-§ 22 stvo – ladung;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;;R01;§ 22 StVO Ladung: Pflichten für Fahrer, Halter und Verlader;2026-10-26;Artikel geplant
+vdi 2700 ladungssicherung;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;R10;VDI 2700: Überblick über die Blätter und ihre Anwendung;2026-12-06;vorhanden – optimieren
+§ 22 stvo – ladung;Ladungssicherung & Recht;Informationell;4;2;1;nicht verifiziert;hoch;;R01;§ 22 StVO Ladung: Pflichten, Maße und Überstand;2026-10-26;Artikel geplant
 din en 12195;Ladungssicherung & Recht;Informationell;3;2;2;nicht verifiziert;hoch;;R05;DIN EN 12195-2: Kennzeichnung von Zurrgurten lesen;2026-12-27;Artikel geplant
 ladungssicherung lkw schulung wie oft;Ladungssicherung & Recht;Informationell;3;3;3;nicht verifiziert;hoch;/ratgeber/ladungssicherung-lkw-grundlagen/;;;;vorhanden – optimieren
 sperrbalken lkw;Ladungssicherung & Recht;Informationell;3;2;2;nicht verifiziert;hoch;;R07;Sperrbalken und Sperrstangen: Einsatz und Grenzen;2027-01-03;Artikel geplant

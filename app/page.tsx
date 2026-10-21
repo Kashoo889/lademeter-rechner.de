@@ -5,6 +5,7 @@ import { ToolPage } from "@/components/content/ToolPage";
 import { ReferenceTable } from "@/components/content/ReferenceTable";
 import { ContentSection } from "@/components/content/ContentSection";
 import { DownloadsCallout } from "@/components/content/DownloadsCallout";
+import { VehicleLinks } from "@/components/content/VehicleLinks";
 import { LademeterForm } from "@/components/calculator/forms/LademeterForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { ldmByQuantityRows, palletLdmRows } from "@/lib/content/referenceData";
@@ -104,6 +105,7 @@ export default function HomePage() {
         </>
       }
       reference={
+        <>
         <ContentSection title="Lademeter-Richtwerte für Paletten" id="richtwerte">
           <ReferenceTable
             caption="Lademeter je Palettentyp"
@@ -129,6 +131,11 @@ export default function HomePage() {
           </p>
           <DownloadsCallout />
         </ContentSection>
+        <ContentSection title="Lademeter je Fahrzeug" id="fahrzeuge">
+          <p>Wie viele Lademeter und Paletten ein Fahrzeug fasst, steht auf den Fahrzeugseiten:</p>
+          <VehicleLinks />
+        </ContentSection>
+        </>
       }
       definitions={[
         { term: "Lademeter (ldm)", detail: "Flächenmaß: Länge der Ladefläche, die eine Ladung bei einer Ladebreite von 2,4 m belegt." },

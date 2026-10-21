@@ -20,7 +20,7 @@ export const siteConfig = {
    * Date of the last substantive content/tool update. Used for sitemap
    * lastModified of static pages - update it when you change page content.
    */
-  lastUpdated: "2026-10-20",
+  lastUpdated: "2026-10-21",
 } as const;
 
 export type CalculatorDefinition = {

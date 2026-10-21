@@ -9,7 +9,7 @@
 | Datum | Slot | ID | Tier | Cluster | Arbeitstitel | Haupt-Keyword |
 |---|---|---|---|---|---|---|
 | 2026-10-26 | 1 | G01 | A | Vorschriften | LKW-Höchstmaße in Deutschland: Länge, Breite, Höhe nach § 32 StVZO | `lkw höchstmaße` |
-| 2026-10-26 | 2 | R01 | A | Ladungssicherung | § 22 StVO Ladung: Pflichten für Fahrer, Halter und Verlader | `§ 22 stvo` |
+| 2026-10-26 | 2 | R01 | B | Ladungssicherung | § 22 StVO Ladung: Pflichten, Maße und Überstand | `§ 22 stvo` |
 | 2026-10-27 | 1 | P01 | A | Paletten | Europalette: Maße, Gewicht und Tragfähigkeit nach EN 13698-1 | `europalette maße` |
 | 2026-10-27 | 2 | V02 | A | Volumengewicht | Volumengewicht bei DPD, GLS, Hermes und UPS im Vergleich | `volumengewicht dpd` |
 | 2026-10-28 | 1 | L03 | A | Lademeter | Lademeter oder Gewicht: Was bestimmt den Frachtpreis? | `lademeter oder gewicht` |
@@ -74,7 +74,7 @@
 | 2026-11-19 | 1 | M03 | B | Palettierung | Kartons richtig palettieren: Fehler, die Ware beschädigen | `palette packen` |
 | 2026-11-19 | 2 | L09 | B | Lademeter | Lademeter bei Langgut, Rollen und Rundmaterial | `lademeter berechnen rollen` |
 | 2026-11-20 | 1 | F07 | B | Fahrzeuge | Jumbo-Zug und Jumbo-Wechselbrücke: Maße und Palettenzahl | `jumbo lkw` |
-| 2026-11-20 | 2 | L01 | A | Lademeter | Lademeter berechnen mit Excel: Vorlage und Formeln zum Download | `lademeter berechnen excel` |
+| 2026-11-20 | 2 | R02 | A | Ladungssicherung | Ladungssicherung: Bußgelder und Punkte laut Bußgeldkatalog | `ladungssicherung strafe` |
 | 2026-11-21 | 1 | V12 | B | Volumengewicht | Dimensional Weight USA vs. Deutschland: Warum die Divisoren abweichen | `dimensional weight` |
 | 2026-11-21 | 2 | S12 | A | Versand | Incoterms 2020 einfach erklärt: EXW, FCA, DAP, DDP | `incoterms 2020` |
 | 2026-11-22 | 1 | P06 | B | Paletten | Einwegpalette: Maße, Gewicht und warum sie nicht tauschfähig ist | `einwegpalette` |
@@ -86,14 +86,14 @@
 |---|---|---|---|---|---|---|
 | 2026-11-23 | 1 | D03 | A | Schüttgewicht | Schüttgewicht von Sand: trocken, feucht und nass | `schüttgewicht sand` |
 | 2026-11-23 | 2 | F09 | B | Fahrzeuge | Kipper-LKW: Ladevolumen und Nutzlast | `kipper lkw` |
-| 2026-11-24 | 1 | R02 | A | Ladungssicherung | Ladungssicherung: Bußgelder und Punkte laut Bußgeldkatalog | `ladungssicherung strafe` |
+| 2026-11-24 | 1 | R03 | A | Ladungssicherung | Formschluss, Kraftschluss, Niederzurren: Methoden erklärt | `formschluss kraftschluss` |
 | 2026-11-24 | 2 | V13 | B | Volumengewicht | Leichte Ware, hohe Kosten: Warum Dichte den Versandpreis treibt | `volumengewicht leichte ware` |
 | 2026-11-25 | 1 | M04 | B | Palettierung | Palette optimal packen: Gewichtsverteilung und Packreihenfolge | `palette packen tipps` |
 | 2026-11-25 | 2 | S13 | A | Versand | CMR-Frachtbrief: Aufbau, Pflichtangaben und Vorlage | `cmr frachtbrief vorlage` |
 | 2026-11-26 | 1 | P08 | B | Paletten | Palettenkonto und Palettenschein im Speditionsalltag | `palettenschein` |
 | 2026-11-26 | 2 | L11 | B | Lademeter | Lademeter-Anfrage richtig stellen: Diese Angaben brauchen Speditionen | `lademeter angaben spedition anfrage` |
 | 2026-11-27 | 1 | V14 | B | Volumengewicht | Volumengewicht bei Kurier- und Expressdiensten | `volumengewicht kurier` |
-| 2026-11-27 | 2 | R03 | A | Ladungssicherung | Formschluss, Kraftschluss, Niederzurren: Methoden erklärt | `formschluss kraftschluss` |
+| 2026-11-27 | 2 | R04 | A | Ladungssicherung | Zurrgurte richtig verwenden: LC, STF und Vorspannkraft | `zurrgurte` |
 | 2026-11-28 | 1 | F10 | B | Fahrzeuge | Tieflader und Schwertransport: Maße und Genehmigungen | `tieflader maße` |
 | 2026-11-28 | 2 | K01 | A | Container | Container-Typen im Überblick: 20', 40', High Cube, Open Top, Reefer | `container typen` |
 | 2026-11-29 | 1 | D04 | A | Schüttgewicht | Schüttgewicht von Kies, Splitt und Schotter | `volumengewicht kies` |
@@ -107,7 +107,7 @@
 | 2026-11-30 | 2 | L12 | B | Lademeter | Lademeter bei Kühlfahrzeugen: Warum die Innenbreite zählt | `lademeter frigo` |
 | 2026-12-01 | 1 | M05 | B | Palettierung | Verpackung für Stückgut: Anforderungen der Spediteure | `verpackung stückgut` |
 | 2026-12-01 | 2 | V15 | B | Volumengewicht | Volumengewicht bei Amazon FBA und Marktplätzen | `amazon volumengewicht` |
-| 2026-12-02 | 1 | R04 | A | Ladungssicherung | Zurrgurte richtig verwenden: LC, STF und Vorspannkraft | `zurrgurte` |
+| 2026-12-02 | 1 | R09 | A | Ladungssicherung | Code XL: Zertifikat und Anforderungen an Aufbauten | `code xl` |
 | 2026-12-02 | 2 | F11 | B | Fahrzeuge | Pritschen-LKW mit Plane: Maße und Einsatz | `pritsche lkw ladefläche` |
 | 2026-12-03 | 1 | D08 | A | Schüttgewicht | Wie viel Schüttgut passt auf einen LKW? Nutzlast und Volumen | `wie viel kies auf einen lkw` |
 | 2026-12-03 | 2 | L13 | B | Lademeter | Lademeter für Tieflader und Überbreite: Sonderfälle | `tieflader lademeter` |
@@ -116,7 +116,7 @@
 | 2026-12-05 | 1 | K02 | A | Container | Paletten im Container verladen: Euro-, Industrie- und ISO-Paletten | `container paletten beladung` |
 | 2026-12-05 | 2 | V16 | B | Volumengewicht | Luftfracht berechnen: Rate, Zuschläge, frachtpflichtiges Gewicht | `luftfracht berechnen` |
 | 2026-12-06 | 1 | V01 | A | Volumengewicht | Volumengewicht bei DHL Paket und DHL Express: Divisor und Beispiel | `volumengewicht dhl` |
-| 2026-12-06 | 2 | R09 | A | Ladungssicherung | Code XL: Zertifikat und Anforderungen an Aufbauten | `code xl` |
+| 2026-12-06 | 2 | R10 | A | Ladungssicherung | VDI 2700: Überblick über die Blätter und ihre Anwendung | `vdi 2700` |
 
 ## Woche 7 (2026-12-07 bis 2026-12-13)
 
@@ -129,7 +129,7 @@
 | 2026-12-09 | 1 | V17 | B | Volumengewicht | Seefracht berechnen: LCL und FCL im Kostenvergleich | `seefracht berechnen` |
 | 2026-12-09 | 2 | P12 | B | Paletten | Beschädigte Europalette: Klassen und Reparatur nach EPAL | `beschädigte europalette` |
 | 2026-12-10 | 1 | D05 | B | Schüttgewicht | Schüttgewicht von Erde und Mutterboden | `schüttgewicht oberboden` |
-| 2026-12-10 | 2 | R10 | A | Ladungssicherung | VDI 2700: Überblick über die Blätter und ihre Anwendung | `vdi 2700` |
+| 2026-12-10 | 2 | R12 | A | Ladungssicherung | Ladungssicherung bei Paletten: Folie, Umreifung, Verbund | `ladungssicherung paletten` |
 | 2026-12-11 | 1 | K03 | A | Container | Containerbeladung planen: Schritt für Schritt | `containerbeladung` |
 | 2026-12-11 | 2 | L16 | B | Lademeter | Lademeter bei Teilladungen: Tabelle für 3, 5, 8 und 10 Paletten | `3 paletten lademeter` |
 | 2026-12-12 | 1 | F13 | B | Fahrzeuge | Doppelstock-Auflieger: Palettenzahl und Einsatz | `doppelstock auflieger` |
@@ -143,7 +143,7 @@
 |---|---|---|---|---|---|---|
 | 2026-12-14 | 1 | M07 | B | Palettierung | Palette folieren: Schritt für Schritt | `palette folieren` |
 | 2026-12-14 | 2 | P14 | B | Paletten | Kunststoffpalette oder Holzpalette: Kosten, Gewicht, Hygiene | `kunststoffpalette` |
-| 2026-12-15 | 1 | R12 | A | Ladungssicherung | Ladungssicherung bei Paletten: Folie, Umreifung, Verbund | `ladungssicherung paletten` |
+| 2026-12-15 | 1 | R15 | A | Ladungssicherung | Ladungssicherung im Transporter und Sprinter | `ladungssicherung sprinter` |
 | 2026-12-15 | 2 | D06 | B | Schüttgewicht | Schüttgewicht von Holzpellets und Hackschnitzeln | `schüttgewicht holzpellets` |
 | 2026-12-16 | 1 | L18 | B | Lademeter | Lademeter richtig berechnen: 12 typische Fehler in der Disposition | `lademeter richtig berechnen` |
 | 2026-12-16 | 2 | V20 | B | Volumengewicht | Nachberechnung durch falsche Maße: Ursachen und Vorbeugung | `nachberechnung maße spedition` |
@@ -152,7 +152,7 @@
 | 2026-12-18 | 1 | S08 | B | Versand | LKW-Maut in Deutschland: Berechnung und Tarife | `lkw maut berechnen` |
 | 2026-12-18 | 2 | P15 | B | Paletten | Halbpalette und Viertelpalette: Maße und Lademeter | `halbpalette maße` |
 | 2026-12-19 | 1 | G05 | A | Vorschriften | Überladung: Bußgeld, Verantwortung und Wiegen | `überladung lkw bußgeld` |
-| 2026-12-19 | 2 | R15 | A | Ladungssicherung | Ladungssicherung im Transporter und Sprinter | `ladungssicherung sprinter` |
+| 2026-12-19 | 2 | R18 | A | Ladungssicherung | Ladungssicherung kontrollieren: Checkliste für Fahrer (PDF) | `ladungssicherung checkliste` |
 | 2026-12-20 | 1 | L19 | B | Lademeter | Lademeter im Container: Warum die Einheit dort kaum üblich ist | `lademeter 40 container` |
 | 2026-12-20 | 2 | D07 | B | Schüttgewicht | Schüttgewicht von Getreide: Weizen, Roggen, Gerste | `schüttgewicht roggen` |
 
@@ -164,7 +164,7 @@
 | 2026-12-21 | 2 | V21 | B | Volumengewicht | Taxiertes Gewicht, Lademetergewicht, Raumgewicht: Begriffe getrennt | `taxiertes gewicht` |
 | 2026-12-22 | 1 | F15 | B | Fahrzeuge | Wechselbrücke und Containerchassis im Kombinierten Verkehr | `wechselbrücke container` |
 | 2026-12-22 | 2 | S09 | B | Versand | Dieselfloater und Mautzuschlag: Zuschläge verstehen | `dieselfloater` |
-| 2026-12-23 | 1 | R18 | A | Ladungssicherung | Ladungssicherung kontrollieren: Checkliste für Fahrer (PDF) | `ladungssicherung checkliste` |
+| 2026-12-23 | 1 | L01 | A | Lademeter | Lademeter berechnen mit Excel: Vorlage und Formeln zum Download | `lademeter berechnen excel` |
 | 2026-12-23 | 2 | P16 | B | Paletten | CP-Paletten (CP1–CP9): Maße für die Chemie | `cp paletten` |
 | 2026-12-24 | 1 | L20 | B | Lademeter | Lademeter bei Sprinter und Transporter: Gibt es das? | `lademeter sprinter` |
 | 2026-12-24 | 2 | K04 | B | Container | Container beladen: Gewichtsverteilung und CTU-Code | `ctu code` |

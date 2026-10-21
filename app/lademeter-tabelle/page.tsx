@@ -10,6 +10,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { ldmByQuantityRows, palletLdmRows, vehicleCapacityRows } from "@/lib/content/referenceData";
 import { PageHero } from "@/components/layout/PageHero";
 import { DownloadsCallout } from "@/components/content/DownloadsCallout";
+import { VehicleLinks } from "@/components/content/VehicleLinks";
 
 const breadcrumbItems = [{ label: "Lademeter-Tabelle", href: "/lademeter-tabelle/" }];
 
@@ -96,6 +97,10 @@ export default function LademeterTabellePage() {
           </Link>
           .
         </p>
+      </ContentSection>
+
+      <ContentSection title="Fahrzeuge im Detail">
+        <VehicleLinks />
       </ContentSection>
 
       <DownloadsCallout />

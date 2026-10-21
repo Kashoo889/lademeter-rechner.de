@@ -16,6 +16,11 @@ Alle Unterlagen sind **Entwürfe/Planung**. Es wurde **nichts veröffentlicht, d
 | `06-90-tage-roadmap.md` | Phasen, Entscheidungen des Betreibers, Drosselregeln, KPIs, Risiken |
 | `07-editorial-calendar.csv` / `.md` | **180 Artikel (2/Tag, 26.10.2026–23.01.2027)** mit Keyword, Quellen, Mehrwert, Link-Zielen |
 | `08-backlink-plan.md` / `08-backlink-prospects.csv` / `08-outreach-welle-1.md` | ethischer Linkaufbau, Assets, Entwurfstexte, Kandidaten, Outreach-Paket (nicht versendet) |
+| `WORKFLOW.md` | **Redaktionsablauf** für 2 Artikel/Tag ab 26.10.2026: Rollen, Pipeline, Qualitäts-Gate, Freigabe-Sicherungen |
+| `briefs/` | 28 Briefings (26.10.–08.11.2026) mit Quellenaufgaben, echten Suchanfragen aus Autosuggest, Pflichtlinks, Gliederung, Faktencheck-Tabelle |
+| `audits/` | Crawl-Audits (Berichte) |
+| `data/` | Rohdaten der Autosuggest-Erhebung (20.10.2026) |
+| `08-oer-veroeffentlichung.md` | Vorbereitung der Veröffentlichung als OER (HubbS, WirLernenOnline, …) – nichts durchgeführt |
 | `drafts/` | 2 Artikel-Entwürfe (G01 LKW-Höchstmaße, R01 § 22 StVO) mit Review-Liste; `drafts/landing/` Landingpage-Gerüste für Excel-Vorlage und Aufgabenblatt |
 | `assets/` | **fertige Download-Assets:** Excel-Vorlage Lademeter (.xlsx), Aufgabenblatt mit Lösungen und Schülerfassung (PDF). Landingpages sind umgesetzt, aber **versteckt** (`DOWNLOADS_LIVE=false` in `lib/downloads.ts`); Details `assets/README.md` |
 | `tools/` | Skript zur monatlichen Autosuggest-Erhebung |

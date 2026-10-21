@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/layout/PageHero";
 import { ArticleMeta } from "@/components/content/ArticleMeta";
 import { ArticleSources } from "@/components/content/ArticleSources";
+import { ClusterNav } from "@/components/content/ClusterNav";
+import { getClusterIdForArticle } from "@/lib/content/clusters";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { FaqAccordion } from "@/components/content/FaqAccordion";
 import { TableOfContents } from "@/components/content/TableOfContents";
@@ -54,6 +56,7 @@ export default async function RatgeberArticlePage(props: PageProps<"/ratgeber/[s
     { label: article.title, href: `/ratgeber/${article.slug}/` },
   ];
   const readingMinutes = Math.max(1, Math.round(article.wordCount / 200));
+  const clusterId = getClusterIdForArticle(article);
 
   return (
     <>
@@ -99,6 +102,8 @@ export default async function RatgeberArticlePage(props: PageProps<"/ratgeber/[s
           <div className="max-w-3xl">
             <ArticleSources sources={article.sources} />
           </div>
+
+          {clusterId ? <ClusterNav clusterId={clusterId} currentPath={`/ratgeber/${article.slug}/`} /> : null}
 
           <div className="max-w-3xl">
             <AdSlot placement="article-end" />

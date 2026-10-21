@@ -6,6 +6,7 @@ publishedAt: "2026-10-26"
 updatedAt: "2026-10-26"
 category: "Recht & Sicherheit"
 tags: ["stvo", "§ 22", "ladung", "ladungsüberstand", "ladungssicherung"]
+cluster: "ladungssicherung"
 relatedTool: "lkw-beladungsrechner"
 faq:
   - question: "Was regelt § 22 StVO?"

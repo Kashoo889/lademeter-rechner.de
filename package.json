@@ -14,7 +14,12 @@
     "typecheck": "next typegen && tsc --noEmit",
     "check:site": "node scripts/check-production.mjs",
     "check:launch": "vitest run --config vitest.launch.config.mts",
-    "check:seo": "node scripts/check-seo.mjs"
+    "check:seo": "node scripts/check-seo.mjs",
+    "check:crawl": "node seo/tools/crawl_audit.mjs",
+    "seo:brief": "node seo/tools/make_briefs.mjs",
+    "seo:new": "node seo/tools/new_article.mjs",
+    "seo:check": "node seo/tools/check_draft.mjs",
+    "seo:promote": "node seo/tools/promote_draft.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

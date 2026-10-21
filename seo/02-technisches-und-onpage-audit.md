@@ -130,3 +130,21 @@ Verifiziert: `npm test` (117 Tests), `tsc`, `eslint`, `next build` grün; alle T
 **Verbleibendes Problem 2 – Impressum/Datenschutz noindex:** Beide Seiten sind live noch `noindex`. Für Vertrauen, Pflichtangaben und eine spätere AdSense-Prüfung sollten sie nach Fertigstellung der Betreiberangaben `index` sein (siehe `lib/legal/operator.ts`, `npm run check:launch`).
 
 **Neuer Befund 3 – Open-Graph-Bild mit Redirect (niedrige Priorität):** Die `og:image`-URL lautet `https://lademeter-rechner.de/opengraph-image?<hash>` (ohne Slash); wegen `trailingSlash: true` folgt eine 308-Weiterleitung auf `/opengraph-image/?<hash>` (danach 200, `image/png`). Soziale Netzwerke folgen meist einer Weiterleitung, direkte URLs sind aber sicherer. Mögliche Lösung (erst in einer Preview testen): Bild-URL explizit mit Slash in `buildPageMetadata` setzen oder eine Ausnahme in den Redirects ergänzen. **Nicht umgesetzt**, weil ein Test mit echten Vorschau-Crawlern (z. B. Facebook-Debugger, LinkedIn Post Inspector) nötig ist.
+
+## 7. Audit vom 21.10.2026 (live und lokaler Build)
+
+**Live (Apex):** Antworten 200; Canonical, Sitemap (32 URLs) und robots.txt konsistent auf Apex; die neuen Download-Seiten sind live erreichbar, aber wie vorgesehen versteckt (`noindex`, nicht in der Sitemap, kein Teaser, Dateien mit `X-Robots-Tag: noindex` und `Link: rel=canonical`). Impressum und Datenschutz sind weiterhin `noindex` (offene Pflichtangaben). **www liefert weiterhin 200 statt 308 auf den Apex** – Schritte in §6.
+
+**Crawl-Audit (lokaler Produktions-Build, `npm run check:crawl`, Bericht `audits/2026-10-21-crawl-local.md`):** 34 Seiten, 1.427 interne Links: **0** defekte Links, **0** interne Links mit Weiterleitung, **0** Überschriften-Probleme, **0** doppelte Titel/Descriptions, **0** Bilder ohne alt, **0** externe Links ohne noopener, **0** Anker ohne Ziel; maximale Klicktiefe 2.
+
+**Behoben/umgesetzt:**
+| Maßnahme | Wirkung |
+|---|---|
+| Topic-Cluster-Navigation „Mehr zum Thema …“ unter jedem Artikel (`lib/content/clusters.ts`, `ClusterNav`) mit beschreibenden Ankertexten; Test erzwingt Cluster für jeden neuen Artikel | eingehende interne Links je Artikel zuvor 5–11, jetzt Cluster-Geschwister + Rechner + Referenzseiten; Struktur für 180 geplante Artikel vorbereitet |
+| Fahrzeug-Links (`VehicleLinks`) auf Startseite, Palettenrechner, Beladungsrechner, Lademeter-Tabelle | Fahrzeugseiten zuvor 8–10, jetzt 12–17 eingehende Links mit keyword-relevanten Ankertexten (Sattelzug 17, Megatrailer 15) |
+| `siteConfig.lastUpdated` auf 21.10.2026 (Sitemap-lastmod der statischen Seiten) | korrekte Aktualität nach den Rechts- und Inhaltsänderungen |
+| Werkzeuge: `crawl_audit.mjs` (Crawl-Audit), `check-seo.mjs` (Host-/Redirect-Prüfung) | wiederholbare Prüfungen |
+
+**Neuer Befund – Repository ist öffentlich (hohe Priorität für Inhaltsschutz):** `https://github.com/Kashoo889/lademeter-rechner.de` ist ohne Anmeldung abrufbar (HTTP 200). Damit sind auch `seo/` (Strategie, Keyword-Daten, Outreach-Entwürfe, Backlink-Kandidaten) und vor allem **unveröffentlichte Artikelentwürfe** (`seo/drafts/`) öffentlich lesbar und kopierbar. Eine Prüfung auf Geheimnisse in getrackten Dateien (API-Schlüssel, Tokens, Private Keys) ergab nichts; `.env*` ist ausgeschlossen. **Empfehlung:** Repository auf „Private“ stellen (Vercel-Deployments funktionieren mit privaten Repos) oder `seo/` in ein privates Repository auslagern. Bereits veröffentlichte Commits bleiben in der Historie sichtbar (bei Bedarf Rotation/Entfernung bewerten). Ich habe weder Sichtbarkeit noch `.gitignore` geändert.
+
+**Offen (unverändert):** www → Apex (§ 6), Impressum/Datenschutz `noindex`, Open-Graph-Bild-Weiterleitung (niedrig), Excel-Abnahme vor Go-Live der Downloads.

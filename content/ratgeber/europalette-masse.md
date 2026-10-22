@@ -3,7 +3,7 @@ title: "Europalette Maße: Größe, Gewicht und Tragfähigkeit"
 description: "Europalette Maße im Überblick: 1200 × 800 × 144 mm, rund 25 kg Eigengewicht, 1.500 kg Tragfähigkeit – mit Rechenbeispielen für Höhe, Nutzlast und Lademeter."
 slug: "europalette-masse"
 publishedAt: "2026-10-21"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-22"
 category: "Paletten"
 tags: ["europalette", "maße", "epal", "gewicht", "tragfähigkeit"]
 cluster: "paletten"
@@ -17,11 +17,17 @@ faq:
     answer: "Als Tragfähigkeit nennt EPAL Schweiz 1.500 kg, als maximale Stapelbelastung der untersten Palette 5.500 kg. Wie die Last verteilt ist und ob die Palette auf einer Fläche oder im Regal steht, beeinflusst, was tatsächlich zulässig ist – dazu die EPAL-Unterlagen oder den Palettenhersteller fragen."
   - question: "Wie viele Lademeter belegt eine Europalette?"
     answer: "Eine Europalette belegt 0,4 Lademeter, denn 1,2 m × 0,8 m geteilt durch die Referenzbreite 2,4 m ergibt 0,4. In einem Standard-Sattelzug mit 13,6 × 2,4 m passen 33 Europaletten längs oder 34 quer."
+  - question: "Woran erkenne ich eine echte EPAL-Europalette?"
+    answer: "Nach dem EPAL-Datenblatt (PB 05/2025) trägt der linke Eckklotz das Zeichen „EPAL im Oval“. Auf dem Mittelklotz stehen IPPC-Zeichen mit Ländercode, Herstellernummer und „HT“ sowie die EPAL-Kennziffer mit Lizenznummer und Produktionsdatum; in einem der Mittelklötze sitzt die EPAL-Prüfklammer."
   - question: "Wie hoch darf eine beladene Europalette sein?"
     answer: "Das hängt vom Transportweg ab. Im Lkw begrenzt die Innenhöhe des Fahrzeugs: Von ihr gehen 14,4 cm für die Palette ab, bei zweilagiger Stapelung doppelt so viel. Die Höhe der Ware kommt zu den 144 mm der Palette hinzu."
 sources:
   - title: "EPAL 1 Europalette – technische Daten und Kennzeichnung (EPAL Schweiz)"
     url: "https://epal.ch/produkte/1epal-europalette-epal1/"
+  - title: "EPAL Datenblatt Europalette QR (PB 05/2025)"
+    url: "https://es.epal-pallets.org/fileadmin/user_upload/ntg_package/images/Produktdownloads/Produktdatenbla__tter/D/EPAL-DS_Europalette_QR-Code_DE.pdf"
+  - title: "EPAL Schweiz: Warnung vor falschen EPAL-Angeboten (2021)"
+    url: "https://epal.ch/news/fake-epal/"
   - title: "EPAL – European Pallet Association e.V."
     url: "https://www.epal-pallets.org/"
 ---
@@ -37,11 +43,12 @@ Eine Europalette (EPAL 1) ist **1200 mm lang, 800 mm breit und 144 mm hoch**. Si
 | Grundfläche | 0,96 m² (1,2 m × 0,8 m) | eigene Berechnung |
 | Gewicht | ca. 25 kg | EPAL Schweiz |
 | Tragfähigkeit | 1.500 kg | EPAL Schweiz |
-| Max. Stapelbelastung (unterste Palette) | 5.500 kg | EPAL Schweiz |
+| Max. Stapelbelastung (unterste Palette) | 5.500 kg | EPAL Schweiz, EPAL-Datenblatt |
+| Toleranzen | Länge und Breite ±3 mm, Höhe +7/−0 mm | EPAL-Datenblatt (technische Zeichnung) |
 | Aufbau | 11 Bretter, 9 Klötze, 78 Nägel | EPAL Schweiz |
 | Lademeter | 0,4 ldm (0,96 m² ÷ 2,4 m) | eigene Berechnung |
 
-Eine Besonderheit der Quelle: EPAL Schweiz führt Länge und Breite in der Tabelle in umgekehrter Reihenfolge (800 und 1200 mm). Gemeint ist dieselbe Palette; allgemein wird die lange Seite mit 1200 mm als Länge angegeben. Die Zahlen sind für die Europalette EPAL 1 gesprochen – eine gleich aussehende Palette ohne Kennzeichnung muss die Maße nicht einhalten.
+Eine Besonderheit der Quellen: EPAL Schweiz und das EPAL-Datenblatt führen Länge und Breite in der Tabelle in umgekehrter Reihenfolge (800 und 1200 mm). Gemeint ist dieselbe Palette; allgemein wird die lange Seite mit 1200 mm als Länge angegeben. Die Zahlen sind für die Europalette EPAL 1 gesprochen – eine gleich aussehende Palette ohne Kennzeichnung muss die Maße nicht einhalten.
 
 ## Die Maße in anderen Einheiten
 
@@ -119,6 +126,27 @@ Rechnerisch passt der Stapel, praktisch ist der Abstand zu klein: Lagen, Verzurr
 
 Das Beispiel zeigt, warum Länge, Breite, Höhe und Gewicht zusammen geprüft werden müssen. Mit dem [Palettenrechner](/lkw-palettenrechner/) lassen sich Stellplätze und Lademeter für eigene Maße berechnen, der [Kartons-pro-Palette-Rechner](/kartons-pro-palette-rechner/) liefert Lagenbild und Höhe.
 
+## Echte EPAL-Palette erkennen: Kennzeichnung
+
+Eine Europalette im EPAL-System erkennen Sie an der Kennzeichnung auf den Klötzen. Das EPAL-Datenblatt (PB 05/2025) nennt:
+
+| Ort | Kennzeichen | Bedeutung |
+| --- | --- | --- |
+| Linker Eckklotz | „EPAL im Oval“ | Marke des Palettensystems |
+| Mittelklotz | IPPC-Rechteck mit IPPC-Ähre, Ländercode, IPPC-Nummer des Herstellers, „HT“ | Hitzebehandlung nach ISPM 15; Herkunftsland und Hersteller |
+| Mittelklotz | EPAL-Kennziffer mit Lizenznummer des Herstellers und Produktionsdatum (Jahr, Monat) | Zuordnung zum lizenzierten Hersteller |
+| Einer der Mittelklötze | EPAL-Prüfklammer | Qualitätsmerkmal, sitzt nur in einem der Mittelklötze |
+| Rechter Eckklotz (nur QR-Variante) | QR-Code mit 9-stelliger alphanumerischer Seriennummer im Klartext | digitale Identifikation |
+| Einer der Mittelklötze (nur nach Reparatur) | Reparaturkennzeichnungsnagel mit EPAL-Marke und Lizenznummer | von einem lizenzierten Reparaturbetrieb repariert |
+
+„HT“ steht für Heat Treatment, die Hitzebehandlung nach dem Standard ISPM 15; sie erlaubt laut EPAL den Einsatz im internationalen Warenverkehr. Andere Quellen beschreiben die Anordnung der Marken teils anders (etwa die Oval-Marke an allen vier Eckklötzen); maßgeblich ist das aktuelle Datenblatt. Fehlt ein Merkmal, ist die Palette nicht automatisch gefälscht, aber der Lieferant sollte es erklären können.
+
+**Eingangskontrolle in einer Minute:** Marke am Eckklotz, IPPC/HT und Kennziffer am Mittelklotz, Prüfklammer, gegebenenfalls Reparaturnagel, Bauweise (11 Bretter, 9 Klötze, 78 Nägel) und die Maße mit den Toleranzen aus der Tabelle oben. Die Toleranzen stammen aus der technischen Zeichnung des Datenblatts; die Norm EN 13698-1 selbst wurde nicht eingesehen.
+
+Zur Qualitätssicherung nennt das Datenblatt jährlich mehr als 25.000 unangemeldete Prüfungen in den Betrieben der Lizenznehmer durch Bureau Veritas und CCIC sowie mehr als 1.000 lizenzierte Reparaturbetriebe. Das sind Herstellerangaben und keine unabhängig geprüften Zahlen.
+
+**Warnzeichen bei Angeboten:** EPAL Schweiz warnte 2021 vor betrügerischen Angeboten. Warnzeichen sind ein auffällig niedriger Preis, Vorauszahlung, fehlende eigene EPAL-Lizenz, fehlender Herkunftsnachweis und unvollständige oder falsche Firmenangaben. Eine mitgeschickte Lizenzurkunde sollten Sie beim genannten Lizenznehmer nachprüfen; die Kontaktdaten stehen auf epal.eu. Die Kennzeichnung sagt nichts über den Zustand der einzelnen Palette: Gebrochene Bretter oder lockere Klötze sind unabhängig vom Zeichen ein Mangel.
+
 ## Häufige Fehler bei den Palettenmaßen
 
 - **Nur die Warenmaße planen.** Ragen Packstücke über die Palette hinaus, ändern sich Fläche und Lademeter. Maßgeblich ist die tatsächliche Grundfläche der beladenen Palette.
@@ -130,4 +158,4 @@ Das Beispiel zeigt, warum Länge, Breite, Höhe und Gewicht zusammen geprüft we
 
 ## Hinweis
 
-Die Angaben zur EPAL 1 stammen vom Datenblatt von EPAL Schweiz, abgerufen am 21.10.2026; die Norm EN 13698-1, auf die sich Händler für die Maße berufen, konnte für diesen Beitrag nicht eingesehen werden, Toleranzen sind deshalb nicht genannt. Planungswerte für Innenhöhe und Nutzlast stammen aus den Rechenkernen dieser Seite und weichen je Fahrzeug ab. Verbindlich sind die aktuellen Unterlagen von EPAL und Ihrem Fahrzeug- oder Palettenhersteller.
+Die Angaben zur EPAL 1 stammen vom Datenblatt von EPAL Schweiz (abgerufen am 21.10.2026) und vom EPAL-Datenblatt PB 05/2025 (abgerufen am 22.10.2026); die Norm EN 13698-1, auf die sich Händler für die Maße berufen, konnte für diesen Beitrag nicht eingesehen werden. Planungswerte für Innenhöhe und Nutzlast stammen aus den Rechenkernen dieser Seite und weichen je Fahrzeug ab. Verbindlich sind die aktuellen Unterlagen von EPAL und Ihrem Fahrzeug- oder Palettenhersteller.

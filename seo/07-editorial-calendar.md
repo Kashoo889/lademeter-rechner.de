@@ -31,7 +31,7 @@
 | 2026-10-29 | 2 | P07 | A | Paletten | Palettentausch: So funktioniert Tausch, Konto und Rückgabe | `palettentausch` |
 | 2026-10-30 | 1 | V18 | A | Volumengewicht | CBM berechnen: Kubikmeter für Kartons, Paletten und Kisten | `cbm berechnen` |
 | 2026-10-30 | 2 | L17 | A | Lademeter | Lademeter-Rechner im Vergleich: dieselbe Aufgabe, fünf Ergebnisse | `lademeter rechner vergleich` |
-| 2026-10-31 | 1 | F08 | A | Fahrzeuge | Lang-LKW (Typ 1–5): Maße, Zulassung und befahrbare Strecken | `lang lkw` |
+| 2026-10-22 | 1 | F08 | A | Fahrzeuge | Lang-LKW (Typ 1–5): Maße, Zulassung und befahrbare Strecken | `lang lkw` |
 | 2026-10-31 | 2 | S01 | A | Versand | Palette versenden: Kosten, Anbieter und Ablauf | `palette versenden` |
 | 2026-11-01 | 1 | P10 | A | Paletten | Palettenhöhe: Maximale Ladehöhe je Transportweg | `palettenhöhe` |
 | 2026-11-01 | 2 | V06 | B | Volumengewicht | Volumengewicht in kg umrechnen: Formel, Tabelle und gängige Divisoren | `volumengewicht in kg umrechnen` |

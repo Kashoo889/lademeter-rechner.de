@@ -91,6 +91,7 @@ export const CLUSTERS: Record<ClusterId, Cluster> = {
       { href: "/lkw-beladungsrechner/", label: "LKW-Beladungsrechner", description: "Fläche, Gewicht und Volumen vorab prüfen." },
       { href: "/ratgeber/achslast-und-gesamtgewicht-lkw/", label: "Nutzlast und Lastverteilung", description: "Nutzlast ausrechnen, Ladung verteilen." },
       { href: "/anhaenger-zuladungsrechner/", label: "Anhänger-Zuladungsrechner", description: "Zuladung, Anhängelast und Stützlast für Pkw mit Anhänger." },
+      { href: "/zuladungsrechner/", label: "Zuladungsrechner", description: "Freie Zuladung von Pkw, Transporter und Wohnmobil." },
     ],
   },
   vorschriften: {

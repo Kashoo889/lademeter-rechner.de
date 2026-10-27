@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ToolPage } from "@/components/content/ToolPage";
 import { ReferenceTable } from "@/components/content/ReferenceTable";
 import { AnhaengerForm } from "@/components/calculator/forms/AnhaengerForm";
@@ -109,7 +110,7 @@ export default function AnhaengerZuladungsrechnerPage() {
               als 25 kg verlangt werden; nach oben gilt der kleinste Herstellerwert (§ 44 Abs. 3 StVZO).
             </li>
             <li>
-              <strong>Zuladung des Zugfahrzeugs:</strong> zulässige Gesamtmasse − Leermasse − Mitfahrer −
+              <strong>Zuladung des Zugfahrzeugs:</strong> (allein berechnen Sie sie im <Link href="/zuladungsrechner/" className="text-brand-700 underline">Zuladungsrechner</Link>) zulässige Gesamtmasse − Leermasse − Mitfahrer −
               Gepäck − Stützlast. Der Fahrer ist üblicherweise mit 75 kg schon in der Leermasse enthalten.
             </li>
             <li>
@@ -173,6 +174,13 @@ export default function AnhaengerZuladungsrechnerPage() {
             columns={["Regel", "Fundstelle", "Prüfung"]}
             rows={rules}
           />
+          <p>
+            Eine ausführliche Erklärung der Felder mit Beispielen finden Sie im Ratgeber{" "}
+            <Link href="/ratgeber/fahrzeugschein-anhaengelast-stuetzlast/" className="text-brand-700 underline">
+              Fahrzeugschein lesen: Anhängelast, Stützlast, Zuladung
+            </Link>
+            .
+          </p>
           <p className="text-sm text-slate-600">
             Quellen: Gesetzestexte auf gesetze-im-internet.de (StVZO, FeV) und Leitfaden zur Ausfüllung der
             Zulassungsbescheinigung Teil I und Teil II des Kraftfahrt-Bundesamts, Stand Juli 2026; abgerufen am
@@ -197,7 +205,7 @@ export default function AnhaengerZuladungsrechnerPage() {
         "Papierwerte ungeprüft glauben: Bei knappen Ergebnissen wiegen.",
       ]}
       faqs={faqs}
-      articleSlugs={["paragraf-22-stvo-ladung", "ladungssicherung-lkw-grundlagen", "palette-gewicht-berechnen"]}
+      articleSlugs={["fahrzeugschein-anhaengelast-stuetzlast", "paragraf-22-stvo-ladung", "ladungssicherung-lkw-grundlagen"]}
     />
   );
 }

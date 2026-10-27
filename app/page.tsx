@@ -146,7 +146,11 @@ export default function HomePage() {
             <Link href="/anhaenger-zuladungsrechner/" className="text-brand-700 underline">
               Anhänger-Zuladungsrechner
             </Link>{" "}
-            prüfen Sie Zuladung, Anhängelast, Stützlast und Führerscheinklasse mit den Werten aus dem Fahrzeugschein.
+            prüfen Sie Zuladung, Anhängelast, Stützlast und Führerscheinklasse mit den Werten aus dem Fahrzeugschein. Die freie Zuladung von Auto, Transporter oder Wohnmobil ermitteln Sie im{" "}
+            <Link href="/zuladungsrechner/" className="text-brand-700 underline">
+              Zuladungsrechner
+            </Link>
+            .
           </p>
         </ContentSection>
         </>

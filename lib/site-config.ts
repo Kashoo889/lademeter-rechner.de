@@ -87,6 +87,15 @@ export const calculators: CalculatorDefinition[] = [
       "Zuladung, Anhängelast, Stützlast und Führerscheinklasse für Pkw oder Transporter mit Anhänger prüfen.",
     primaryKeyword: "Anhänger Zuladung berechnen",
   },
+  {
+    slug: "zuladungsrechner",
+    href: "/zuladungsrechner/",
+    navLabel: "Zuladung Auto",
+    title: "Zuladungsrechner",
+    shortDescription:
+      "Zuladung von Pkw, Transporter und Wohnmobil aus dem Fahrzeugschein berechnen: Personen, Gepäck, Fahrräder, Wasser und Gas.",
+    primaryKeyword: "Zuladung berechnen",
+  },
 ];
 
 export const knowledgeNavigation = [

@@ -5,13 +5,14 @@ import path from "node:path";
  * Download assets (Excel-Vorlage, Aufgabenblatt) and their landing pages.
  *
  * The landing pages exist but stay HIDDEN while DOWNLOADS_LIVE is false: they are `noindex`, missing from
- * the sitemap and not linked from anywhere. Set it to true only after the operator has approved the files,
- * the licence (CC BY 4.0 proposed) and completed the manual Excel check in seo/assets/README.md.
+ * the sitemap and not linked from anywhere. Set to true on 2026-10-27 after the operator approved the files and
+ * the licence (CC BY 4.0) and the checks in seo/assets/README.md (formulas verified against the calculator core with
+ * the Python library `formulas` and independently with LibreOffice; not opened in Microsoft Excel).
  *
  * The files live in /public/downloads (copied from seo/assets by seo/tools/sync_downloads.mjs; a test checks
  * that both copies are identical).
  */
-export const DOWNLOADS_LIVE = false;
+export const DOWNLOADS_LIVE = true;
 
 export const DOWNLOAD_VERSION = "1.0";
 /** ISO date of the last substantive change to the assets. */

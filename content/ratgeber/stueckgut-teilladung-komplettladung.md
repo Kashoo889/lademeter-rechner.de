@@ -3,7 +3,7 @@ title: "Stückgut, Teilladung, Komplettladung: Unterschiede erklärt"
 description: "Stückgut, Teilladung oder Komplettladung (LTL/FTL)? Typische Grenzen nach Lademetern und Gewicht, Vor- und Nachteile und eine Checkliste für die richtige Wahl."
 slug: "stueckgut-teilladung-komplettladung"
 publishedAt: "2026-10-20"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Ladeplanung"
 tags: ["stückgut", "teilladung", "komplettladung", "ftl", "ltl", "sammelgut"]
 relatedTool: "lkw-beladungsrechner"
@@ -113,3 +113,7 @@ Bei Stückgut summieren sich solche Zuschläge schnell. Vergleichen Sie deshalb 
 ## Fazit
 
 Stückgut eignet sich für kleine Mengen, Teilladungen für mittlere Sendungen ohne Umschlag, Komplettladungen für volle oder zeitkritische Transporte. Die Grenzen sind fließend und werden von jeder Spedition selbst gezogen. Wer seine Lademeter und Gewichte kennt, kann Angebote sachlich vergleichen und die günstigste passende Variante wählen.
+
+## Weiterführend
+
+Vertiefung zum Thema: [Frachtbrief nach HGB](/ratgeber/frachtbrief-hgb/) sowie [Haftung des Frachtführers: § 431 HGB und 8,33 SZR](/ratgeber/haftung-frachtfuehrer-hgb/).

@@ -3,7 +3,7 @@ title: "LKW-Höchstmaße in Deutschland: Länge, Breite, Höhe"
 description: "Welche Maße dürfen LKW, Sattelzug und Lastzug haben? Grenzwerte nach § 32 StVZO und § 22 StVO für Breite, Höhe und Länge – mit Beispiel zur Ladeflächenplanung."
 slug: "lkw-hoechstmasse-deutschland"
 publishedAt: "2026-10-21"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-27"
 category: "Recht & Sicherheit"
 tags: ["stvzo", "abmessungen", "höchstmaße", "sattelzug", "ladefläche"]
 cluster: "vorschriften"
@@ -116,14 +116,14 @@ Eine Sendung besteht aus 10 Europaletten (1,20 × 0,80 m), jede 1,80 m hoch, nic
 
 1. **Fläche:** 10 Paletten benötigen 10 Bodenstellplätze. Mit der Lademeter-Formel: 10 × 1,20 m × 0,80 m ÷ 2,4 m = **4,0 Lademeter** (rund 29 % eines Sattelzugs mit 13,6 Lademetern).
 2. **Höhe:** 1,80 m liegt unter der Innenhöhe von 2,70 m. Zweilagig wären es 2 × 1,80 m = 3,60 m und damit mehr als die Innenhöhe. Zweilagiges Stapeln scheidet aus.
-3. **Gewicht:** 10 × 400 kg = 4.000 kg. Das liegt weit unter der typischen Nutzlast eines Sattelzugs von rund 24 t (Planungswert), muss aber gegen die tatsächliche Nutzlast des Fahrzeugs geprüft werden – siehe [Achslast und Gesamtgewicht](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+3. **Gewicht:** 10 × 400 kg = 4.000 kg. Das liegt weit unter der typischen Nutzlast eines Sattelzugs von rund 24 t (Planungswert), muss aber gegen die tatsächliche Nutzlast des Fahrzeugs geprüft werden – siehe [Nutzlast und Lastverteilung](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 4. **Ergebnis:** Fläche, Höhe und Gewicht passen. Der Rest der Ladefläche kann für weitere Sendungen genutzt werden.
 
 Die Fläche lässt sich im [Lademeter-Rechner](/) nachrechnen, die Anordnung im [LKW-Palettenrechner](/lkw-palettenrechner/).
 
 ## Außenmaße und Gewicht sind verschiedene Grenzen
 
-Ein Fahrzeug kann die Maße einhalten und trotzdem überladen sein – und umgekehrt. Das zulässige Gesamtgewicht und die Achslasten regelt § 34 StVZO. Wie Nutzlast und Achslast zusammenhängen, erklärt der Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/). Prüfen Sie Maße und Gewicht immer getrennt und gegen die Fahrzeugpapiere.
+Ein Fahrzeug kann die Maße einhalten und trotzdem überladen sein – und umgekehrt. Das zulässige Gesamtgewicht und die Achslasten regelt § 34 StVZO. Wie Nutzlast und Achslast zusammenhängen, erklärt der Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/). Prüfen Sie Maße und Gewicht immer getrennt und gegen die Fahrzeugpapiere.
 
 ## Praxis: So prüfen Sie Maße vor der Beladung
 
@@ -145,3 +145,7 @@ Ein Fahrzeug kann die Maße einhalten und trotzdem überladen sein – und umgek
 ## Hinweis
 
 Für Sonderfälle wie Überlänge, Überbreite oder Schwertransporte wenden Sie sich an die zuständige Straßenverkehrsbehörde oder einen Fachberater. Dieser Artikel ist eine allgemeine Information und keine Rechtsberatung.
+
+## Weiterführend
+
+Vertiefung zum Thema: [Lang-LKW: Maße, Regeln und Positivnetz](/ratgeber/lang-lkw/); [Überlänge und Überbreite: Erlaubnis nach § 29 StVO](/ratgeber/ueberlaenge-ueberbreite-erlaubnis/) sowie [Zulässiges Gesamtgewicht LKW](/ratgeber/zulaessiges-gesamtgewicht-lkw/).

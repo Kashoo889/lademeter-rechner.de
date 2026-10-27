@@ -3,7 +3,7 @@ title: "§ 22 StVO Ladung: Pflichten, Maße und Überstand"
 description: "§ 22 StVO einfach erklärt: wie Ladung verstaut und gesichert sein muss, welche Maße gelten, wie weit sie überstehen darf und wer dafür verantwortlich ist."
 slug: "paragraf-22-stvo-ladung"
 publishedAt: "2026-10-21"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-27"
 category: "Recht & Sicherheit"
 tags: ["stvo", "§ 22", "ladung", "ladungsüberstand", "ladungssicherung"]
 cluster: "ladungssicherung"
@@ -111,7 +111,7 @@ Mehrere Beteiligte können gleichzeitig pflichtig sein. Wer im Einzelfall wofür
 2. **Maße gegen Absatz 2 prüfen:** Fahrzeug und Ladung zusammen nicht breiter als 2,55 m und nicht höher als 4 m (Ausnahmen beachten).
 3. **Überstand messen:** vorn, hinten und seitlich gegen die Werte der Absätze 3 bis 5; Gesamtlänge gegen 20,75 m.
 4. **Kennzeichnung bereithalten:** Fahne, Schild oder Körper nach Absatz 4 sowie, wenn nötig, Leuchten und Rückstrahler.
-5. **Gewicht getrennt prüfen:** § 22 StVO regelt keine Gewichte. Zulässiges Gesamtgewicht und Achslasten sind in § 34 StVZO geregelt – siehe [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+5. **Gewicht getrennt prüfen:** § 22 StVO regelt keine Gewichte. Zulässiges Gesamtgewicht und Achslasten sind in § 34 StVZO geregelt – siehe [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 6. **Vorab planen:** Mit dem [LKW-Beladungsrechner](/lkw-beladungsrechner/) lassen sich Fläche, Gewicht und Volumen gegen das Fahrzeug prüfen; Hinweise zum Ablauf gibt die Checkliste [LKW-Beladung richtig planen](/ratgeber/lkw-beladung-richtig-planen/).
 
 ## Was § 22 StVO nicht regelt
@@ -132,3 +132,7 @@ Mehrere Beteiligte können gleichzeitig pflichtig sein. Wer im Einzelfall wofür
 ## Hinweis
 
 Dieser Artikel fasst gesetzliche Vorschriften zusammen und ist keine Rechtsberatung. Bei Streitfällen, Bußgeldverfahren oder Haftungsfragen wenden Sie sich an eine fachkundige Stelle.
+
+## Weiterführend
+
+Vertiefung zum Thema: [Überlänge und Überbreite: Erlaubnis nach § 29 StVO](/ratgeber/ueberlaenge-ueberbreite-erlaubnis/) sowie [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/). Wer mit Pkw und Anhänger lädt, prüft Zuladung und Stützlast vorab im [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/).

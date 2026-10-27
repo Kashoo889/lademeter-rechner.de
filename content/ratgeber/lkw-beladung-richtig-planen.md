@@ -3,7 +3,7 @@ title: "LKW-Beladung planen: Checkliste in 7 Schritten mit Beispiel"
 description: "LKW-Beladung richtig planen: Sendungsdaten, Fahrzeugwahl, Lademeter, Gewicht, Lastverteilung, Ladereihenfolge und Sicherung – mit durchgerechnetem Beispiel."
 slug: "lkw-beladung-richtig-planen"
 publishedAt: "2026-09-01"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Ladeplanung"
 tags: ["ladeplanung", "lkw", "beladung", "checkliste", "disposition"]
 relatedTool: "lkw-beladungsrechner"
@@ -69,7 +69,7 @@ Auch wenn Gesamtgewicht und Fläche passen, kann eine einzelne Achse überladen 
 - Nicht alles Schwere an das Heck stellen – dort fehlt oft die Last auf der Antriebsachse
 - Bei Teilbeladung den Lastverteilungsplan des Fahrzeugs beachten, falls vorhanden
 
-Die Grenzwerte für Achslasten und Gesamtgewichte regelt § 34 StVZO. Einen Überblick gibt der Ratgeber [Achslast und Gesamtgewicht](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+Die Grenzwerte für Achslasten und Gesamtgewichte regelt § 34 StVZO. Einen Überblick gibt der Ratgeber [Nutzlast und Lastverteilung](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 
 ## Schritt 5: Ladereihenfolge festlegen
 
@@ -130,3 +130,7 @@ Bei Flächenauslastungen über etwa 85 % lohnt sich eine konkrete Ladeskizze. Ge
 ## Fazit
 
 Gute Ladeplanung folgt einer festen Reihenfolge: Daten erfassen, Fläche, Gewicht und Volumen berechnen, Fahrzeug wählen, Lastverteilung und Reihenfolge prüfen, Sicherung planen und dokumentieren. Wer diese Schritte konsequent durchläuft, vermeidet Nachfahrten und gefährliche Überladungen.
+
+## Weiterführend
+
+Vertiefung zum Thema: [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/); [Zulässiges Gesamtgewicht LKW](/ratgeber/zulaessiges-gesamtgewicht-lkw/) sowie [Achslast nach § 34 StVZO](/ratgeber/achslast-tandem-tridem/).

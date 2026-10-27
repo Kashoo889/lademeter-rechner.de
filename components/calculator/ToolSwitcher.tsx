@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Layers, PackageSearch, Ruler, Scale, Truck } from "lucide-react";
+import { Caravan, Layers, PackageSearch, Ruler, Scale, Truck } from "lucide-react";
 import { calculators } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -12,9 +12,10 @@ const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   "kartons-pro-palette-rechner": PackageSearch,
   "lkw-beladungsrechner": Truck,
   "volumengewicht-rechner": Scale,
+  "anhaenger-zuladungsrechner": Caravan,
 };
 
-/** Horizontal switcher between the five calculators, shown above each calculator. */
+/** Horizontal switcher between the calculators, shown above each calculator. */
 export function ToolSwitcher() {
   const pathname = usePathname();
   return (

@@ -119,7 +119,7 @@ Zusätzlich gibt es in den Sommerferien auf bestimmten Strecken ein Samstagsfahr
 - **„Frische Ware ist immer ausgenommen.“** Nur die in Nr. 3 genannten Warengruppen.
 - **„Einmal genehmigt, immer genehmigt.“** Genehmigungen können Nebenbestimmungen und Befristungen enthalten (§ 46 Abs. 3).
 
-Ergänzend zu den Fahrverboten: Wie schwer ein Lkw sein darf, steht im Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/); welche Maße gelten, im Ratgeber [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/); wie Ladung gesichert sein muss, im Ratgeber [§ 22 StVO Ladung](/ratgeber/paragraf-22-stvo-ladung/).
+Ergänzend zu den Fahrverboten: Wie schwer ein Lkw sein darf, steht im Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/); welche Maße gelten, im Ratgeber [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/); wie Ladung gesichert sein muss, im Ratgeber [§ 22 StVO Ladung](/ratgeber/paragraf-22-stvo-ladung/).
 
 ## Hinweis
 

@@ -78,6 +78,15 @@ export const calculators: CalculatorDefinition[] = [
       "Volumengewicht und frachtpflichtiges Gewicht für Luftfracht, Paket, Seefracht oder eigenen Tarif.",
     primaryKeyword: "Volumengewicht berechnen",
   },
+  {
+    slug: "anhaenger-zuladungsrechner",
+    href: "/anhaenger-zuladungsrechner/",
+    navLabel: "Anhänger Zuladung",
+    title: "Anhänger Zuladungsrechner",
+    shortDescription:
+      "Zuladung, Anhängelast, Stützlast und Führerscheinklasse für Pkw oder Transporter mit Anhänger prüfen.",
+    primaryKeyword: "Anhänger Zuladung berechnen",
+  },
 ];
 
 export const knowledgeNavigation = [

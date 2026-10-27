@@ -3,7 +3,7 @@ title: "Lademeter in kg umrechnen: Faktor und Abrechnung"
 description: "Lademeter in kg umrechnen: Warum Speditionen 1.500 bis 2.000 kg je ldm ansetzen, wie das frachtpflichtige Gewicht entsteht und wann das echte Gewicht zählt."
 slug: "lademeter-in-kg-umrechnen"
 publishedAt: "2026-10-20"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Grundlagen"
 tags: ["lademeter", "gewicht", "frachtkosten", "frachtpflichtiges gewicht"]
 relatedTool: "lademeter-rechner"
@@ -115,3 +115,7 @@ Steht nichts dazu in den Unterlagen, fragen Sie vor der Buchung nach.
 ## Fazit
 
 Lademeter und Gewicht sind unabhängige Größen, die über einen tarifabhängigen Faktor verbunden werden. Typisch sind 1.500 bis 2.000 kg je Lademeter. Abgerechnet wird der höhere Wert aus tatsächlichem Gewicht und Lademetergewicht. Wer den Faktor seiner Spedition kennt, kann Frachtkosten zuverlässig vorab kalkulieren und Angebote fair vergleichen.
+
+## Weiterführend
+
+Vertiefung zum Thema: [Gewicht einer beladenen Palette ermitteln](/ratgeber/palette-gewicht-berechnen/) sowie [Frachtbrief nach HGB: wo Gewicht und Lademeter eingetragen werden](/ratgeber/frachtbrief-hgb/).

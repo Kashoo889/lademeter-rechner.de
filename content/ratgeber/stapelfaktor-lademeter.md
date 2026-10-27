@@ -3,7 +3,7 @@ title: "Stapelfaktor bei Lademetern: So zählt gestapelte Ware"
 description: "Wie Stapeln die Lademeter senkt: Formel mit Stapellagen, Innenhöhe-Check für Planenauflieger und Megatrailer, Beispiele und typische Abrechnungsregeln."
 slug: "stapelfaktor-lademeter"
 publishedAt: "2026-10-20"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Grundlagen"
 tags: ["lademeter", "stapelfaktor", "stapeln", "ladeplanung"]
 relatedTool: "lademeter-rechner"
@@ -123,3 +123,7 @@ Mit Stapeln halbiert sich der Flächenbedarf. Für die Spedition wird die Sendun
 ## Fazit
 
 Stapeln kann die benötigten Lademeter halbieren oder sogar dritteln. Rechnen Sie mit aufgerundeten Bodenstellplätzen, prüfen Sie die Innenhöhe des Fahrzeugs und die Belastbarkeit der Ware und stimmen Sie die Stapelbarkeit vorab mit Ihrer Spedition ab. Nur dann wird die Ersparnis auch in der Abrechnung wirksam.
+
+## Weiterführend
+
+Vertiefung zum Thema: [Lademeter bei nicht stapelbarer Ware](/ratgeber/lademeter-berechnen-nicht-stapelbar/) sowie [Europalette Maße: Höhe, Gewicht und Tragfähigkeit](/ratgeber/europalette-masse/).

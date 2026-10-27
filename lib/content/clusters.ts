@@ -89,7 +89,8 @@ export const CLUSTERS: Record<ClusterId, Cluster> = {
     links: [
       { href: "/ratgeber/lkw-beladung-richtig-planen/", label: "LKW-Beladung planen", description: "Checkliste in 7 Schritten mit Beispiel." },
       { href: "/lkw-beladungsrechner/", label: "LKW-Beladungsrechner", description: "Fläche, Gewicht und Volumen vorab prüfen." },
-      { href: "/ratgeber/achslast-und-gesamtgewicht-lkw/", label: "Achslast und Gesamtgewicht", description: "Gewichtsgrenzen nach § 34 StVZO." },
+      { href: "/ratgeber/achslast-und-gesamtgewicht-lkw/", label: "Nutzlast und Lastverteilung", description: "Nutzlast ausrechnen, Ladung verteilen." },
+      { href: "/anhaenger-zuladungsrechner/", label: "Anhänger-Zuladungsrechner", description: "Zuladung, Anhängelast und Stützlast für Pkw mit Anhänger." },
     ],
   },
   vorschriften: {
@@ -99,6 +100,7 @@ export const CLUSTERS: Record<ClusterId, Cluster> = {
       { href: "/lkw-beladungsrechner/", label: "LKW-Beladungsrechner", description: "Nutzlast, Fläche und Volumen prüfen." },
       { href: "/fahrzeuge/", label: "Fahrzeuge und Maße", description: "Innenmaße und Nutzlasten gängiger Fahrzeuge." },
       { href: "/ratgeber/ladungssicherung-lkw-grundlagen/", label: "Ladungssicherung im LKW", description: "Pflichten, Verantwortliche und Hilfsmittel." },
+      { href: "/anhaenger-zuladungsrechner/", label: "Anhänger-Zuladungsrechner", description: "Zuladung, Anhängelast und Stützlast für Pkw mit Anhänger." },
     ],
   },
   container: {
@@ -124,7 +126,7 @@ export const CLUSTERS: Record<ClusterId, Cluster> = {
     label: "Schüttgewicht und Dichte",
     links: [
       { href: "/lkw-beladungsrechner/", label: "LKW-Beladungsrechner", description: "Gewicht und Volumen gegen die Nutzlast prüfen." },
-      { href: "/ratgeber/achslast-und-gesamtgewicht-lkw/", label: "Achslast und Gesamtgewicht", description: "Nutzlast, Achslast und Gesamtgewicht." },
+      { href: "/ratgeber/achslast-und-gesamtgewicht-lkw/", label: "Nutzlast und Lastverteilung", description: "Nutzlast ausrechnen, Ladung verteilen." },
       { href: "/volumengewicht-rechner/", label: "Volumengewicht-Rechner", description: "Gewicht je Kubikmeter und Abrechnungsgewicht." },
     ],
   },

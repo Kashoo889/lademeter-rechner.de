@@ -3,7 +3,7 @@ title: "Palettenarten im Überblick: Euro-, Industrie-, Halbpalette"
 description: "Euro-, Industrie-, Halb- und Viertelpalette sowie Gitterbox: Maße, Lademeter und Stellplätze im Sattelzug im Vergleich, plus Hinweise zum Palettentausch."
 slug: "europaletten-und-palettenarten"
 publishedAt: "2026-08-15"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Paletten"
 tags: ["paletten", "europalette", "industriepalette", "gitterbox", "halbpalette"]
 relatedTool: "lkw-palettenrechner"
@@ -119,3 +119,7 @@ Welche Anordnung sinnvoll ist, hängt auch von der Entladung ab: Wird seitlich e
 ## Fazit
 
 Für die Ladeplanung zählen vor allem Grundfläche und Lademeter: Europalette 0,4 ldm, Industriepalette 0,5 ldm, Halbpalette 0,2 ldm. Auf einen Sattelzug passen 33 Europaletten oder 26 Industriepaletten. Wer Kartons auf die Palette bringen will, plant das Lagenbild am besten mit dem [Kartons-pro-Palette-Rechner](/kartons-pro-palette-rechner/).
+
+## Weiterführend
+
+Vertiefung zum Thema: [Europalette Maße, Toleranzen und Kennzeichnung echter EPAL-Paletten](/ratgeber/europalette-masse/) sowie [Halbpalette: Maße, EPAL 6 und EPAL 7](/ratgeber/halbpalette-masse/).

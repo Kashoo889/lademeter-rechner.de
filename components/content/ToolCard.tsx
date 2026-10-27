@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Layers, PackageSearch, Ruler, Scale, Truck } from "lucide-react";
+import { ArrowRight, Caravan, Layers, PackageSearch, Ruler, Scale, Truck } from "lucide-react";
 import type { CalculatorDefinition } from "@/lib/site-config";
 
 const iconBySlug: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -8,6 +8,7 @@ const iconBySlug: Record<string, React.ComponentType<{ className?: string }>> = 
   "kartons-pro-palette-rechner": PackageSearch,
   "lkw-beladungsrechner": Truck,
   "volumengewicht-rechner": Scale,
+  "anhaenger-zuladungsrechner": Caravan,
 };
 
 export function ToolCard({ tool }: { tool: CalculatorDefinition }) {

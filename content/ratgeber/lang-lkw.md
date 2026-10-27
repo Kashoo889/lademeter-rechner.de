@@ -61,7 +61,7 @@ Die Nummern 2 bis 5 gelten nach § 3 Satz 2 nur zum **überwiegenden Transport v
 - **§ 4 Abs. 2:** Fahrzeugkombinationen nach Nr. 2 bis 4 dürfen die höchstzulässige Gesamtlänge bis zu **25,25 m** überschreiten.
 - **§ 4 Abs. 3:** Fahrzeugkombinationen nach Nr. 5 dürfen die höchstzulässige Gesamtlänge bis zu **24,00 m** überschreiten.
 
-Zum Vergleich: Die allgemeinen Höchstmaße für Lkw nach § 32 StVZO erklärt der Ratgeber [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/). Die Verordnung regelt in den hier geprüften Vorschriften die Längen; zu Breite und Höhe trifft der geprüfte Text keine Aussage. Gewichtsgrenzen regelt die Verordnung in dem hier geprüften Text nicht; dafür gelten die allgemeinen Vorschriften zu Gesamtgewicht und Achslast, die im Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/) beschrieben sind.
+Zum Vergleich: Die allgemeinen Höchstmaße für Lkw nach § 32 StVZO erklärt der Ratgeber [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/). Die Verordnung regelt in den hier geprüften Vorschriften die Längen; zu Breite und Höhe trifft der geprüfte Text keine Aussage. Gewichtsgrenzen regelt die Verordnung in dem hier geprüften Text nicht; dafür gelten die allgemeinen Vorschriften zu Gesamtgewicht und Achslast, die im Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/) beschrieben sind.
 
 ## Streckennetz: nur auf freigegebenen Strecken (§ 2)
 

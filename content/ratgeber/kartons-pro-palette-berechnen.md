@@ -3,7 +3,7 @@ title: "Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen"
 description: "Wie viele Kartons passen auf eine Palette? Lagenbild, Verbund, Stapelhöhe und Gewichtsgrenzen erklärt – mit Rechenbeispielen für Euro- und Halbpalette."
 slug: "kartons-pro-palette-berechnen"
 publishedAt: "2026-10-10"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Verpackung"
 tags: ["kartons", "paletten", "verpackung", "lagenbildung", "palettierung"]
 relatedTool: "kartons-pro-palette-rechner"
@@ -132,3 +132,7 @@ Mit 5 Lagen ist jede Palette 164,4 cm hoch. Zwei davon übereinander wären 3,29
 ## Fazit
 
 Die Kartonzahl pro Palette ergibt sich aus Kartons pro Lage, Lagen und Gewichtsgrenze. Prüfen Sie beide Ausrichtungen und gemischte Lagenbilder, ziehen Sie die Palettenhöhe ab und behalten Sie das Gewicht im Blick. Wie viele fertige Paletten anschließend auf den LKW passen, berechnet der [LKW-Palettenrechner](/lkw-palettenrechner/).
+
+## Weiterführend
+
+Vertiefung zum Thema: [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/); [Halbpalette: Maße, EPAL 6 und EPAL 7](/ratgeber/halbpalette-masse/) sowie [Europalette Maße](/ratgeber/europalette-masse/).

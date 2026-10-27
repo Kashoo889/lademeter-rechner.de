@@ -3,7 +3,7 @@ title: "Ladungssicherung im LKW: Grundlagen, Pflichten, Hilfsmittel"
 description: "Ladungssicherung im LKW: Wer verantwortlich ist (§ 22 StVO, § 412 HGB), wie Form- und Kraftschluss wirken und welche Hilfsmittel in der Praxis helfen."
 slug: "ladungssicherung-lkw-grundlagen"
 publishedAt: "2026-10-15"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Recht & Sicherheit"
 tags: ["ladungssicherung", "lkw", "vorschriften", "ladeplanung", "vdi 2700"]
 relatedTool: "lkw-beladungsrechner"
@@ -77,7 +77,7 @@ Daneben gibt es die **Direktzurrung**, bei der Ladung über Zurrmittel direkt mi
 Werkzeuge wie der [LKW-Beladungsrechner](/lkw-beladungsrechner/) oder der [LKW-Palettenrechner](/lkw-palettenrechner/) helfen, Fläche, Gewicht und Volumen vorab einzuschätzen. Die geometrische Planung ist der erste Schritt, ersetzt aber nicht die mechanische Sicherung. Beide Themen hängen eng zusammen:
 
 - Eine lückenlose Anordnung erleichtert den Formschluss.
-- Schwere Ware gehört nach unten und mittig, damit Achslasten und Schwerpunkt stimmen (siehe [Achslast und Gesamtgewicht](/ratgeber/achslast-und-gesamtgewicht-lkw/)).
+- Schwere Ware gehört nach unten und mittig, damit Achslasten und Schwerpunkt stimmen (siehe [Nutzlast und Lastverteilung](/ratgeber/achslast-und-gesamtgewicht-lkw/)).
 - Gestapelte Ware braucht zusätzliche Sicherung gegen Kippen.
 
 Planen Sie die benötigten Sicherungsmittel daher schon bei der Disposition ein.
@@ -114,3 +114,7 @@ Wird unterwegs teilweise entladen, ändert sich die Situation nach jedem Stopp. 
 ## Fazit
 
 Ladungssicherung ist kein optionaler Zusatzschritt, sondern Pflicht für alle Beteiligten. Formschluss und Kraftschluss ergänzen sich, geeignete Hilfsmittel senken das Risiko erheblich. Wer Fläche, Gewicht und Sicherung bereits bei der Planung zusammen denkt, spart an der Rampe Zeit und vermeidet Schäden.
+
+## Weiterführend
+
+Vertiefung zum Thema: [§ 22 StVO Ladung: Pflichten, Maße und Überstand](/ratgeber/paragraf-22-stvo-ladung/) sowie [Überlänge und Überbreite: Erlaubnis nach § 29 StVO](/ratgeber/ueberlaenge-ueberbreite-erlaubnis/). Für Pkw mit Anhänger gibt es zusätzlich den [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/) (Zuladung, Anhängelast, Stützlast).

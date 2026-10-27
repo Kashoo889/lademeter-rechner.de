@@ -80,7 +80,7 @@ export default function LkwBeladungsrechnerPage() {
             Ergänzen Sie 8 Gitterboxen à 600 kg, steigt das Gewicht auf 12.000 kg – die Fläche ist dann
             weiterhin kein Problem, entscheidend wird die Achslast. Hintergründe im Ratgeber{" "}
             <Link href="/ratgeber/achslast-und-gesamtgewicht-lkw/" className="text-brand-700 underline">
-              Achslast und Gesamtgewicht
+              Nutzlast und Lastverteilung
             </Link>
             .
           </p>

@@ -28,7 +28,7 @@ Wie schwer ein Lkw sein darf, hängt von der **Fahrzeugart und der Zahl der Achs
 
 ## Gesamtgewicht und zulässiges Gesamtgewicht
 
-Das **zulässige Gesamtgewicht** ist der Höchstwert, den Fahrzeug oder Fahrzeugkombination samt Ladung wiegen dürfen. Nach § 34 Abs. 2 StVZO ergeben sich die technisch zulässigen Werte aus der Werkstoffbeanspruchung und aus weiteren Vorschriften, etwa zu Motorleistung und Bremsen; nach Abs. 3 müssen zulässige Achslast und zulässiges Gesamtgewicht im Betrieb eingehalten werden. Das tatsächliche Gewicht ergibt sich aus Leergewicht plus Ladung. Wie daraus die Nutzlast folgt, erklärt der Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/); die zulässigen Achslasten stehen im Ratgeber [Achslast: Einzel-, Doppel- und Dreifachachse](/ratgeber/achslast-tandem-tridem/).
+Das **zulässige Gesamtgewicht** ist der Höchstwert, den Fahrzeug oder Fahrzeugkombination samt Ladung wiegen dürfen. Nach § 34 Abs. 2 StVZO ergeben sich die technisch zulässigen Werte aus der Werkstoffbeanspruchung und aus weiteren Vorschriften, etwa zu Motorleistung und Bremsen; nach Abs. 3 müssen zulässige Achslast und zulässiges Gesamtgewicht im Betrieb eingehalten werden. Das tatsächliche Gewicht ergibt sich aus Leergewicht plus Ladung. Wie daraus die Nutzlast folgt, erklärt der Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/); die zulässigen Achslasten stehen im Ratgeber [Achslast: Einzel-, Doppel- und Dreifachachse](/ratgeber/achslast-tandem-tridem/).
 
 ## Höchstwerte für Kraftfahrzeuge und Anhänger (§ 34 Abs. 5)
 
@@ -110,6 +110,8 @@ Die Werte aus § 34 sind Obergrenzen des Gesetzes. Für Ihr Fahrzeug maßgeblich
 - **„Alternative Antriebe dürfen beliebig mehr wiegen.“** Nur bis 1 t bzw. 2 t und nur, wenn das Mehrgewicht durch die Technik begründet ist.
 
 Welche Maße gelten, steht im Ratgeber [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/); für Überschreitungen im Einzelfall siehe [Überlänge und Überbreite: Erlaubnis nach § 29 StVO](/ratgeber/ueberlaenge-ueberbreite-erlaubnis/).
+
+Für Pkw und Transporter bis 3,5 t mit Anhänger (Zuladung, Anhängelast, Stützlast, Führerscheinklasse) gibt es den [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/).
 
 ## Hinweis
 

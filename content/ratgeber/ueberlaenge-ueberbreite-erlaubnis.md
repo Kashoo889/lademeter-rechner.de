@@ -105,7 +105,7 @@ Das ist eine allgemeine Orientierung und keine verbindliche Liste. Welche Unterl
 - **„Der Bescheid reicht im Büro.“** Er muss bei der Fahrt mitgeführt werden.
 - **„Überlänge, Überbreite und Überhöhe sind dasselbe Verfahren.“** Die Grundlage ist ähnlich, die Voraussetzungen und Auflagen unterscheiden sich im Einzelfall.
 
-Wie Ladung zu sichern und zu kennzeichnen ist, steht im Ratgeber [§ 22 StVO Ladung](/ratgeber/paragraf-22-stvo-ladung/) und im Ratgeber [Ladungssicherung im LKW: Grundlagen](/ratgeber/ladungssicherung-lkw-grundlagen/); zu Gewicht und Achslast im Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+Wie Ladung zu sichern und zu kennzeichnen ist, steht im Ratgeber [§ 22 StVO Ladung](/ratgeber/paragraf-22-stvo-ladung/) und im Ratgeber [Ladungssicherung im LKW: Grundlagen](/ratgeber/ladungssicherung-lkw-grundlagen/); zu Gewicht und Achslast im Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 
 ## Hinweis
 

@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# unpublished research, drafts and internal SEO planning (kept local only, never public)
+/seo/

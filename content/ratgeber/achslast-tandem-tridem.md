@@ -118,7 +118,7 @@ Die Kombination hat fünf Achsen, der Höchstwert beträgt nach § 34 Abs. 6 Nr.
 Wie schwer eine einzelne Achse belastet wird, lässt sich mit dem Gesamtgewicht allein nicht ausrechnen. Dafür brauchen Sie die Achsabstände, den Schwerpunkt der Ladung und die Leergewichts-Verteilung des Fahrzeugs, also Werte aus den Fahrzeugpapieren und von Hersteller oder Aufbauer. Der [Beladungsrechner](/lkw-beladungsrechner/) dieser Seite prüft Nutzlast und Flächenauslastung, nicht die Achslasten. Für die Praxis gelten zwei Hinweise, die nur eine Orientierung sind:
 
 1. **Schwere Güter nicht an einem Ende konzentrieren.** Wo das Gewicht liegt, entscheidet, welche Achse es trägt.
-2. **Bei Zweifeln wiegen.** Fahrzeugwaagen liefern die tatsächlichen Achslasten; Grundlagen zu Nutzlast und Gesamtgewicht stehen im Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+2. **Bei Zweifeln wiegen.** Fahrzeugwaagen liefern die tatsächlichen Achslasten; Grundlagen zu Nutzlast und Gesamtgewicht stehen im Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 
 ## Häufige Missverständnisse
 

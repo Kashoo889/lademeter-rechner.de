@@ -83,7 +83,7 @@ Das Eigengewicht der Palette gehört zur Ladung und verringert die Nutzlast:
 - 33 Paletten × 25 kg = **825 kg** nur für die leeren Paletten.
 - 34 Paletten × 25 kg = **850 kg**.
 
-Bei einer Nutzlast von 24.000 kg, dem Planungswert des Standard-Sattelzugs im Beladungsrechner, dürfen 33 Paletten im Mittel rund **727 kg** wiegen (24.000 kg ÷ 33), und zwar einschließlich der Palette selbst. Die Ware pro Palette darf damit im Mittel etwa 702 kg wiegen. Schwere Güter erreichen die Nutzlast also, bevor die Fläche ausgelastet ist; leichte Güter nicht. Wie Gesamtgewicht und Achslasten zusammenhängen, beschreibt der Ratgeber [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+Bei einer Nutzlast von 24.000 kg, dem Planungswert des Standard-Sattelzugs im Beladungsrechner, dürfen 33 Paletten im Mittel rund **727 kg** wiegen (24.000 kg ÷ 33), und zwar einschließlich der Palette selbst. Die Ware pro Palette darf damit im Mittel etwa 702 kg wiegen. Schwere Güter erreichen die Nutzlast also, bevor die Fläche ausgelastet ist; leichte Güter nicht. Wie Gesamtgewicht und Achslasten zusammenhängen, beschreibt der Ratgeber [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 
 ## Tragfähigkeit und Stapelbelastung
 

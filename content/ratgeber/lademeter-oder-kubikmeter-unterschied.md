@@ -3,7 +3,7 @@ title: "Lademeter oder Kubikmeter: Was ist der Unterschied?"
 description: "Lademeter messen die belegte Ladefläche, Kubikmeter das Volumen. Wann welche Einheit gilt, warum es keinen festen Umrechnungsfaktor gibt – mit Beispielen."
 slug: "lademeter-oder-kubikmeter-unterschied"
 publishedAt: "2026-10-20"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Grundlagen"
 tags: ["lademeter", "kubikmeter", "volumen"]
 relatedTool: "lademeter-rechner"
@@ -111,3 +111,7 @@ Aus Höhe und Grundfläche kann die Spedition das Volumen selbst ableiten. Fehlt
 ## Fazit
 
 Lademeter und Kubikmeter beantworten unterschiedliche Fragen. Lademeter zeigen, wie viel Ladefläche eine Sendung im Straßengüterverkehr beansprucht, Kubikmeter, wie viel Raum sie einnimmt. Für die Planung brauchen Sie beide Werte – plus das Gewicht. Den Lademeterbedarf mehrerer Positionen berechnet der [Lademeter-Rechner](/) in einem Schritt.
+
+## Weiterführend
+
+Vertiefung zum Thema: [CBM berechnen: Kubikmeter für Kartons und Paletten](/ratgeber/cbm-berechnen/) sowie [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/).

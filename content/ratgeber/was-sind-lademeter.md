@@ -3,7 +3,7 @@ title: "Was ist ein Lademeter? Definition, Formel und Beispiele"
 description: "Was ist ein Lademeter (ldm)? Formel mit 2,4 m Ladebreite, Rechenbeispiele für Euro- und Industriepaletten, Stapeln, Abrechnung und typische Fehler."
 slug: "was-sind-lademeter"
 publishedAt: "2026-08-01"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Grundlagen"
 tags: ["lademeter", "ldm", "formel", "grundlagen", "ladeplanung"]
 relatedTool: "lademeter-rechner"
@@ -173,3 +173,7 @@ In der Seefracht wird überwiegend in Kubikmetern und Containerstellplätzen ger
 ## Fazit
 
 Ein Lademeter ist 1 m Ladefläche über eine Breite von 2,4 m. Die Formel Länge × Breite ÷ 2,4 reicht für die meisten Berechnungen aus: Eine Europalette hat 0,4 ldm, eine Industriepalette 0,5 ldm, ein Sattelzug 13,6 ldm. Prüfen Sie zusätzlich immer Gewicht, Stapelbarkeit und die Tarifregeln Ihrer Spedition. Für schnelle Ergebnisse mit mehreren Positionen nutzen Sie den [Lademeter-Rechner](/).
+
+## Weiterführend
+
+Rechenfälle ohne Stapeln mit Rechenweg finden Sie im Ratgeber [Lademeter bei nicht stapelbarer Ware: sechs durchgerechnete Fälle](/ratgeber/lademeter-berechnen-nicht-stapelbar/); zum Gewicht der Paletten siehe [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/). Zum Üben gibt es ein kostenloses [Aufgabenblatt mit Lösungen](/lademeter-aufgaben/) und eine [Excel-Vorlage](/lademeter-excel-vorlage/).

@@ -4,6 +4,12 @@ import { siteConfig } from "@/lib/site-config";
 /** Approximate number of characters Google shows in a result title. */
 const SERP_TITLE_LIMIT = 60;
 
+/**
+ * Explicit Open Graph image URL with trailing slash. The file-based image route (app/opengraph-image.tsx) is
+ * redirected (308) when requested without the slash because of `trailingSlash: true`; pointing to the final URL avoids the hop.
+ */
+const OG_IMAGE = { url: "/opengraph-image/", width: 1200, height: 630, alt: "Lademeter Rechner – Online-Rechner für Lademeter, Paletten und LKW-Ladeplanung" };
+
 type PageMetadataInput = {
   /** Page title without the site-name suffix (the root layout template adds it). */
   title: string;
@@ -51,12 +57,14 @@ export function buildPageMetadata({
       url,
       title: socialTitle,
       description,
+      images: [OG_IMAGE],
       ...(type === "article" ? { publishedTime, modifiedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
       description,
+      images: [OG_IMAGE.url],
     },
     ...(noindex ? { robots: { index: false, follow: true } } : {}),
   };

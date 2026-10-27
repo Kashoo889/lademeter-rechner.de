@@ -1,9 +1,9 @@
 ---
-title: "Achslast und Gesamtgewicht beim LKW: Grundlagen"
-description: "Zulässiges Gesamtgewicht, Leergewicht, Nutzlast und Achslasten beim LKW: Grenzwerte nach § 34 StVZO, Lastverteilung und Rechenbeispiel für den Sattelzug."
+title: "Nutzlast und Lastverteilung beim LKW: Grundlagen"
+description: "Nutzlast, Leergewicht und Lastverteilung beim LKW: So rechnen Sie die Nutzlast aus, warum Achslasten zählen und wie Sie Ladung gleichmäßig verteilen."
 slug: "achslast-und-gesamtgewicht-lkw"
 publishedAt: "2026-10-20"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-27"
 category: "Recht & Sicherheit"
 tags: ["achslast", "gesamtgewicht", "nutzlast", "stvzo", "lastverteilung"]
 relatedTool: "lkw-beladungsrechner"
@@ -11,7 +11,7 @@ faq:
   - question: "Was ist der Unterschied zwischen Nutzlast und zulässigem Gesamtgewicht?"
     answer: "Das zulässige Gesamtgewicht ist das maximale Gewicht des beladenen Fahrzeugs. Die Nutzlast ist der Teil davon, der für Ladung bleibt: zulässiges Gesamtgewicht minus Leergewicht."
   - question: "Wie schwer darf ein Sattelzug sein?"
-    answer: "Ein Sattelkraftfahrzeug mit mehr als vier Achsen darf nach § 34 StVZO in der Regel 40 t wiegen, im kombinierten Verkehr unter bestimmten Voraussetzungen 44 t. Prüfen Sie die aktuelle Rechtslage und die Fahrzeugpapiere."
+    answer: "Ein Sattelkraftfahrzeug mit mehr als vier Achsen darf nach § 34 StVZO in der Regel 40 t wiegen, im intermodalen Verkehr unter bestimmten Voraussetzungen 42 oder 44 t. Alle Höchstwerte stehen im Ratgeber zum zulässigen Gesamtgewicht; maßgeblich sind die Fahrzeugpapiere."
   - question: "Kann eine Achse überladen sein, obwohl das Gesamtgewicht stimmt?"
     answer: "Ja. Wird schwere Ware einseitig, etwa nur am Heck oder ganz vorn, geladen, kann eine einzelne Achse ihre zulässige Last überschreiten, obwohl das Gesamtgewicht eingehalten ist."
 sources:
@@ -21,7 +21,7 @@ sources:
     url: "https://www.gesetze-im-internet.de/stvo_2013/__22.html"
 ---
 
-Eine Ladung muss nicht nur auf die Ladefläche passen, sondern auch zum Gewicht des Fahrzeugs. Dabei zählen zwei Grenzen: das zulässige Gesamtgewicht und die zulässigen Achslasten. Dieser Ratgeber erklärt die Begriffe, nennt die wichtigsten Grenzwerte und zeigt, warum die Verteilung der Ladung genauso wichtig ist wie ihr Gesamtgewicht.
+Eine Ladung muss nicht nur auf die Ladefläche passen, sondern auch zum Gewicht des Fahrzeugs. Dabei zählen zwei Grenzen: das zulässige Gesamtgewicht und die zulässigen Achslasten. Dieser Ratgeber erklärt die Begriffe, zeigt, wie Sie die **Nutzlast** ausrechnen, und warum die **Verteilung** der Ladung genauso wichtig ist wie ihr Gesamtgewicht. Die gesetzlichen Höchstwerte im Detail stehen in zwei eigenen Beiträgen: [Zulässiges Gesamtgewicht LKW](/ratgeber/zulaessiges-gesamtgewicht-lkw/) und [Achslast bei Einzel-, Doppel- und Dreifachachse](/ratgeber/achslast-tandem-tridem/).
 
 ## Die wichtigsten Begriffe
 
@@ -32,19 +32,14 @@ Eine Ladung muss nicht nur auf die Ladefläche passen, sondern auch zum Gewicht 
 
 **Nutzlast = zulässiges Gesamtgewicht − Leergewicht**
 
-## Grenzwerte nach § 34 StVZO
+## Wo die gesetzlichen Grenzwerte stehen
 
-Die Straßenverkehrs-Zulassungs-Ordnung legt Höchstwerte für Achslasten und Gesamtgewichte fest. Einige häufig benötigte Werte, jeweils in der Regel und vorbehaltlich der Detailregelungen:
+Die Höchstwerte für Gesamtgewicht und Achslasten regelt § 34 StVZO. Weil sie von Fahrzeugart, Achszahl und Achsabstand abhängen, gibt es sie hier nicht noch einmal als Tabelle:
 
-| Bezug | Höchstwert (in der Regel) |
-| --- | --- |
-| Einzelachse | 10 t |
-| angetriebene Achse | 11,5 t |
-| Kraftfahrzeug mit zwei Achsen | 18 t |
-| Sattelkraftfahrzeug oder Lastzug mit mehr als vier Achsen | 40 t |
-| dto. im kombinierten Verkehr (unter Voraussetzungen) | 44 t |
+- **Gesamtgewicht** von Lkw, Anhängern, Zügen und Sattelkraftfahrzeugen (18 bis 44 t): [Zulässiges Gesamtgewicht LKW: § 34 StVZO im Überblick](/ratgeber/zulaessiges-gesamtgewicht-lkw/)
+- **Achslasten** für Einzel-, Doppel- und Dreifachachsen: [Achslast: Einzel-, Doppel- und Dreifachachse nach § 34](/ratgeber/achslast-tandem-tridem/)
 
-Für Doppel- und Dreifachachsen, besondere Federungen und weitere Fahrzeugarten gelten eigene Werte. Die Vorschrift wird gelegentlich geändert. Prüfen Sie daher die aktuelle Fassung und vor allem die Angaben in den Papieren Ihres Fahrzeugs – sie können niedriger sein als die gesetzlichen Höchstwerte.
+Für Ihre Ladeplanung entscheidend ist jedoch der niedrigere von zwei Werten: der gesetzliche Höchstwert oder die Eintragung in den Papieren Ihres Fahrzeugs.
 
 ## Rechenbeispiel: Nutzlast eines Sattelzugs
 

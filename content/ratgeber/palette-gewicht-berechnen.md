@@ -87,7 +87,7 @@ Diese Methode ist eine **Schätzung**. Hohlräume, Verpackung und ungleichmäßi
 
 **3. Tragfähigkeit der Palette.** Eine EPAL-Europalette trägt laut EPAL 1.500 kg. Die Angabe gilt für eine gleichmäßig verteilte Last; punktuelle Belastung ist etwas anderes. Beim Stapeln beladener Paletten soll die unterste Palette laut EPAL nur bis zu 5.500 kg belastet werden, auf festem, ebenem Untergrund.
 
-**4. Ladungssicherung und Achslast.** Das Gewicht je Palette beeinflusst, wie Sie die Ladung verteilen und sichern. Grundlagen dazu: [Ladungssicherung im LKW](/ratgeber/ladungssicherung-lkw-grundlagen/) und [Achslast und Gesamtgewicht beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
+**4. Ladungssicherung und Achslast.** Das Gewicht je Palette beeinflusst, wie Sie die Ladung verteilen und sichern. Grundlagen dazu: [Ladungssicherung im LKW](/ratgeber/ladungssicherung-lkw-grundlagen/) und [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/).
 
 ## Von der Palette zur Sendung: Gesamtgewicht mehrerer Paletten
 

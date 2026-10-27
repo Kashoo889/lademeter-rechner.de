@@ -6,6 +6,7 @@ import { ReferenceTable } from "@/components/content/ReferenceTable";
 import { ContentSection } from "@/components/content/ContentSection";
 import { DownloadsCallout } from "@/components/content/DownloadsCallout";
 import { VehicleLinks } from "@/components/content/VehicleLinks";
+import { TopicGuides } from "@/components/content/TopicGuides";
 import { LademeterForm } from "@/components/calculator/forms/LademeterForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { ldmByQuantityRows, palletLdmRows } from "@/lib/content/referenceData";
@@ -134,6 +135,19 @@ export default function HomePage() {
         <ContentSection title="Lademeter je Fahrzeug" id="fahrzeuge">
           <p>Wie viele Lademeter und Paletten ein Fahrzeug fasst, steht auf den Fahrzeugseiten:</p>
           <VehicleLinks />
+        </ContentSection>
+        <ContentSection title="Ratgeber nach Thema" id="ratgeber-themen">
+          <p>Die wichtigsten Anleitungen und Nachschlagewerke, nach Themen geordnet:</p>
+          <TopicGuides />
+        </ContentSection>
+        <ContentSection title="Transporter und Anhänger im Alltag" id="anhaenger">
+          <p>
+            Beim Umzug oder Gartentransport zählt nicht die Fläche, sondern das Gewicht: Mit dem{" "}
+            <Link href="/anhaenger-zuladungsrechner/" className="text-brand-700 underline">
+              Anhänger-Zuladungsrechner
+            </Link>{" "}
+            prüfen Sie Zuladung, Anhängelast, Stützlast und Führerscheinklasse mit den Werten aus dem Fahrzeugschein.
+          </p>
         </ContentSection>
         </>
       }

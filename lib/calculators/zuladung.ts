@@ -9,7 +9,9 @@
  *   Gesamtmasse (für Klassen L, M1, N1 gleich F.1), Feld G Masse des in Betrieb befindlichen Fahrzeugs (Leermasse),
  *   Feld 22 kann auf Antrag die tatsächliche Masse enthalten.
  * - § 42 Abs. 3 StVZO: Leergewicht = betriebsfertig, Kraftstoff zu 90 %, Systeme für andere Flüssigkeiten zu 100 %
- *   (Abwasser ausgenommen), bei Kraftfahrzeugen zuzüglich 75 kg Fahrer.
+ *   (gebrauchtes Wasser ausgenommen), bei Kraftfahrzeugen zuzüglich 75 kg Fahrer. Gas nennt die Vorschrift nicht;
+ *   ob Frischwasser und Gas in Feld G stecken, hängt von der Eintragung des Herstellers ab und wird deshalb
+ *   getrennt abgefragt. Unbekannt = nicht enthalten (vorsichtige Annahme, Zuladung eher zu klein als zu groß).
  *
  * Offen gelassen: Achslasten (erfordern Fahrzeugdaten, die Nutzer meist nicht haben) und Abweichungen der
  * Leermasse laut Papieren von der tatsächlichen Masse. Beides wird im Ergebnis ausdrücklich genannt.
@@ -41,8 +43,10 @@ export type ZuladungInput = {
   /** Wohnmobil: Frischwasser in Litern und Gas in kg. */
   wasserLiter: number | null;
   gasKg: number | null;
-  /** Wohnmobil: Wasser und Gas sind laut Papieren bereits in der Leermasse enthalten. */
-  wasserGasInLeermasse: boolean;
+  /** Wohnmobil: Frischwasser ist laut Herstellerdatenblatt bereits in der Leermasse enthalten. */
+  wasserInLeermasse: boolean;
+  /** Wohnmobil: Gas ist laut Herstellerdatenblatt bereits in der Leermasse enthalten. */
+  gasInLeermasse: boolean;
   /** Stützlast eines Anhängers auf der Kupplung. */
   stuetzlast: number | null;
 };
@@ -133,10 +137,10 @@ export function calculateZuladung(input: ZuladungInput): ZuladungResult | null {
   if (raeder > 0 && present(input.gewichtProRad) && input.gewichtProRad > 0)
     items.push({ id: "raeder", label: `Fahrräder (${raeder} × ${kg(input.gewichtProRad)})`, kg: raeder * input.gewichtProRad });
 
-  if (input.art === "wohnmobil" && !input.wasserGasInLeermasse) {
-    if (present(input.wasserLiter) && input.wasserLiter > 0)
+  if (input.art === "wohnmobil") {
+    if (!input.wasserInLeermasse && present(input.wasserLiter) && input.wasserLiter > 0)
       items.push({ id: "wasser", label: `Frischwasser (${nf.format(input.wasserLiter)} l)`, kg: input.wasserLiter * WASSER_KG_PRO_LITER });
-    if (present(input.gasKg) && input.gasKg > 0) items.push({ id: "gas", label: "Gas", kg: input.gasKg });
+    if (!input.gasInLeermasse && present(input.gasKg) && input.gasKg > 0) items.push({ id: "gas", label: "Gas", kg: input.gasKg });
   }
 
   if (present(input.stuetzlast) && input.stuetzlast > 0)
@@ -159,10 +163,11 @@ export function calculateZuladung(input: ZuladungInput): ZuladungResult | null {
     "Maßgeblich sind immer die Eintragungen in Ihren Fahrzeugpapieren. Der Rechner ersetzt weder Wiegen noch Rechtsberatung.",
   ];
   if (input.art === "wohnmobil") {
+    const ausgenommen = [input.wasserInLeermasse ? "Frischwasser" : "", input.gasInLeermasse ? "Gas" : ""].filter(Boolean);
     notes.push(
-      input.wasserGasInLeermasse
-        ? "Wasser und Gas wurden nicht abgezogen, weil Sie angegeben haben, dass sie bereits in der Leermasse enthalten sind. Prüfen Sie das im Datenblatt Ihres Herstellers."
-        : "Wasser und Gas werden abgezogen. Sind sie laut Datenblatt bereits in der Leermasse enthalten, rechnen Sie zu vorsichtig: Haken bei „bereits in der Leermasse enthalten“ setzen.",
+      ausgenommen.length > 0
+        ? `${ausgenommen.join(" und ")} wurde${ausgenommen.length > 1 ? "n" : ""} nicht abgezogen, weil Sie angegeben haben, dass ${ausgenommen.length > 1 ? "beides" : "es"} bereits in der Leermasse enthalten ist. Prüfen Sie das im Datenblatt Ihres Herstellers; Wiegen ist sicherer.`
+        : "Frischwasser und Gas werden abgezogen. Nach § 42 Abs. 3 StVZO gelten Systeme für andere Flüssigkeiten in der Leermasse als zu 100 % gefüllt (gebrauchtes Wasser ausgenommen). Steht im Datenblatt Ihres Herstellers, dass Wasser oder Gas schon enthalten sind, setzen Sie den entsprechenden Haken, sonst rechnen Sie zu vorsichtig.",
     );
   }
   return { max, items, belegt, rest, auslastungProzent: max > 0 ? (belegt / max) * 100 : 0, tone, summary, notes };

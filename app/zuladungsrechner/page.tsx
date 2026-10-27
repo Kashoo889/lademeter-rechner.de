@@ -32,7 +32,12 @@ const faqs = [
   {
     question: "Was zählt beim Wohnmobil zur Zuladung?",
     answer:
-      "Alles, was nach der Erstzulassung hinzukommt oder nicht schon in der Leermasse steckt: Mitfahrer, Gepäck, nachgerüstetes Zubehör und je nach Herstellerangabe Frischwasser und Gas. Ob Wasser und Gas in der Leermasse enthalten sind, steht im Datenblatt des Herstellers. Der Rechner nimmt zur Sicherheit an, dass sie noch abgezogen werden müssen.",
+      "Alles, was nach der Erstzulassung hinzukommt oder nicht schon in der Leermasse steckt: Mitfahrer, Gepäck, nachgerüstetes Zubehör und je nach Herstellerangabe Frischwasser und Gas. Der Rechner fragt Wasser und Gas getrennt ab und zieht sie ab, solange Sie nicht angeben, dass sie schon in der Leermasse enthalten sind.",
+  },
+  {
+    question: "Sind Wasser und Gas im Leergewicht des Fahrzeugscheins enthalten?",
+    answer:
+      "Das lässt sich nicht pauschal sagen. Nach § 42 Abs. 3 StVZO zählen Systeme für andere Flüssigkeiten in der Leermasse als zu 100 % gefüllt, gebrauchtes Wasser ausgenommen; Gas nennt die Vorschrift nicht. Welche Füllmengen der Hersteller tatsächlich eingerechnet hat, steht im Datenblatt oder Prospekt und weicht zwischen Herstellern ab. Ohne diese Angabe rechnet der Rechner vorsichtig und zieht beides ab. Am sichersten ist das Wiegen mit den Tanks, wie Sie reisen.",
   },
   {
     question: "Wie schwer ist ein Liter Wasser?",
@@ -61,6 +66,7 @@ const fields: (string | number)[][] = [
 const rules: (string | number)[][] = [
   ["Zulässiges Gesamtgewicht und Achslast müssen im Betrieb eingehalten werden", "§ 34 Abs. 3 StVZO", "Ergebnis"],
   ["Leergewicht: betriebsfertig, Kraftstoff zu 90 %, bei Kfz inkl. 75 kg Fahrer", "§ 42 Abs. 3 StVZO", "Fahrer"],
+  ["Systeme für andere Flüssigkeiten zählen als zu 100 % gefüllt, gebrauchtes Wasser ausgenommen; Gas ist nicht genannt", "§ 42 Abs. 3 StVZO", "Wohnmobil: Wasser und Gas"],
   ["1 Liter Wasser ≈ 1 kg", "Physik", "Wohnmobil: Wasser"],
 ];
 
@@ -93,8 +99,9 @@ export default function ZuladungsrechnerPage() {
               Erstzulassung montiert wurde (Dachbox, Träger, Markise), steht nicht in der Leermasse.
             </li>
             <li>
-              <strong>Wohnmobil:</strong> Frischwasser (1 l ≈ 1 kg) und Gas, sofern sie nicht laut Datenblatt
-              schon in der Leermasse enthalten sind.
+              <strong>Wohnmobil:</strong> Frischwasser (1 l ≈ 1 kg) und Gas, sofern Sie nicht angeben, dass sie
+              laut Herstellerdatenblatt schon in der Leermasse enthalten sind. Beides lässt sich getrennt
+              einstellen.
             </li>
             <li>
               <strong>Stützlast:</strong> Bei Anhängerbetrieb belastet sie das Zugfahrzeug und zählt zur

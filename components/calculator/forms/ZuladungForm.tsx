@@ -27,7 +27,8 @@ type FormState = {
   gewichtProRad: string;
   wasserLiter: string;
   gasKg: string;
-  wasserGasInLeermasse: boolean;
+  wasserInLeermasse: boolean;
+  gasInLeermasse: boolean;
   stuetzlast: string;
 };
 
@@ -44,7 +45,8 @@ const INITIAL: FormState = {
   gewichtProRad: "",
   wasserLiter: "",
   gasKg: "",
-  wasserGasInLeermasse: false,
+  wasserInLeermasse: false,
+  gasInLeermasse: false,
   stuetzlast: "",
 };
 
@@ -76,7 +78,7 @@ const TEXT_KEYS = [
 ] as const;
 
 function toShare(state: FormState) {
-  return { ...Object.fromEntries(TEXT_KEYS.map((key) => [key, state[key]])), art: state.art, wg: state.wasserGasInLeermasse };
+  return { ...Object.fromEntries(TEXT_KEYS.map((key) => [key, state[key]])), art: state.art, ww: state.wasserInLeermasse, wgas: state.gasInLeermasse };
 }
 
 function sanitize(raw: unknown): FormState | null {
@@ -86,7 +88,9 @@ function sanitize(raw: unknown): FormState | null {
   const next: FormState = { ...INITIAL };
   for (const key of TEXT_KEYS) next[key] = asString(d[key]).slice(0, 12);
   next.art = asOneOf(d.art, ["pkw", "transporter", "wohnmobil"] as const, "pkw");
-  next.wasserGasInLeermasse = asBool(d.wg, false);
+  // "wg" stammt aus älteren Links, in denen Wasser und Gas gemeinsam angegeben wurden.
+  next.wasserInLeermasse = asBool(d.ww, asBool(d.wg, false));
+  next.gasInLeermasse = asBool(d.wgas, asBool(d.wg, false));
   return next;
 }
 
@@ -104,7 +108,8 @@ function toInput(state: FormState): ZuladungInput {
     gewichtProRad: parseDecimal(state.gewichtProRad),
     wasserLiter: parseDecimal(state.wasserLiter),
     gasKg: parseDecimal(state.gasKg),
-    wasserGasInLeermasse: state.wasserGasInLeermasse,
+    wasserInLeermasse: state.wasserInLeermasse,
+    gasInLeermasse: state.gasInLeermasse,
     stuetzlast: parseDecimal(state.stuetzlast),
   };
 }
@@ -304,18 +309,29 @@ export function ZuladungForm() {
                     error={err("gasKg")}
                   />
                 </div>
-                <label className="mt-4 flex cursor-pointer items-start gap-3 text-sm text-slate-700">
-                  <input
-                    type="checkbox"
-                    checked={state.wasserGasInLeermasse}
-                    onChange={(event) => set("wasserGasInLeermasse", event.target.checked)}
-                    className="mt-0.5 h-5 w-5 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
-                  />
-                  <span>
-                    Wasser und Gas sind laut Herstellerdatenblatt bereits in der Leermasse enthalten.
-                    <span className="block text-xs text-slate-500">Im Zweifel nicht ankreuzen, dann rechnet der Rechner auf der sicheren Seite.</span>
-                  </span>
-                </label>
+                <fieldset className="mt-4 space-y-3">
+                  <legend className="text-sm font-bold text-slate-800">Schon in der Leermasse (Feld G) enthalten?</legend>
+                  <p className="text-xs text-slate-500">
+                    Das steht im Datenblatt des Herstellers, nicht im Fahrzeugschein. Im Zweifel nicht ankreuzen: Dann rechnet der
+                    Rechner auf der sicheren Seite.
+                  </p>
+                  {(
+                    [
+                      ["wasserInLeermasse", "Frischwasser ist bereits enthalten"],
+                      ["gasInLeermasse", "Gas ist bereits enthalten"],
+                    ] as const
+                  ).map(([key, label]) => (
+                    <label key={key} className="flex cursor-pointer items-center gap-3 text-sm text-slate-700">
+                      <input
+                        type="checkbox"
+                        checked={state[key]}
+                        onChange={(event) => set(key, event.target.checked)}
+                        className="h-5 w-5 shrink-0 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+                      />
+                      <span>{label}</span>
+                    </label>
+                  ))}
+                </fieldset>
               </>
             ) : null}
 

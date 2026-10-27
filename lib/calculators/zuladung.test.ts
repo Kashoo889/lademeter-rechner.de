@@ -15,7 +15,8 @@ function input(overrides: Partial<ZuladungInput> = {}): ZuladungInput {
     gewichtProRad: null,
     wasserLiter: null,
     gasKg: null,
-    wasserGasInLeermasse: false,
+    wasserInLeermasse: false,
+    gasInLeermasse: false,
     stuetzlast: null,
     ...overrides,
   };
@@ -87,10 +88,26 @@ describe("Wohnmobil", () => {
     expect(result?.items.map((i) => i.id)).toEqual(["wasser", "gas"]);
   });
 
-  it("zieht Wasser und Gas nicht ab, wenn sie laut Papieren in der Leermasse enthalten sind", () => {
-    const result = calculateZuladung(camper({ wasserGasInLeermasse: true }));
+  it("zieht Wasser nicht ab, wenn es laut Datenblatt in der Leermasse enthalten ist, Gas aber schon", () => {
+    const result = calculateZuladung(camper({ wasserInLeermasse: true }));
+    expect(result?.belegt).toBe(22);
+    expect(result?.items.map((i) => i.id)).toEqual(["gas"]);
+    expect(result?.notes.join(" ")).toContain("Frischwasser wurde nicht abgezogen");
+  });
+
+  it("zieht Gas nicht ab, wenn es laut Datenblatt in der Leermasse enthalten ist, Wasser aber schon", () => {
+    const result = calculateZuladung(camper({ gasInLeermasse: true }));
+    expect(result?.belegt).toBe(100);
+  });
+
+  it("zieht nichts ab, wenn beides enthalten ist", () => {
+    const result = calculateZuladung(camper({ wasserInLeermasse: true, gasInLeermasse: true }));
     expect(result?.belegt).toBe(0);
-    expect(result?.notes.join(" ")).toContain("nicht abgezogen");
+    expect(result?.notes.join(" ")).toContain("Frischwasser und Gas wurden nicht abgezogen");
+  });
+
+  it("nennt die Rechtsgrundlage, wenn beides abgezogen wird", () => {
+    expect(calculateZuladung(camper())?.notes.join(" ")).toContain("§ 42 Abs. 3 StVZO");
   });
 
   it("ignoriert Wasser und Gas bei Pkw und Transporter", () => {

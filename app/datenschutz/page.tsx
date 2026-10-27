@@ -93,15 +93,13 @@ export default function DatenschutzPage() {
 
       <LegalSection id="hosting" title={`${num()} Hosting und Server-Logfiles`}>
         <p>
-          {operator.hosting.confirmed ? "Diese Website wird" : "Diese Website soll"} bei{" "}
+          Diese Website wird bei{" "}
           {operator.hosting.provider ? (
             <strong>{operator.hosting.provider}</strong>
           ) : (
             <Missing label="Tatsächlichen Hosting-Anbieter, Verarbeitungsorte und Vertragsgrundlagen bestätigen" />
           )}{" "}
-          {operator.hosting.confirmed
-            ? "gehostet."
-            : "gehostet werden (Planungsstand; noch kein bestätigtes Produktions-Deployment)."}{" "}
+          gehostet.{" "}
           Beim Aufruf einer Seite verarbeitet der jeweilige Hosting-Anbieter technisch notwendige Daten, die Ihr
           Browser übermittelt (Server-Logfiles):
         </p>
@@ -128,7 +126,7 @@ export default function DatenschutzPage() {
               Vercel oder seine Unterauftragsverarbeiter tätig sind. Vercel, Inc. ist unter dem EU-U.S. Data Privacy Framework (DPF) zertifiziert. Für Übermittlungen aus dem
               EWR sieht der DPA zudem die EU-Standardvertragsklauseln (SCC) vor. Nach seinem aktuellen
               Wortlaut gilt dieser DPA für Kunden auf Pro- und Enterprise-Tarifen; der tatsächlich
-              gewählte Tarif und die vertragliche Einbeziehung sind daher vor dem Livegang zu bestätigen.
+              gewählte Tarif und die vertragliche Einbeziehung sind daher noch zu bestätigen.
             </p>
             <p>
               Die Laufzeit von Runtime-Logs ist tarifabhängig. Vercel dokumentiert aktuell unterschiedliche
@@ -275,7 +273,7 @@ export default function DatenschutzPage() {
 
       <LegalSection id="drittland" title={`${num()} Übermittlung in Drittländer`}>
         <p>
-          Der Betreiber hat seinen Sitz in Lahore, Pakistan. Wenn Sie ihn per E-Mail oder künftig über ein
+          Der Betreiber hat seinen Sitz in Lahore, Pakistan. Wenn Sie ihn per E-Mail oder über das
           Kontaktformular kontaktieren, werden die von Ihnen übermittelten Daten deshalb grundsätzlich
           auch in Pakistan verarbeitet. Für Pakistan besteht kein Angemessenheitsbeschluss der
           EU-Kommission. Die für diese Übermittlung einschlägige Rechtsgrundlage, geeignete Garantien

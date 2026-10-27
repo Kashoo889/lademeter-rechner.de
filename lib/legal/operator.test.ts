@@ -38,10 +38,10 @@ describe("operator configuration", () => {
         "phone",
         "editorialResponsibilityReview",
         "euRepresentative",
-        "consumerDisputeStatement",
         "hosting.confirmed",
       ]),
     );
+    expect(fields).not.toContain("consumerDisputeStatement");
     expect(fields).not.toEqual(expect.arrayContaining(["kind", "name", "postalCode", "city", "email", "supervisoryAuthority"]));
   });
 

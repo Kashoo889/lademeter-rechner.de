@@ -107,7 +107,12 @@ export const operator: OperatorConfig = {
   vatId: null,
   editorialResponsible: null,
   editorialResponsibilityReview: null,
-  consumerDisputeStatement: null,
+  // § 36 Abs. 3 VSBG (gelesen auf gesetze-im-internet.de, 28.10.2026): Unternehmer, die am 31. Dezember des Vorjahres
+  // höchstens zehn Personen beschäftigt haben, sind von der Pflicht nach § 36 Abs. 1 Nr. 1 VSBG befreit. Der Text stützt
+  // sich auf die Angabe, dass der Betreiber eine Einzelperson ohne Beschäftigte ist. Die Teilnahme an einem Verfahren
+  // wird weder zugesagt noch ausgeschlossen. Zur Prüfung durch eine Fachperson vorgemerkt (legalReview).
+  consumerDisputeStatement:
+    "Der Anbieter ist eine Einzelperson und beschäftigt keine Mitarbeitenden. Er ist daher nach § 36 Abs. 3 VSBG nicht verpflichtet, über seine Bereitschaft zur Teilnahme an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle zu informieren. Die Inhalte dieser Website sind kostenlos; über die Website werden keine Verbraucherverträge geschlossen.",
   supervisoryAuthority: null,
   euRepresentative: null,
   euRepresentativeExemption: null,

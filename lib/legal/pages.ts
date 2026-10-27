@@ -1,7 +1,7 @@
 import { getMissingOperatorFields, isLegalReviewed, operator, type MissingItem } from "@/lib/legal/operator";
 
 /** Last substantive change of the legal texts (shown as "Stand"). */
-export const LEGAL_TEXTS_UPDATED = "2026-10-21";
+export const LEGAL_TEXTS_UPDATED = "2026-10-28";
 
 const IMPRESSUM_FIELDS = new Set([
   "kind",

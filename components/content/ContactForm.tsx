@@ -271,8 +271,10 @@ export function ContactForm({ fallbackEmail }: { fallbackEmail: string | null })
             <Link href="/datenschutz/#kontakt" className="text-brand-700 underline underline-offset-2 hover:text-brand-900">
               Datenschutzerklärung
             </Link>{" "}
-            zur Kenntnis genommen und willige in die Verarbeitung meiner Angaben zur Beantwortung meiner
-            Anfrage ein.
+            zur Kenntnis genommen. Ich willige ausdrücklich ein, dass meine Angaben an den Betreiber in Pakistan
+            übermittelt werden, obwohl für Pakistan kein Angemessenheitsbeschluss der EU-Kommission besteht und mir
+            dort möglicherweise weniger Rechte zustehen (Art. 49 Abs. 1 lit. a DSGVO). Ich kann diese Einwilligung
+            jederzeit widerrufen.
           </span>
         </label>
         {errors.privacyAcknowledged ? (

@@ -106,7 +106,10 @@ export const operator: OperatorConfig = {
   register: null,
   vatId: null,
   editorialResponsible: null,
-  editorialResponsibilityReview: null,
+  // Einschätzung des Betreibers vom 28.10.2026, keine anwaltliche Prüfung: Rechner und sachliche Ratgeber, keine
+  // journalistisch-redaktionelle Gestaltung im Sinne von § 18 Abs. 2 MStV (kein Nachrichten-/Meinungsangebot, keine
+  // Übernahme periodischer Druckerzeugnisse). Die Seiten nennen dies offen als Einschätzung; Fachprüfung bleibt empfohlen.
+  editorialResponsibilityReview: { applies: false, reviewedAt: "28.10.2026", reviewer: "Betreiber (Einschätzung, keine anwaltliche Prüfung)" },
   // § 36 Abs. 3 VSBG (gelesen auf gesetze-im-internet.de, 28.10.2026): Unternehmer, die am 31. Dezember des Vorjahres
   // höchstens zehn Personen beschäftigt haben, sind von der Pflicht nach § 36 Abs. 1 Nr. 1 VSBG befreit. Der Text stützt
   // sich auf die Angabe, dass der Betreiber eine Einzelperson ohne Beschäftigte ist. Die Teilnahme an einem Verfahren
@@ -116,7 +119,10 @@ export const operator: OperatorConfig = {
   supervisoryAuthority: null,
   euRepresentative: null,
   euRepresentativeExemption: null,
-  about: { authorName: "Muhammad Kashif", bio: null },
+  about: {
+    authorName: "Muhammad Kashif",
+    bio: "entwickelt und betreibt die Website von Lahore, Pakistan aus. Er programmiert die Rechner, recherchiert die Ratgeber anhand von Gesetzestexten, amtlichen Leitfäden und Normen und pflegt die Seite. Er ist weder Rechtsanwalt noch Fachkraft für Ladungssicherung: Rechtliche Aussagen stehen deshalb mit Fundstelle da, Unsicherheiten benennen wir offen, und die Rechner ersetzen keine fachliche Prüfung.",
+  },
   hosting: {
     provider: "Vercel Inc.",
     privacyPolicyUrl: "https://vercel.com/legal/privacy-notice",

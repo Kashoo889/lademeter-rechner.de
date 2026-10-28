@@ -40,6 +40,18 @@ export default function HaftungsausschlussPage() {
         </p>
       </LegalSection>
 
+      <LegalSection title="Fahrzeug-, Gewichts- und Zuladungsrechner">
+        <p>
+          Der Anhänger-Zuladungsrechner und der Zuladungsrechner arbeiten mit den Werten, die Sie aus Ihren
+          Fahrzeugpapieren eingeben, und mit den in der Seite genannten Vorschriften. Die Leermasse im
+          Fahrzeugschein kann von der tatsächlichen Masse abweichen; Achslasten, Gewichtsverteilung, Toleranzen und
+          Besonderheiten Ihres Fahrzeugs oder Anhängers werden nicht geprüft. Die Ergebnisse sind keine Zusicherung,
+          dass Ihr Gespann oder Fahrzeug zulässig beladen ist. Wiegen Sie im Zweifel auf einer Fahrzeugwaage; maßgeblich
+          sind stets Ihre Fahrzeugpapiere und die geltenden Vorschriften. Bußgelder und Folgen einer Überladung sind
+          nicht Gegenstand dieser Seite.
+        </p>
+      </LegalSection>
+
       <LegalSection title="Inhalte">
         <p>
           Die Inhalte dieser Website werden mit Sorgfalt erstellt. Für die

@@ -201,7 +201,7 @@ export default function DatenschutzPage() {
           Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Betreff sowie den Inhalt Ihrer Nachricht),
           um Ihr Anliegen zu bearbeiten und mit Ihnen in Kontakt zu treten. Rechtsgrundlage ist Art. 6
           Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen) bzw. Art. 6 Abs. 1
-          lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung eines Vertrages abzielt.
+          lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung eines Vertrages abzielt. Die Einwilligung im Formular betrifft ausschließlich die Übermittlung nach Pakistan (siehe Abschnitt „Übermittlung in Drittländer“).
           Wir löschen die Daten, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen
           Aufbewahrungspflichten entgegenstehen.
         </p>
@@ -296,12 +296,19 @@ export default function DatenschutzPage() {
 
       <LegalSection id="drittland" title={`${num()} Übermittlung in Drittländer`}>
         <p>
-          Der Betreiber hat seinen Sitz in Lahore, Pakistan. Wenn Sie ihn per E-Mail oder über das
-          Kontaktformular kontaktieren, werden die von Ihnen übermittelten Daten deshalb grundsätzlich
-          auch in Pakistan verarbeitet. Für Pakistan besteht kein Angemessenheitsbeschluss der
-          EU-Kommission. Die für diese Übermittlung einschlägige Rechtsgrundlage, geeignete Garantien
-          und gegebenenfalls ergänzende Schutzmaßnahmen müssen vor dem öffentlichen Betrieb fachlich
-          geprüft und anschließend hier konkret beschrieben werden.
+          Der Betreiber hat seinen Sitz in Lahore, Pakistan. Wenn Sie das Kontaktformular nutzen, wird Ihre
+          Nachricht über den Dienstleister Resend zugestellt (siehe oben) und vom Betreiber in Pakistan gelesen und
+          beantwortet. Für Pakistan hat die EU-Kommission kein angemessenes Datenschutzniveau festgestellt
+          (kein Angemessenheitsbeschluss), und es bestehen keine Standardvertragsklauseln mit dem Betreiber als
+          Empfänger. Ihre Rechte lassen sich dort möglicherweise schwerer durchsetzen als in der EU.
+        </p>
+        <p>
+          <strong>Rechtsgrundlage der Übermittlung:</strong> Ihre ausdrückliche Einwilligung nach Art. 49 Abs. 1
+          Satz 1 lit. a DSGVO. Sie erteilen sie, indem Sie vor dem Absenden das Häkchen im Formular setzen, nachdem
+          Sie über diese Risiken informiert wurden. Ohne diese Einwilligung kann das Formular nicht abgesendet
+          werden. Sie können die Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO);
+          bereits erfolgte Verarbeitungen bleiben rechtmäßig. Schreiben Sie uns stattdessen eine E-Mail, geschieht die
+          Übermittlung an die im Impressum genannte Adresse auf Ihre eigene Veranlassung.
         </p>
         <p>
           Soweit künftig weitere Anbieter außerhalb von EU und EWR eingesetzt werden, werden deren

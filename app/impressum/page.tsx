@@ -113,9 +113,11 @@ export default function ImpressumPage() {
           </p>
         ) : operator.editorialResponsibilityReview?.applies === false ? (
           <p>
-            Nach dokumentierter fachlicher Prüfung ist § 18 Abs. 2 MStV für dieses Angebot nicht
-            anwendbar. Prüfung vom {operator.editorialResponsibilityReview.reviewedAt} durch{" "}
-            {operator.editorialResponsibilityReview.reviewer}.
+            Einschätzung des Betreibers vom {operator.editorialResponsibilityReview.reviewedAt}: Dieses Angebot besteht
+            aus Online-Rechnern und sachlichen Ratgebern. Es ist nach Einschätzung des Betreibers nicht
+            journalistisch-redaktionell gestaltet im Sinne von § 18 Abs. 2 MStV; ein Verantwortlicher nach dieser
+            Vorschrift wird deshalb nicht benannt. Die Einschätzung ist keine Rechtsberatung und nicht anwaltlich
+            geprüft.
           </p>
         ) : (
           <p>

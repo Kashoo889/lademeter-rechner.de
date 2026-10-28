@@ -36,12 +36,12 @@ describe("operator configuration", () => {
       expect.arrayContaining([
         "street",
         "phone",
-        "editorialResponsibilityReview",
         "euRepresentative",
         "hosting.confirmed",
       ]),
     );
     expect(fields).not.toContain("consumerDisputeStatement");
+    expect(fields).not.toContain("editorialResponsibilityReview");
     expect(fields).not.toEqual(expect.arrayContaining(["kind", "name", "postalCode", "city", "email", "supervisoryAuthority"]));
   });
 

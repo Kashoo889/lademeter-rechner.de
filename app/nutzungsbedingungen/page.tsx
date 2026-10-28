@@ -74,7 +74,15 @@ export default function NutzungsbedingungenPage() {
           Vervielfältigung oder Verbreitung über die gesetzlich erlaubte Nutzung (z. B. das Zitatrecht
           nach § 51 UrhG) hinaus bedarf unserer vorherigen Zustimmung. Das Setzen von Links auf
           einzelne Seiten sowie das Teilen von Ergebnis-Links ist ausdrücklich erwünscht. Eigene
-          Berechnungsergebnisse dürfen Sie frei verwenden.
+          Berechnungsergebnisse dürfen Sie frei verwenden. Ausgenommen vom Vorbehalt sind die{" "}
+          <Link href="/lademeter-excel-vorlage/" className="text-brand-700 underline">
+            Excel-Vorlage
+          </Link>{" "}
+          und die{" "}
+          <Link href="/lademeter-aufgaben/" className="text-brand-700 underline">
+            Aufgabenblätter
+          </Link>
+          : Sie stehen unter der Lizenz CC BY 4.0 und dürfen bei Namensnennung frei genutzt und weitergegeben werden.
         </p>
       </LegalSection>
 

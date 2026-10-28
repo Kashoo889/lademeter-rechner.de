@@ -43,6 +43,20 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // www is not canonical: send every www request to the apex domain (also when the host does not do it).
+      {
+        source: "/:path((?!.*\\.[a-z0-9]+$).*)",
+        has: [{ type: "host", value: "www.lademeter-rechner.de" }],
+        destination: "https://lademeter-rechner.de/:path/",
+        permanent: true,
+      },
+      // Files (sitemap.xml, downloads, icons) keep their exact path.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.lademeter-rechner.de" }],
+        destination: "https://lademeter-rechner.de/:path*",
+        permanent: true,
+      },
       // The Lademeter-Rechner moved to the homepage (one URL for the main keyword).
       { source: "/lademeter-rechner/", destination: "/", permanent: true },
       // Browsers request /favicon.ico by default; the icon is generated at /icon.

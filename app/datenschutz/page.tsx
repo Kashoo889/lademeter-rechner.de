@@ -150,6 +150,29 @@ export default function DatenschutzPage() {
             </p>
           </>
         ) : null}
+        {operator.hosting.provider === "Railway Corporation" ? (
+          <>
+            <p>
+              Railway beschreibt im veröffentlichten Auftragsverarbeitungsvertrag (DPA), dass die primäre
+              Verarbeitung in den USA stattfindet. Für Übermittlungen aus dem EWR sieht der DPA das EU-U.S. Data
+              Privacy Framework (sofern der Empfänger zertifiziert ist) oder die EU-Standardvertragsklauseln vor.
+              Railway muss neue Unterauftragsverarbeiter in einer öffentlichen Liste ankündigen. Die tatsächlich
+              gewählte Region, die Vertragseinbeziehung des DPA für unser Konto und die Aufbewahrungsdauer der
+              Logs sind noch zu bestätigen.
+            </p>
+            <p>
+              Öffentliche Informationen: {operator.hosting.privacyPolicyUrl ? (
+                <ExternalLink href={operator.hosting.privacyPolicyUrl}>Railway Privacy Policy</ExternalLink>
+              ) : null}
+              {operator.hosting.dpaUrl ? (
+                <>, <ExternalLink href={operator.hosting.dpaUrl}>Railway Data Processing Addendum</ExternalLink></>
+              ) : null}
+              {operator.hosting.subprocessorsUrl ? (
+                <>, <ExternalLink href={operator.hosting.subprocessorsUrl}>aktuelle Unterauftragsverarbeiter</ExternalLink></>
+              ) : null}.
+            </p>
+          </>
+        ) : null}
         {!operator.hosting.confirmed ? (
           <p>
             <Missing label="Vercel-Tarif, Vertrags-/DPA-Geltung, Kontoeinstellungen, Verarbeitungsorte, Unterauftragsverarbeiter und Log-Aufbewahrung des tatsächlichen Deployments bestätigen" />

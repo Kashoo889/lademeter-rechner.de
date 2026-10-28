@@ -17,4 +17,10 @@ describe("Vercel deployment environment", () => {
     expect(isNonProductionVercelDeployment({ VERCEL: "1", VERCEL_TARGET_ENV: "staging" })).toBe(true);
     expect(isNonProductionVercelDeployment({ VERCEL: "1" })).toBe(true);
   });
+
+  it("treats only the production environment on Railway as indexable", () => {
+    expect(isNonProductionVercelDeployment({ RAILWAY_ENVIRONMENT_NAME: "production" })).toBe(false);
+    expect(isNonProductionVercelDeployment({ RAILWAY_ENVIRONMENT_NAME: "pr-12" })).toBe(true);
+    expect(isNonProductionVercelDeployment({ RAILWAY_ENVIRONMENT_NAME: "staging" })).toBe(true);
+  });
 });

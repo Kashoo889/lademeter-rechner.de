@@ -87,7 +87,7 @@ Der Rechenkern dieser Seite enthält als Orientierungswerte für Luftfracht den 
 - Divisor 6.000: 1.578.240 ÷ 6.000 = **263,04 kg** Volumengewicht – das tatsächliche Gewicht von 300 kg ist höher und zählt.
 - Faktor 1.000 kg je m³ (Seefracht): 1,578 m³ × 1.000 = **1.578 kg** – hier zählt das Volumen.
 
-Das zeigt, warum dieselbe Palette je nach Beförderungsart nach Gewicht oder nach Volumen abgerechnet werden kann. Die Luftfracht-Regel mit Rundung und weiteren Beispielen erklärt der Ratgeber [Volumengewicht in der Luftfracht](/ratgeber/volumengewicht-luftfracht/). Mit dem [Volumengewicht-Rechner](/volumengewicht-rechner/) lassen sich diese Rechnungen mit eigenen Maßen und eigenem Divisor nachvollziehen.
+Das zeigt, warum dieselbe Palette je nach Beförderungsart nach Gewicht oder nach Volumen abgerechnet werden kann. Die Luftfracht-Regel mit Rundung und weiteren Beispielen erklärt der Ratgeber [Volumengewicht in der Luftfracht](/ratgeber/volumengewicht-luftfracht/), die Seefracht-Regel der Ratgeber [Volumengewicht in der Seefracht](/ratgeber/volumengewicht-seefracht/). Mit dem [Volumengewicht-Rechner](/volumengewicht-rechner/) lassen sich diese Rechnungen mit eigenen Maßen und eigenem Divisor nachvollziehen.
 
 ## CBM, Lademeter und Palettenstellplätze
 

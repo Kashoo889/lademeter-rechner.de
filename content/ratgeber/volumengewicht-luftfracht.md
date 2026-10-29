@@ -151,7 +151,7 @@ Wie viele Kartons auf eine Palette passen und wie hoch die Palette dann wird, be
 
 ## Weiterführend
 
-Das Volumengewicht ist die Luftfracht-Variante des frachtpflichtigen Gewichts, wie es im Straßenverkehr über Lademeter bestimmt wird: Siehe [Lademeter in kg umrechnen](/ratgeber/lademeter-in-kg-umrechnen/) und [Lademeter oder Kubikmeter](/ratgeber/lademeter-oder-kubikmeter-unterschied/). Wie sich Europaletten und andere Ladungsträger unterscheiden, steht in [Europaletten und Palettenarten](/ratgeber/europaletten-und-palettenarten/).
+Für die Seefracht gilt eine andere Regel: [Volumengewicht in der Seefracht: W/M-Regel und Beispiele](/ratgeber/volumengewicht-seefracht/). Das Volumengewicht ist die Luftfracht-Variante des frachtpflichtigen Gewichts, wie es im Straßenverkehr über Lademeter bestimmt wird: Siehe [Lademeter in kg umrechnen](/ratgeber/lademeter-in-kg-umrechnen/) und [Lademeter oder Kubikmeter](/ratgeber/lademeter-oder-kubikmeter-unterschied/). Wie sich Europaletten und andere Ladungsträger unterscheiden, steht in [Europaletten und Palettenarten](/ratgeber/europaletten-und-palettenarten/).
 
 ## Hinweis
 

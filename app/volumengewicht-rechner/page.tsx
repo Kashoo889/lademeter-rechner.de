@@ -110,7 +110,7 @@ export default function VolumengewichtPage() {
         "Rundungsregeln des Frachtführers zu übersehen, etwa Aufrunden auf 0,5 kg.",
       ]}
       faqs={faqs}
-      articleSlugs={["lademeter-in-kg-umrechnen", "lademeter-oder-kubikmeter-unterschied", "was-sind-lademeter"]}
+      articleSlugs={["volumengewicht-luftfracht", "lademeter-in-kg-umrechnen", "lademeter-oder-kubikmeter-unterschied"]}
     />
   );
 }

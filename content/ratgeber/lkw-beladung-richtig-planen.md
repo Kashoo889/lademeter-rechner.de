@@ -133,4 +133,4 @@ Gute Ladeplanung folgt einer festen Reihenfolge: Daten erfassen, Fläche, Gewich
 
 ## Weiterführend
 
-Vertiefung zum Thema: [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/); [Zulässiges Gesamtgewicht LKW](/ratgeber/zulaessiges-gesamtgewicht-lkw/) sowie [Achslast nach § 34 StVZO](/ratgeber/achslast-tandem-tridem/).
+Vertiefung zum Thema: [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/); [Zulässiges Gesamtgewicht LKW](/ratgeber/zulaessiges-gesamtgewicht-lkw/) sowie [Achslast nach § 34 StVZO](/ratgeber/achslast-tandem-tridem/). Für die Vorbereitung der Palette: [Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen](/ratgeber/kartons-pro-palette-berechnen/).

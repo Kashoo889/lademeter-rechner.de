@@ -122,4 +122,4 @@ Für die Ladeplanung zählen vor allem Grundfläche und Lademeter: Europalette 0
 
 ## Weiterführend
 
-Vertiefung zum Thema: [Europalette Maße, Toleranzen und Kennzeichnung echter EPAL-Paletten](/ratgeber/europalette-masse/) sowie [Halbpalette: Maße, EPAL 6 und EPAL 7](/ratgeber/halbpalette-masse/).
+Vertiefung zum Thema: [Europalette Maße, Toleranzen und Kennzeichnung echter EPAL-Paletten](/ratgeber/europalette-masse/) sowie [Halbpalette: Maße, EPAL 6 und EPAL 7](/ratgeber/halbpalette-masse/). Wie viele Kartons auf eine Palette passen, zeigt [Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen](/ratgeber/kartons-pro-palette-berechnen/).

@@ -114,4 +114,4 @@ Lademeter und Kubikmeter beantworten unterschiedliche Fragen. Lademeter zeigen, 
 
 ## Weiterführend
 
-Vertiefung zum Thema: [CBM berechnen: Kubikmeter für Kartons und Paletten](/ratgeber/cbm-berechnen/) sowie [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/).
+Vertiefung zum Thema: [CBM berechnen: Kubikmeter für Kartons und Paletten](/ratgeber/cbm-berechnen/) sowie [Palettengewicht berechnen](/ratgeber/palette-gewicht-berechnen/). Wie das Volumen in der Luftfracht zum Abrechnungsgewicht wird, erklärt [Volumengewicht in der Luftfracht](/ratgeber/volumengewicht-luftfracht/).

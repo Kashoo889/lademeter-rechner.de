@@ -156,6 +156,10 @@ Zur Qualitätssicherung nennt das Datenblatt jährlich mehr als 25.000 unangemel
 - **Tragfähigkeit mit Zuladung gleichsetzen.** Die Palette trägt 1.500 kg, das Fahrzeug aber nicht beliebig viele solcher Paletten.
 - **Zentimeter und Millimeter mischen.** 120 × 80 cm ist etwas anderes als 1200 × 80 (ein häufiger Tippfehler).
 
+## Weiterführend
+
+Von der Palette zur Packstückzahl: [Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen](/ratgeber/kartons-pro-palette-berechnen/).
+
 ## Hinweis
 
 Die Angaben zur EPAL 1 stammen vom Datenblatt von EPAL Schweiz (abgerufen am 21.10.2026) und vom EPAL-Datenblatt PB 05/2025 (abgerufen am 22.10.2026); die Norm EN 13698-1, auf die sich Händler für die Maße berufen, konnte für diesen Beitrag nicht eingesehen werden. Planungswerte für Innenhöhe und Nutzlast stammen aus den Rechenkernen dieser Seite und weichen je Fahrzeug ab. Verbindlich sind die aktuellen Unterlagen von EPAL und Ihrem Fahrzeug- oder Palettenhersteller.

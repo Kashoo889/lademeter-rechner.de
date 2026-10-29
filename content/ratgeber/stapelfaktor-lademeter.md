@@ -126,4 +126,4 @@ Stapeln kann die benötigten Lademeter halbieren oder sogar dritteln. Rechnen Si
 
 ## Weiterführend
 
-Vertiefung zum Thema: [Lademeter bei nicht stapelbarer Ware](/ratgeber/lademeter-berechnen-nicht-stapelbar/) sowie [Europalette Maße: Höhe, Gewicht und Tragfähigkeit](/ratgeber/europalette-masse/).
+Vertiefung zum Thema: [Lademeter bei nicht stapelbarer Ware](/ratgeber/lademeter-berechnen-nicht-stapelbar/) sowie [Europalette Maße: Höhe, Gewicht und Tragfähigkeit](/ratgeber/europalette-masse/). Wie hoch eine beladene Palette wird, rechnet [Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen](/ratgeber/kartons-pro-palette-berechnen/) vor.

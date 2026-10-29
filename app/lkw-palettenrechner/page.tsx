@@ -5,7 +5,7 @@ import { ReferenceTable } from "@/components/content/ReferenceTable";
 import { ContentSection } from "@/components/content/ContentSection";
 import { PalettenForm } from "@/components/calculator/forms/PalettenForm";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { vehicleCapacityRows } from "@/lib/content/referenceData";
+import { vehicleExcerptRows } from "@/lib/content/referenceData";
 import { VehicleLinks } from "@/components/content/VehicleLinks";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -95,16 +95,16 @@ export default function LkwPalettenrechnerPage() {
         <>
         <ContentSection title="Paletten pro Fahrzeug im Überblick" id="tabelle">
           <ReferenceTable
-            caption="Maximale Palettenzahl je Fahrzeug (nicht gestapelt)"
-            columns={["Fahrzeug", "Innenmaße (L × B)", "Lademeter", "Europaletten", "Industriepaletten", "Halbpaletten"]}
-            rows={vehicleCapacityRows()}
+            caption="Beispiele: Europaletten je Fahrzeug (nicht gestapelt)"
+            columns={["Fahrzeug", "Lademeter", "Europaletten"]}
+            rows={vehicleExcerptRows(["standard-semi-trailer", "truck-12t", "solo-truck", "van-3-5t", "container-40"])}
           />
           <p className="text-sm text-slate-600">
             Berechnet mit denselben Annahmen wie der Rechner (Standardmaße, siehe{" "}
             <Link href="/methodik/" className="text-brand-700 underline">
               Berechnungsgrundlagen
             </Link>
-            ). Details je Fahrzeug unter{" "}
+            ). Alle Fahrzeuge mit Maßen, Industrie- und Halbpaletten stehen unter{" "}
             <Link href="/fahrzeuge/" className="text-brand-700 underline">
               Fahrzeuge &amp; Maße
             </Link>

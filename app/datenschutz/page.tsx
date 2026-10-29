@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ExternalLink, LegalPage, LegalSection, Missing } from "@/components/legal/LegalPage";
 import { ConsentSettingsButton } from "@/components/ads/ConsentSettingsButton";
 import { adsActive } from "@/lib/ads/config";
+import { analyticsActive } from "@/lib/analytics/config";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { formatAddressLines, isLegalReviewed, operator } from "@/lib/legal/operator";
+import { isLegalReviewed, operator, publicAddressLines } from "@/lib/legal/operator";
 import { LEGAL_TEXTS_UPDATED, legalNoindex, missingFor } from "@/lib/legal/pages";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -16,7 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function DatenschutzPage() {
-  const address = formatAddressLines();
+  const address = publicAddressLines();
   let n = 0;
   const num = () => `${++n}.`;
 
@@ -42,13 +43,16 @@ export default function DatenschutzPage() {
           {operator.name ?? <Missing label="Name bzw. Firma" />}
           <br />
           {address ? (
-            address.join(", ")
-          ) : (
+            <>
+              {address.join(", ")}
+              <br />
+            </>
+          ) : operator.publishAddress ? (
             <>
               <Missing label="Anschrift (Straße und Hausnummer bzw. Gebäude und Ortsteil, PLZ, Ort)" />, {operator.country}
+              <br />
             </>
-          )}
-          <br />
+          ) : null}
           E-Mail: {operator.email ?? <Missing label="E-Mail-Adresse" />}
           {operator.phone ? (
             <>
@@ -85,8 +89,11 @@ export default function DatenschutzPage() {
           <li>Schriftarten werden von unserem eigenen Server geladen, es besteht keine Verbindung zu Google Fonts.</li>
           <li>
             {adsActive
-              ? "Werbung (Google AdSense) wird nur nach Ihrer Einwilligung personalisiert ausgespielt; eigene Analyse- oder Tracking-Dienste setzen wir nicht ein."
-              : "Wir setzen keine Analyse-, Tracking- oder Werbedienste und keine Cookies ein."}
+              ? "Werbung (Google AdSense) wird nur nach Ihrer Einwilligung personalisiert ausgespielt."
+              : "Wir setzen keine Werbedienste und keine Cookies ein."}{" "}
+            {analyticsActive
+              ? "Zur Reichweitenmessung nutzen wir Plausible Analytics ohne Cookies."
+              : "Eine Reichweitenmessung findet derzeit nicht statt."}
           </li>
         </ul>
       </LegalSection>
@@ -179,6 +186,31 @@ export default function DatenschutzPage() {
           </p>
         ) : null}
       </LegalSection>
+
+      {analyticsActive ? (
+        <LegalSection id="reichweitenmessung" title={`${num()} Reichweitenmessung mit Plausible Analytics`}>
+          <p>
+            Wir messen die Nutzung dieser Website mit Plausible Analytics. Nach den Angaben des Anbieters werden Daten in
+            der EU auf Infrastruktur europäischer Unternehmen verarbeitet und gespeichert. Plausible verwendet nach
+            eigenen Angaben keine Cookies, keinen Browser-Cache und keinen Local Storage und speichert keine
+            Roh-IP-Adressen oder User-Agent-Zeichenketten. IP-Adresse und User-Agent werden kurzzeitig verarbeitet, um
+            einen täglich wechselnden Hashwert und den ungefähren Standort (Land, Region, Stadt) zu bestimmen.
+          </p>
+          <p>
+            Erhoben werden: aufgerufene Seite (Hostname und Pfad), Referrer, Browser, Betriebssystem, Gerätetyp,
+            ungefährer Standort sowie Verhalten auf der Seite (z. B. Verweildauer). Die Daten dienen ausschließlich der
+            statistischen Auswertung, welche Inhalte genutzt werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO
+            (berechtigtes Interesse an der Verbesserung des Angebots). Einwilligungsbedürftige Zugriffe auf Ihr Endgerät
+            im Sinne von § 25 TDDDG finden dafür nach Angaben des Anbieters nicht statt. Sie können widersprechen
+            (Art. 21 DSGVO), etwa mit einer Nachricht an die oben genannte Adresse oder über die Do-Not-Track-Einstellung
+            Ihres Browsers, sofern der Anbieter sie berücksichtigt.
+          </p>
+          <p className="text-sm text-slate-600">
+            Weitere Informationen:{" "}
+            <ExternalLink href="https://plausible.io/data-policy">Datenschutzhinweise von Plausible</ExternalLink>.
+          </p>
+        </LegalSection>
+      ) : null}
 
       <LegalSection id="rechner" title={`${num()} Nutzung der Rechner`}>
         <p>

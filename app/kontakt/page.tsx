@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbJsonLd } from "@/lib/seo/jsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
-import { formatAddressLines, operator } from "@/lib/legal/operator";
+import { operator, publicAddressLines } from "@/lib/legal/operator";
 
 const breadcrumbItems = [{ label: "Kontakt", href: "/kontakt/" }];
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function KontaktPage() {
-  const address = formatAddressLines();
+  const address = publicAddressLines();
 
   return (
     <>

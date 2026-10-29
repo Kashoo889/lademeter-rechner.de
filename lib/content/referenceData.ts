@@ -72,6 +72,19 @@ export function vehicleCapacityRows() {
   });
 }
 
+/** Kurzer Auszug der Fahrzeugtabelle (Fahrzeug, Lademeter, Europaletten), damit die volle Tabelle nur auf /fahrzeuge/ steht. */
+export function vehicleExcerptRows(ids: Exclude<VehiclePreset, "custom">[]) {
+  return ids.map((id) => {
+    const vehicle = VEHICLES[id];
+    const euro = vehicleCapacity(id, "euro");
+    return [
+      vehicle.label,
+      `${formatDecimal(vehicleFloorLdm(id), 1)} ldm`,
+      euro.lengthwise === euro.best ? String(euro.best) : `bis ${euro.best}`,
+    ];
+  });
+}
+
 /** Table: ldm for N Europaletten / Industriepaletten (1..N). */
 export function ldmByQuantityRows(quantities: number[]) {
   const euro = ldmOfPallet("euro");

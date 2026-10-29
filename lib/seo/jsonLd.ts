@@ -116,3 +116,16 @@ export function buildWebPageJsonLd({ name, path, description }: { name: string; 
     isPartOf: { "@id": WEBSITE_ID },
   };
 }
+
+/** FAQPage schema. Only for questions that are visible on the page (see FaqAccordion). */
+export function buildFaqJsonLd(items: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+}

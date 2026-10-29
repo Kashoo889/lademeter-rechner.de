@@ -48,6 +48,12 @@ export type OperatorConfig = {
    * Anschrift als „nicht vollständig bestätigt“ markiert (gelber Hinweis, noindex).
    */
   addressComplete: boolean;
+  /**
+   * Betreiberentscheidung (30.10.2026): Die Anschrift wird nicht auf den Seiten veröffentlicht. Sie bleibt hier
+   * gespeichert und für `getMissingOperatorFields` (check:launch) sichtbar. Rechtlich verlangt § 5 Abs. 1 Nr. 1 DDG
+   * die Angabe der Anschrift der Niederlassung; die Entscheidung liegt beim Betreiber und ist nicht geprüft.
+   */
+  publishAddress: boolean;
   postalCode: string | null;
   city: string | null;
   /** Provinz/Bundesland, wird hinter dem Ort ausgegeben (z. B. "Punjab"). */
@@ -97,6 +103,7 @@ export const operator: OperatorConfig = {
   street: null,
   addressLines: ["Israr Boys Hostel", "Nashiman Iqbal Phase 1"],
   addressComplete: false,
+  publishAddress: false,
   postalCode: "54000",
   city: "Lahore",
   region: "Punjab",
@@ -207,4 +214,9 @@ export function formatAddressLines(config: OperatorConfig = operator): string[] 
   if (lines.length === 0 || !config.postalCode || !config.city) return null;
   const place = [`${config.postalCode} ${config.city}`, config.region].filter(Boolean).join(", ");
   return [...lines, place, config.country];
+}
+
+/** Anschrift für die öffentlichen Seiten: `null`, solange der Betreiber sie nicht veröffentlichen will. */
+export function publicAddressLines(config: OperatorConfig = operator): string[] | null {
+  return config.publishAddress ? formatAddressLines(config) : null;
 }

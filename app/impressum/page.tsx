@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, LegalSection, Missing } from "@/components/legal/LegalPage";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { contactFormConfigured, formatAddressLines, isLegalReviewed, operator } from "@/lib/legal/operator";
+import { contactFormConfigured, isLegalReviewed, operator, publicAddressLines } from "@/lib/legal/operator";
 import { LEGAL_TEXTS_UPDATED, legalNoindex, missingFor } from "@/lib/legal/pages";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function ImpressumPage() {
-  const address = formatAddressLines();
+  const address = publicAddressLines();
   const editorial = operator.editorialResponsible;
 
   return (
@@ -35,13 +35,13 @@ export default function ImpressumPage() {
                 <br />
               </span>
             ))
-          ) : (
+          ) : operator.publishAddress ? (
             <>
               <Missing label="Anschrift (Straße und Hausnummer bzw. Gebäude und Ortsteil, Postleitzahl, Ort; kein Postfach)" />
               <br />
               {operator.country}
             </>
-          )}
+          ) : null}
         </p>
         {operator.kind === "company" ? (
           <p>

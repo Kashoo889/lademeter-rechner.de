@@ -1,4 +1,6 @@
 import { Plus } from "lucide-react";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildFaqJsonLd } from "@/lib/seo/jsonLd";
 
 export type FaqItem = {
   question: string;
@@ -8,6 +10,7 @@ export type FaqItem = {
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
   return (
     <div className="space-y-2.5">
+      {items.length > 0 ? <JsonLd data={buildFaqJsonLd(items)} /> : null}
       {items.map((faq) => (
         <details
           key={faq.question}

@@ -7,7 +7,7 @@ import { FaqAccordion } from "@/components/content/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbJsonLd } from "@/lib/seo/jsonLd";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { ldmByQuantityRows, palletLdmRows, vehicleCapacityRows } from "@/lib/content/referenceData";
+import { ldmByQuantityRows, palletLdmRows, vehicleExcerptRows } from "@/lib/content/referenceData";
 import { PageHero } from "@/components/layout/PageHero";
 import { DownloadsCallout } from "@/components/content/DownloadsCallout";
 import { VehicleLinks } from "@/components/content/VehicleLinks";
@@ -86,12 +86,12 @@ export default function LademeterTabellePage() {
 
       <ContentSection title="Ladefläche und Palettenzahl je Fahrzeug">
         <ReferenceTable
-          caption="Lademeter und Palettenkapazität je Fahrzeug"
-          columns={["Fahrzeug", "Innenmaße (L × B)", "Lademeter", "Europaletten", "Industriepaletten", "Halbpaletten"]}
-          rows={vehicleCapacityRows()}
+          caption="Auszug: Lademeter und Europaletten ausgewählter Fahrzeuge"
+          columns={["Fahrzeug", "Lademeter", "Europaletten"]}
+          rows={vehicleExcerptRows(["standard-semi-trailer", "truck-12t", "solo-truck", "van-3-5t", "container-40"])}
         />
         <p>
-          Mehr zu den einzelnen Fahrzeugen unter{" "}
+          Die vollständige Tabelle mit Innenmaßen sowie Industrie- und Halbpaletten steht unter{" "}
           <Link href="/fahrzeuge/" className="text-brand-700 underline">
             Fahrzeuge &amp; Maße
           </Link>

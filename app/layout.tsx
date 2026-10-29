@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AdSenseScript } from "@/components/ads/AdSenseScript";
+import { PlausibleScript } from "@/components/analytics/PlausibleScript";
 import { adsenseClient } from "@/lib/ads/config";
 import { buildOrganizationJsonLd, buildWebsiteJsonLd } from "@/lib/seo/jsonLd";
 import { siteConfig } from "@/lib/site-config";
@@ -44,8 +45,16 @@ export const metadata: Metadata = {
   // AdSense site verification. Only rendered when a valid publisher ID is
   // configured; it loads no script and sets no cookies.
   ...(adsenseClient ? { other: { "google-adsense-account": adsenseClient } } : {}),
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+  // Search engine verification codes (optional, set in the hosting environment).
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+    ? {
+        verification: {
+          ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : {}),
+          ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+            ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } }
+            : {}),
+        },
+      }
     : {}),
 };
 
@@ -63,6 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col bg-background text-slate-900">
         <AdSenseScript />
+        <PlausibleScript />
         <JsonLd data={buildWebsiteJsonLd()} />
         <JsonLd data={buildOrganizationJsonLd()} />
         <SkipLink />

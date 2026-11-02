@@ -52,7 +52,7 @@ Beide Formate lassen sich gut mit Europaletten kombinieren, weil sie in deren Ra
 
 ## Gitterbox
 
-Die Gitterbox ist ein Stapelbehälter auf Europaletten-Grundfläche mit Gitterwänden. Typisch sind Außenmaße von ca. **1240 × 835 × 970 mm** und ein Innenmaß von rund 1200 × 800 mm. Wegen der größeren Außenmaße belegt sie mit ca. **0,43 ldm** etwas mehr Fläche als eine Europalette. Gitterboxen werden für Kleinteile, Schüttgut und Industriekomponenten eingesetzt und sind in der Regel stapelbar – wie hoch, hängt von Zustand, Beladung und Herstellerangaben ab.
+Die Gitterbox ist ein Stapelbehälter auf Europaletten-Grundfläche mit Gitterwänden. Typisch sind Außenmaße von ca. **1240 × 835 × 970 mm** und ein Innenmaß von rund 1200 × 800 mm. Wegen der größeren Außenmaße belegt sie mit ca. **0,43 ldm** etwas mehr Fläche als eine Europalette. Gitterboxen werden für Kleinteile, Schüttgut und Industriekomponenten eingesetzt und sind in der Regel stapelbar – wie hoch, hängt von Zustand, Beladung und Herstellerangaben ab. Die EPAL-Daten, die Auflast und Rechenbeispiele stehen im Ratgeber [Gitterbox: Maße, Traglast und Stapelregeln (EPAL)](/ratgeber/gitterbox-masse/).
 
 ## Einweg- und Kunststoffpaletten
 

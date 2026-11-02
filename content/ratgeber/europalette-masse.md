@@ -158,7 +158,7 @@ Zur Qualitätssicherung nennt das Datenblatt jährlich mehr als 25.000 unangemel
 
 ## Weiterführend
 
-Von der Palette zur Packstückzahl: [Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen](/ratgeber/kartons-pro-palette-berechnen/).
+Zur Gitterbox: [Gitterbox: Maße, Traglast und Stapelregeln (EPAL)](/ratgeber/gitterbox-masse/). Von der Palette zur Packstückzahl: [Kartons auf der Palette: Lagen, Höhe und Gewicht berechnen](/ratgeber/kartons-pro-palette-berechnen/).
 
 ## Hinweis
 

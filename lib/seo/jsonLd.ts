@@ -1,10 +1,12 @@
 import { siteConfig } from "@/lib/site-config";
+import { operator } from "@/lib/legal/operator";
 import type { Article } from "@/lib/content/ratgeber";
 import type { BreadcrumbItem } from "@/components/seo/Breadcrumbs";
 
 /**
  * Structured data helpers. Only real, verifiable fields are populated - no
- * fake ratings, reviews, author credentials, or business identity data.
+ * fake ratings, reviews, author credentials, or business identity data. The article
+ * author is the responsible person named in the Impressum (name only).
  */
 
 const ORGANIZATION_ID = `${siteConfig.domain}/#organization`;
@@ -69,7 +71,9 @@ export function buildArticleJsonLd(article: Article) {
     dateModified: article.updatedAt ?? article.publishedAt,
     inLanguage: "de-DE",
     image: absolute("/opengraph-image"),
-    author: { "@id": ORGANIZATION_ID, "@type": "Organization", name: siteConfig.name },
+    author: operator.about.authorName
+      ? { "@type": "Person", name: operator.about.authorName, url: absolute("/ueber-uns/") }
+      : { "@id": ORGANIZATION_ID, "@type": "Organization", name: siteConfig.name },
     publisher: { "@id": ORGANIZATION_ID },
     mainEntityOfPage: url,
     url,

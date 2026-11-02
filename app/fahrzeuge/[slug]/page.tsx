@@ -132,7 +132,7 @@ export default async function FahrzeugPage(props: PageProps<"/fahrzeuge/[slug]">
               frontLabel="Stirnwand"
             />
           ) : null}
-          <Button href={calculatorHref} className="w-full">
+          <Button href={calculatorHref} rel="nofollow" className="w-full">
             Im Palettenrechner öffnen und anpassen
           </Button>
         </div>

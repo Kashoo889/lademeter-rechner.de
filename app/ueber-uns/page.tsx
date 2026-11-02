@@ -80,7 +80,7 @@ export default function UeberUnsPage() {
           </p>
         )}
 
-        <h2 className="pt-4 text-xl font-extrabold tracking-tight text-slate-950">Redaktion und Korrekturen</h2>
+        <h2 id="redaktion" className="pt-4 text-xl font-extrabold tracking-tight text-slate-950">Redaktion und Korrekturen</h2>
         <p>
           Ratgeber nennen ihre Quellen (u. a. Gesetzestexte auf gesetze-im-internet.de) und zeigen
           Veröffentlichungs- und Aktualisierungsdatum. Fehler korrigieren wir und aktualisieren das
@@ -89,6 +89,14 @@ export default function UeberUnsPage() {
             Kontaktseite
           </Link>{" "}
           entgegen.
+        </p>
+        <p>
+          Verantwortlich für Inhalte und Korrekturen ist {authorName ?? "der Betreiber"} (siehe{" "}
+          <Link href="/impressum/" className="text-brand-700 underline">
+            Impressum
+          </Link>
+          ). Rechenbeispiele werden mit dem Rechenkern dieser Seite nachgerechnet, der durch automatisierte Tests
+          abgesichert ist. Rechtliche Aussagen nennen Gesetz, Absatz und Abrufdatum und ersetzen keine Rechtsberatung.
         </p>
 
         <h2 className="pt-4 text-xl font-extrabold tracking-tight text-slate-950">Finanzierung</h2>

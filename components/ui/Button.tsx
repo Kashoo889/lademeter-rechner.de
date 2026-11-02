@@ -28,6 +28,7 @@ type ButtonAsButton = CommonProps &
 type ButtonAsLink = CommonProps & {
   href: string;
   onClick?: () => void;
+  rel?: string;
 };
 
 /**
@@ -41,7 +42,7 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
 
   if ("href" in props && props.href) {
     return (
-      <Link href={props.href} className={classes} onClick={props.onClick}>
+      <Link href={props.href} className={classes} onClick={props.onClick} rel={props.rel}>
         {children}
       </Link>
     );

@@ -149,7 +149,7 @@ Wie viele Kartons auf eine Palette passen und wie hoch sie wird, berechnet der [
 
 ## Weiterführend
 
-Mit dem [Volumengewicht-Rechner](/volumengewicht-rechner/) können Sie beide Verfahren nachrechnen: Wählen Sie „Seefracht“ oder tragen Sie einen eigenen Faktor ein. Wie das frachtpflichtige Gewicht im Straßenverkehr über Lademeter entsteht, erklärt [Lademeter in kg umrechnen](/ratgeber/lademeter-in-kg-umrechnen/); den Unterschied zwischen Fläche und Volumen zeigt [Lademeter oder Kubikmeter](/ratgeber/lademeter-oder-kubikmeter-unterschied/).
+Luft, See und Straße im Vergleich: [Frachtpflichtiges Gewicht berechnen: Luft, See, Straße](/ratgeber/frachtpflichtiges-gewicht-berechnen/). Mit dem [Volumengewicht-Rechner](/volumengewicht-rechner/) können Sie beide Verfahren nachrechnen: Wählen Sie „Seefracht“ oder tragen Sie einen eigenen Faktor ein. Wie das frachtpflichtige Gewicht im Straßenverkehr über Lademeter entsteht, erklärt [Lademeter in kg umrechnen](/ratgeber/lademeter-in-kg-umrechnen/); den Unterschied zwischen Fläche und Volumen zeigt [Lademeter oder Kubikmeter](/ratgeber/lademeter-oder-kubikmeter-unterschied/).
 
 ## Hinweis
 

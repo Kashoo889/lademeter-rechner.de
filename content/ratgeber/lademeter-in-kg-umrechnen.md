@@ -118,4 +118,4 @@ Lademeter und Gewicht sind unabhängige Größen, die über einen tarifabhängig
 
 ## Weiterführend
 
-Vertiefung zum Thema: [Gewicht einer beladenen Palette ermitteln](/ratgeber/palette-gewicht-berechnen/) sowie [Frachtbrief nach HGB: wo Gewicht und Lademeter eingetragen werden](/ratgeber/frachtbrief-hgb/).
+Vertiefung zum Thema: [Frachtpflichtiges Gewicht berechnen: Luft, See, Straße](/ratgeber/frachtpflichtiges-gewicht-berechnen/); [Gewicht einer beladenen Palette ermitteln](/ratgeber/palette-gewicht-berechnen/) sowie [Frachtbrief nach HGB: wo Gewicht und Lademeter eingetragen werden](/ratgeber/frachtbrief-hgb/).

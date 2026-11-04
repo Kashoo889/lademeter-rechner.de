@@ -101,6 +101,10 @@ Maßgeblich sind jeweils die **zulässigen** Massen aus den Papieren, nicht das 
 
 Wie Ladung auf dem Anhänger gesichert und wie weit sie überstehen darf, steht im Ratgeber [§ 22 StVO Ladung](/ratgeber/paragraf-22-stvo-ladung/) und im Ratgeber [Ladungssicherung im LKW: Grundlagen](/ratgeber/ladungssicherung-lkw-grundlagen/).
 
+## Weiterführend
+
+Zur Zuladung eines Wohnmobils mit Wasser und Gas: [Wohnmobil Zuladung berechnen: Formel, Wasser und Gas](/ratgeber/wohnmobil-zuladung-berechnen/).
+
 ## Hinweis
 
 Dieser Beitrag fasst den Leitfaden des Kraftfahrt-Bundesamts (Stand Juli 2026), § 42 und § 44 StVZO sowie § 6 und § 6a FeV zusammen (abgerufen am 27.10.2026) und ist keine Rechtsberatung. Nicht behandelt sind Geländefahrzeuge, Zugfahrzeuge und Anhänger über 3,5 t, Wohnwagen mit Tempo-100-Zulassung, Dachlasten und Bußgelder. Verbindlich sind Ihre Fahrzeugpapiere und die jeweils aktuellen Vorschriften.

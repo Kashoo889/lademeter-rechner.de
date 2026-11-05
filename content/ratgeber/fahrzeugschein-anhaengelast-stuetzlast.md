@@ -103,7 +103,7 @@ Wie Ladung auf dem Anhänger gesichert und wie weit sie überstehen darf, steht 
 
 ## Weiterführend
 
-Zur Zuladung eines Wohnmobils mit Wasser und Gas: [Wohnmobil Zuladung berechnen: Formel, Wasser und Gas](/ratgeber/wohnmobil-zuladung-berechnen/).
+Zur Zuladung eines Wohnmobils mit Wasser und Gas: [Wohnmobil Zuladung berechnen: Formel, Wasser und Gas](/ratgeber/wohnmobil-zuladung-berechnen/). Für Transporter: [Transporter Zuladung berechnen: Nutzlast und 3,5 Tonnen](/ratgeber/transporter-zuladung-berechnen/).
 
 ## Hinweis
 

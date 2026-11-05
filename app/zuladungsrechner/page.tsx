@@ -180,7 +180,7 @@ export default function ZuladungsrechnerPage() {
         "Nur die Gesamtmasse prüfen und die Achslast ignorieren.",
       ]}
       faqs={faqs}
-      articleSlugs={["wohnmobil-zuladung-berechnen", "fahrzeugschein-anhaengelast-stuetzlast", "paragraf-22-stvo-ladung"]}
+      articleSlugs={["wohnmobil-zuladung-berechnen", "transporter-zuladung-berechnen", "fahrzeugschein-anhaengelast-stuetzlast"]}
     />
   );
 }

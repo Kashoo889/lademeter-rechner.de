@@ -205,7 +205,7 @@ export default function AnhaengerZuladungsrechnerPage() {
         "Papierwerte ungeprüft glauben: Bei knappen Ergebnissen wiegen.",
       ]}
       faqs={faqs}
-      articleSlugs={["fahrzeugschein-anhaengelast-stuetzlast", "paragraf-22-stvo-ladung", "ladungssicherung-lkw-grundlagen"]}
+      articleSlugs={["wohnwagen-zuladung-berechnen", "fahrzeugschein-anhaengelast-stuetzlast", "paragraf-22-stvo-ladung"]}
     />
   );
 }

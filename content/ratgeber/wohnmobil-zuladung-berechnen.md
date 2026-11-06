@@ -129,7 +129,7 @@ Papierwerte bleiben Rechnung. TÜV NORD empfiehlt, das beladene Wohnmobil einige
 
 ## Weiterführend
 
-Für Transporter und Lieferwagen gibt es den Ratgeber [Transporter Zuladung berechnen: Nutzlast und 3,5 Tonnen](/ratgeber/transporter-zuladung-berechnen/). Die Felder des Fahrzeugscheins erklärt der Ratgeber [Fahrzeugschein lesen: Anhängelast, Stützlast, Zuladung](/ratgeber/fahrzeugschein-anhaengelast-stuetzlast/). Wie sich Nutzlast und Lastverteilung bei größeren Fahrzeugen berechnen, steht in [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/). Für Gespanne mit Wohnwagen oder Anhänger gibt es den [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/); die eigene Beladung rechnen Sie im [Zuladungsrechner](/zuladungsrechner/) nach.
+Für Transporter und Lieferwagen gibt es den Ratgeber [Transporter Zuladung berechnen: Nutzlast und 3,5 Tonnen](/ratgeber/transporter-zuladung-berechnen/). Die Felder des Fahrzeugscheins erklärt der Ratgeber [Fahrzeugschein lesen: Anhängelast, Stützlast, Zuladung](/ratgeber/fahrzeugschein-anhaengelast-stuetzlast/). Wie sich Nutzlast und Lastverteilung bei größeren Fahrzeugen berechnen, steht in [Nutzlast und Lastverteilung beim LKW](/ratgeber/achslast-und-gesamtgewicht-lkw/). Für Gespanne mit Wohnwagen gibt es den Ratgeber [Wohnwagen Zuladung berechnen: Leergewicht und Stützlast](/ratgeber/wohnwagen-zuladung-berechnen/) und den [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/); die eigene Beladung rechnen Sie im [Zuladungsrechner](/zuladungsrechner/) nach.
 
 ## Hinweis
 

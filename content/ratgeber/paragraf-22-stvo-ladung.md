@@ -135,4 +135,4 @@ Dieser Artikel fasst gesetzliche Vorschriften zusammen und ist keine Rechtsberat
 
 ## Weiterführend
 
-Vertiefung zum Thema: [Überlänge und Überbreite: Erlaubnis nach § 29 StVO](/ratgeber/ueberlaenge-ueberbreite-erlaubnis/) sowie [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/). Wer mit Pkw und Anhänger lädt, prüft Zuladung und Stützlast vorab im [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/).
+Zur Ladung auf dem Autodach: [Dachlast berechnen: Dachbox, Träger und Gepäck](/ratgeber/dachlast-berechnen/). Vertiefung zum Thema: [Überlänge und Überbreite: Erlaubnis nach § 29 StVO](/ratgeber/ueberlaenge-ueberbreite-erlaubnis/) sowie [LKW-Höchstmaße in Deutschland](/ratgeber/lkw-hoechstmasse-deutschland/). Wer mit Pkw und Anhänger lädt, prüft Zuladung und Stützlast vorab im [Anhänger-Zuladungsrechner](/anhaenger-zuladungsrechner/).
